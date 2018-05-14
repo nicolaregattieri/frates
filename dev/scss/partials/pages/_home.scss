@@ -4,7 +4,10 @@
 
 body.home{
 	.banners-top{
-		border-top: 1px solid #2e2b3e;
+		z-index: -1;
+		max-width: 100%;
+		width: 100%;
+
 
 		img{
 			width: 100%;
@@ -61,5 +64,29 @@ body.home{
 				height: auto;
 			}
 		}
+	}
+
+	.tlt-shelf {
+		font-size: 1.2em;
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 22px;
+		span{
+			height: 60%;
+			margin: 10px 0;
+			display: block;
+		}
+		@include mq($screen-md) {
+			font-size: 2em;
+			margin-top: 60px;
+			
+			span{
+				display: block;
+				margin: 20px 0;
+				height: 80%;
+			}
+		}
+		
 	}
 }

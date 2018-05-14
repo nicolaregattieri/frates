@@ -1,7 +1,7 @@
 /* ========================================================================
 	Menu Persistente
 	======================================================================= */
-	
+
 header {
 	&.menu-persistente {
 		@extend .transition;
@@ -17,35 +17,49 @@ header {
 		-moz-animation: grow .7s;
 		-webkit-animation: grow .7s;
 		box-shadow: 0 0 50px rgba(#000, .4);
+		background-image: none;
+
+		a.first-menu {
+			color: #776c46;
+		}
 
 		.top-box {
 			display: none;
 		}
-
-		.container {
-			.row {
-				@extend .transition;
-				padding: 20px 0;
-				overflow: hidden;
-				margin-left: 0 !important;
-				position: inherit !important;
+		.main-header {
+			header .main-header .menu-header ul li.has-sub a.first-menu  {
+				color: red !important;
+			}
+			.logo {
+				.black-logo {
+					display: none;
+				}
+				.gold-logo {
+					display: block;
+				}
 			}
 		}
+		.row {
+			@extend .transition;
+			padding: 20px 0;
+			overflow: hidden;
+			margin-left: 0 !important;
+			position: inherit !important;
+		}
 	}
-
-	&.ha-hidding{
+	&.ha-hidding {
 		@extend .transition;
 		top: 0;
 		position: fixed;
 		background: #fff;
 		z-index: 9999999999999;
-		
 		.top-box {
 			display: none;
 		}
 	}
-
-	&.ha-hide{
+	&.ha-hide {
 		top: -100%;
 	}
 }
+
+

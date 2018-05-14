@@ -14,7 +14,12 @@
 	display: none;
 
 	@include mq($screen-md) {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.busca {
+			flex: 2
+		}	
 	}
 
 	&.active{
@@ -29,6 +34,7 @@
 
 	.busca{
 		position: relative;
+		
 
 		legend,
 		label,
@@ -37,29 +43,32 @@
 		}
 
 		input{
+			border: none;
+    		border-bottom: 2px solid #000;
 			&.fulltext-search-box{
 				@include font-size(1.2);
-				font-family: 'Cairo', sans-serif;
+				font-family: 'Open Sans', sans-serif;
 				height: 30px;
 				padding: 10px;
-				border: none;
+				border-bottom: 1px solid #fff;
 				width: 100%;
-				color: #2e2b3e;
-				border: 1px solid #2e2b3e;
+				color: #fff;
 				background-color: transparent;
+				font-size: .9em;
 			}
 
 			&.btn-buscar{
-			    right: 5px;
-				width: 16px;
-			    height: 16px;
+			    right: -34px;
+				width: 45px;
+				height: 35px;
 				border: none;
-			    font-size: 0;
-			    cursor: pointer;
-			    position: absolute;
-			    top: 7px;
+				font-size: 0;
+				cursor: pointer;
+				position: absolute;
+				top: 0px;
 				background: url(/arquivos/search.png) no-repeat 0 0 transparent;
 			}
+		
 		}
 	}
 }
