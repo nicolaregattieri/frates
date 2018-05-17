@@ -2,7 +2,7 @@
    Minicart
    ========================================================================== */
 
-#mini-cart {
+#mini-cart, .minicart-mbl{
 	@extend .transition;
 	display: flex;
 	vertical-align: middle;

@@ -10,7 +10,6 @@ header {
 		top: 0;
 		transition: all 150ms ease-in-out;
 	}
-
 	position: relative;
 	width: 100%;
 	z-index: 9999;
@@ -45,14 +44,14 @@ header {
 					color: #fff;
 					align-items: center;
 					cursor: pointer;
-						a {
-							text-align: center;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: inherit;
-							text-decoration: none;
-						}
+					a {
+						text-align: center;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: inherit;
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -94,6 +93,10 @@ header {
 		.logo-mobile {
 			display: block;
 			padding-left: 20%;
+			padding-top: 1.1%;
+			svg image {
+				height: 77%;
+			}
 			@include mq($screen-md) {
 				display: none;
 				padding-left: 0;
@@ -266,7 +269,6 @@ header {
 							nav {
 								width: 100%;
 								ul {
-									
 									li {
 										clear: both;
 										width: 100%;
@@ -275,14 +277,13 @@ header {
 										padding: 15px 0;
 										border-bottom: .5px solid rgb(75, 75, 75);
 										font-size: 0.9em;
-										&:last-child{
+										&:last-child {
 											border-bottom: 0;
 										}
-										
-										&:hover{
+										&:hover {
 											border-bottom: .5px solid #776c46;
 											color: #776c46;
-											&:last-child{
+											&:last-child {
 												border-bottom: 0;
 											}
 										}
@@ -296,7 +297,6 @@ header {
 											text-transform: uppercase;
 											font-weight: normal;
 											display: inline-block;
-									
 											&:hover {
 												@extend .transition;
 												color: #776c46;
@@ -305,7 +305,6 @@ header {
 									}
 								}
 							}
-							
 							.category-list,
 							.banner-submenu {
 								display: inline-block;
@@ -410,7 +409,7 @@ header {
 		li {
 			position: relative;
 			display: flex;
-			&:hover{
+			&:hover {
 				.tip {
 					display: flex;
 					justify-content: center;
@@ -422,7 +421,7 @@ header {
 					line-height: 1.4em;
 				}
 			}
-			.tip{
+			.tip {
 				width: 250px;
 				height: auto;
 				background: #756B45;
@@ -431,22 +430,26 @@ header {
 				display: none;
 				border-radius: 20px;
 				transition: all 350ms;
-				&::after{
+				&::after {
 					content: "";
 					position: absolute;
 					width: 0px;
 					height: 0px;
 					top: -10px;
 					left: 25%;
-					border-bottom: 10px solid  #756B45;
+					border-bottom: 10px solid #756B45;
 					border-left: 10px solid transparent;
-					border-right: 10px solid  transparent;
+					border-right: 10px solid transparent;
 				}
 				p {
 					padding: 10px;
 				}
 			}
-	
+		}
+	}
+	.main-header {
+		.lupa-gold {
+			fill: #756B45;
 		}
 	}
 	@include mq($screen-md) {
@@ -478,13 +481,14 @@ header {
 				}
 			}
 		}
-
-		.gold-logo{
+		.gold-logo {
 			display: none;
 		}
-
 		.row {
 			display: flex;
 		}
+	}
+	.searchbox .busca input.fulltext-search-box{
+		color:#999 ;
 	}
 }
