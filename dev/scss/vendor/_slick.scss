@@ -152,7 +152,7 @@ $slick-opacity-not-active: .25 !default;
 
 .slick-prev,
 .slick-next {
-    display: none !important;
+    display: none;
     top: 268px;
     width: 20px;
     height: 55px;
@@ -163,12 +163,12 @@ $slick-opacity-not-active: .25 !default;
     color: transparent;
     position: absolute;
     border: none;
-    background: url(../arquivos/arrow-v2.png) center center no-repeat;
+    background: transparent;
 }
 
 .slick-prev {
     @include rotate(180deg);
-    left: 10px;
+    left: 0;
 
     @include mq($screen-md){
       left: 0;
@@ -176,7 +176,7 @@ $slick-opacity-not-active: .25 !default;
 }
 
 .slick-next {
-    right: 10px;
+    right: 0px;
 
     @include mq($screen-md){
       right: 0;

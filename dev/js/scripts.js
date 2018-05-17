@@ -89,7 +89,7 @@ $(function() {
 
 	// Busca Mob //
 		$(".js-open-mobile-search").click(function() {
-			$(".searchbox").toggleClass("active");
+			$(".searchbox").toggleClass("active-now");
 			$(".searchbox").slideToggle();
 		});
 	// Busca Mob //
@@ -133,6 +133,40 @@ $(function() {
 			});
 		}
 	// Slider //
+
+	if (slideShelf.length > 0) {
+		$('.home').find('.slideShelf .prateleira').find('ul').slick({
+			adaptiveHeight: true,
+			autoplay: false,
+			arrows: true,
+			dots: false,
+			mobileFirst: true,
+			draggable: true,
+			touchMove: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 991,
+					settings: {
+						slidesToShow: 4
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 479,
+					settings: {
+						slidesToShow: 2
+					}
+				}
+			]
+		});
+	}
 
 	// Frete Gratis Aberto //
 		try {

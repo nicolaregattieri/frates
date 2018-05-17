@@ -2,50 +2,58 @@
    Searchform
    ========================================================================== */
 
-.js-open-mobile-search{
+.js-open-mobile-search {
 	border: none;
 	background-color: transparent;
 	padding-top: 20px;
 }
 
-.searchbox{
+.searchbox {
 	padding-top: 28px;
 	text-align: right;
 	display: none;
-
+	&.active-new {
+		display: flex;
+		justify-content: space-between;
+	}
+	&.active {
+		position: absolute;
+		right: 0;
+		top: 70px;
+		width: 100%;
+		z-index: 999999999;
+		background-color: #fff;
+		padding: 5px;
+		color: #fff;
+	}
 	@include mq($screen-md) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		.busca {
 			flex: 2
-		}	
+		}
 	}
-
-	&.active{
+	&.active {
 		position: absolute;
-	    right: 0;
-	    top: 70px;
-	    width: 100%;
-	    z-index: 999999999;
-	    background-color: #fff;
-	    padding: 5px;
+		right: 0;
+		top: 70px;
+		width: 100%;
+		z-index: 999999999;
+		background-color: #fff;
+		padding: 5px;
 	}
-
-	.busca{
+	.busca {
 		position: relative;
-		
-
 		legend,
 		label,
-		select{
+		select {
 			display: none;
 		}
-
-		input{
+		input {
 			border: none;
-    		border-bottom: 2px solid #000;
-			&.fulltext-search-box{
+			border-bottom: 2px solid #000;
+			&.fulltext-search-box {
 				@include font-size(1.2);
 				font-family: 'Open Sans', sans-serif;
 				height: 30px;
@@ -56,9 +64,8 @@
 				background-color: transparent;
 				font-size: .9em;
 			}
-
-			&.btn-buscar{
-			    right: -34px;
+			&.btn-buscar {
+				right: -34px;
 				width: 45px;
 				height: 35px;
 				border: none;
@@ -68,7 +75,6 @@
 				top: 0px;
 				background: url(/arquivos/search.png) no-repeat 0 0 transparent;
 			}
-		
 		}
 	}
 }

@@ -3,6 +3,14 @@
    ========================================================================== */
 
 body.home{
+
+	.box-banner {
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: auto;
+		}
+	}
 	.banners-top{
 		z-index: -1;
 		max-width: 100%;

@@ -1,99 +1,116 @@
 <footer>
-	<section class="row">
-		<div class="bg-cinza top-footer container">
-			<div class="col-md-3">
-				<h3 class="tlt-footer-box">Central de Ajuda</h3>
-				<nav>
-					<ul>
-						<li>
-							<a href="/institucional/sobre-nos">Sobre Nós</a>
-						</li>
-						<li>
-							<a href="/institucional/privacidade">Privacidade</a>
-						</li>
-						<li>
-							<a href="/institucional/pagamentos">Pagamentos</a>
-						</li>
-						<li>
-							<a href="/institucional/troca-e-devolucao">Troca e Devolução</a>
-						</li>
-						<li>
-							<a href="/institucional/duvidas-frequentes">Dúvidas Frequentes</a>
-						</li>
-						<li>
-							<a href="/institucional/fale-conosco">Fale Conosco</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<div class="col-md-3">
-				<div class="row">
-					<h3 class="tlt-footer-box">Formas de Pagamento</h3>
-				</div>
-				<div class="row">
-					<h3 class="tlt-footer-box">Sua compra segura</h3>
+	<section class="container bg-cinza ">
+		<div class="top-footer top-footer--half">
+			<div class="top-footer--left">
+				<div class="footer-ajuda">
+					<h3 class="footer__tlt">Central de Ajuda</h3>
+					<nav>
+						<ul>
+							<li>
+								<a href="/institucional/sobre-nos">Sobre Nós</a>
+							</li>
+							<li>
+								<a href="/institucional/privacidade">Privacidade</a>
+							</li>
+							<li>
+								<a href="/institucional/pagamentos">Pagamentos</a>
+							</li>
+							<li>
+								<a href="/institucional/troca-e-devolucao">Troca e Devolução</a>
+							</li>
+							<li>
+								<a href="/institucional/duvidas-frequentes">Dúvidas Frequentes</a>
+							</li>
+							<li>
+								<a href="/institucional/fale-conosco">Fale Conosco</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="row">
-					<h3 class="tlt-footer-box">Fique ligado nas novidades das Frates</h3>
-                    <form action="javascript:masterDataNewsletter()" method="POST" class="form-newsletter" data-module="newsletter">
-                        <input type="hidden" name="newsInternalPart" value="newsletter" />
-                        <input type="hidden" name="newsInternalPage" value="_" />
-                        <input type="hidden" name="newsInternalCampaign" value="newsletter:opt-in" />
-                        <fieldset class="nome">
-                            <input type="text" name="newsletterClientNome" id="cl_nome" class="nome" placeholder="Seu nome" data-validation="required nome" data-msg-required="seu nome" data-msg-email="Insira o seu nome" />
-                        </fieldset>
-                        <fieldset class="email">
-                            <input type="text" name="newsletterClientEmail" id="cl_email" class="email" placeholder="seu e-mail" data-validation="required email" data-msg-required="seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" />
-                        </fieldset>
-                        <button type="submit" class="newsletter-button-ok submit">Cadastrar</button>    
-                    </form> 
+			
+			<div class="top-footer top-footer--right">
+				<div class="footer-compra">
+					<h3 class="footer__tlt">Formas de Pagamento</h3>
+					<span class="footer-compra__img">
+						<vtex:contentPlaceHolder id="footer-compra__img" />
+					</span>
 				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<a href="/">Seja um<br />Lojista ou Revendedor</a>
-					</div>
-					<div class="col-md-6">
-						<h3 class="tlt-footer-box">Me segue ;)</h3>
-						<nav>
-							<ul>
-								<li>
-									<a href="/" alt="instagram" target="_blank">
-										<i>
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAADAnd05AAAAW3RSTlMAGF2Vw+L6DGjGgO7em2pGLCBV54YpDanpaQgi1tct5e9K5iPhJhxXSQ7tZugbfpB/6xbdYWCwkpyxwmv3uvXbR8EZ+yrfGlC2ty75CRX2lM+1nVuoS4UoK2cXxbipjgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAJFSURBVEjHlZZpX9pAEMZHIiKIIVxJgCBQgicC2npFjeIVi9Bovft8/+/RhPwouwkhdd7sMPvPstmdmSdEPluICYvxJWApvijEFmiuJZaT4Cy5nAiHUysOkV4VM1I2K2XE1bTzcyUV8kAuD+QLRTZULLix3AxYVgC1VPaHyyUVUGR/uKIBgkyz1hGAaoWPrdVQb4S9U6OOb2tsoFmD3go/sJaOWpP5Pw36+rwDXtehTXeqoN6iudaqQ5n4G8AmRdgmsOF5iTyEKJpIQN67rxTUrWh8S0VqvPg2StE0UQnb7vI7aDN3udvpMtbbnc6U29hxhiQKDL3HZ+QewxeQJNoHmKzqMOj3HwcKOtO5IrBPMaSZDXYZ/JDoAF1mMo0YHeE4BD/x48c4IgOnQfzs/PwM5snhBYefwiAdlwG8f0V01R+7LH4Jna5xw+G3Gsw7170zod1y+A2uCchyuCXh3vN/QrI4PAsE8cEEv8cgiD9A4vGhaY5cd2T+GvK4hAeKI8PjZMNw+JEBm3g8gzj1Ifpw+RHm05OJR9mHi+g71/Tbh5Nsm4BpO9VmBa7p2ZcEljsMB4OhO1q+JHgOpJhiMRZMsS8m8Nzy6ATLwyk+9mxCTfSKj3pQ5WhaVtEbO19sHJQDGlF0A/jX5l/+p+m9TPdVjW6pVeb9KtENmxMEVw5ew+jXOmprfKg5V2y0ZiDqSpkYlDJxppSRJ5Ttt3c29P7WDhFKxxK9iQx/ZLMfExnuzdHtT7/If4bDY/sTsw3vE8Kwg58QfwH1UqJ/Euax3wAAAABJRU5ErkJggg==" width="46" height="46"/></svg>
-										</i>
-									</a>
-								</li>
-								<li>
-									<a href="/" alt="facebook" target="_blank">
-										<i>
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABDlBMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAAA07IBdAAAAWHRSTlMAGF2VwuL6DGjGgO7cm2pGKyBV54YoDanpaQgi19Yt5e9KI+EmHFdJDgftsPX4Zugy81AWKf6ScN63nDCga0ey+yrqyfksBRA9pgvBnVt/CR6oS4XdZxeU8C6/4gAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAIgSURBVEjHlZZpQ9pAEIbHBERQEgIYEg45gkdtK60HUokHrZa2Vlrq9f7/X9JNqCXZ3RzOFzaTh2F2d2ZeiDhbUdRMdhVYzWZUZYViLbeWR8jya7louLDOiI2ippcMo6RrxQ32uF6I+EK5AlSqm0HXZtXzlSWwWQMsu86767YF1Eze3WgCqkmyOCrQaoR9W210ulF76nbQ3go6em04/egD6zto9wK/14KzHXfA2w5ay0xr6PQp1vod1F7WO8AuJdgusLNY5SpQk2giFZXFfRVg7Unevwk/7lko+MH3YQts6e074H0oRRv7XvgDDIS7/PDRL7DDoK8+wAH7yKMqBM9AxKmKPNERcMzT5glwMjw97YW8x8ARKRiJp8wifxI3P4JCQ5wJ/jHDXRE/w5CleZ4WP0eGHFxwp+K6l15Tua7LteoFHLrCJOw8XHYq13YTXBFgROGfuWQMIA7/IsGvcRN2fp1OvzH2+3T6g8NvcE1Z6GlPRkeWbqGlxTXcvuaafrJrupMUQQQ+wp20xOS4X2KyApbjfgHL2kOK/2sP1nxaGlxbNB/NYHHD8dd4PP7N0aaFmb945eCgMtBNorvA/zE/TzP05su8mskjtRnYXyN5YIcEwZODP5F583LABKEVKzY9wTtnUqaJUqYxKZvL4nhCObgPC+X9IEIomeVmngw/FG19YhgT3S4+eDI8i9HtR17kH6Nh356U55e/EM/KE//2L7krgOxZ7nBoAAAAAElFTkSuQmCC" width="46" height="46"/></svg>
-										</i>
-									</a>
-								</li>
-								<li>
-									<a href="/" alt="twitter" target="_blank">
-										<i>
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABdFBMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAAAhqNSCAAAAenRSTlMAGF2VwuL6DGjGgO7cm2pGKyBV54YohQ2p6WkIItYt5e9KI+EmJRxXSQ7tZugCk8zRPTbw9JTQrhYpD+QG4FDeGvW+kpzqWwluugdrt6ZHFM9z+ypI/tm7+Swh/FhZ1ATBAaz9PJ4Dbdh160V/WveWF8nXmhGo5kvdZwFWGHAAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAChElEQVRIx5WW60MSQRTFrzxEUBZ5KOwq8ljyiWX5JC01jUpSCrK0rCyzJ5VZpJ6/vmVhd2dGlrX7heWe3w4zc+/MgUiILpfb4+0Gur0et6uLOoavxw8u/D0+ezjQqxF9QSnUHw73h6Rgn/a1N2DzQiQKRGMDbGpgsJGLtIHjCUBWhsT0kCIDibiYHk4C7ji1G8cNJIf53EgK6YzdmjJppEbYRDYFNWe/YddUpLLM7yWhjnba4FEVSWumCaRz1DFyaSSM5zFgnBxiHBhrPvmicDvRRG5Em/UKQJ5wxidkBPTBJ6E400QKJhvDTyFv1XLaksPXb8wEtR242VKH8pjSPvyIWUzCLN+t2UZHzs0vLBqZGPxES0DBpG9juVW+lTutFvZKd1tiAVgiF1atwdeAdUWfUMZs+XsrhroKF21g08Kn72v6QvEB0UODfrRlqkFskAclZvkBHZl7PLht4AFLLMFDKnasRLn0BEI8tdQdqFRB1UpsVUQazyy1igoBYWYy2yK9W2YqAQh4+bmAvyAe38M+W+qXwVccfsBo+9gjL0Is/pof/M1bRgvBS4eQWPzde5Y++sBqEg61Mh1zjffx0+ddE//CSZtamYpsE+iVPfjapkTNJijyLVYofKuZezP7naf1FuMauLp4ZMA/fq7xdLOB+eNBJ8rxr5lTz++DPwJsHA/t8El0hZCah49qkOPOdFxGTX/4z4uDIkDGidZOl3nN169y6dWteZ06X6mnzPqGO1/YORV/OUMYWUb6zI4+E+3A0Wyyl7J1zcqky1YmtbUyahplflAwyryNUWrhqzVs+Fyz4Wo4XA0pwfOGDdc6+PaFaPIX9rAeJ6554y/EvOtEVP8Bn9LgDIrD1LsAAAAASUVORK5CYII=" width="46" height="46"/></svg>
-										</i>
-									</a>
-								</li>
-								<li>
-									<a href="/" alt="youtube" target="_blank">
-										<i>
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABRFBMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAACPnGlEAAAAanRSTlMAGF6Vw+L6DGjGgO7cm2pGKyDdVeeGKQ2p6WkIItct5e9KI+EmJdYcV0kO7WboFpCsucfQ1eDIwK6MXd4Tkpxgwmvs/kevoCr7NLjEQMEkp/kstR6d/LeqlGVbFBWButPJo3+o5EuFKGcXx+KhYQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAJUSURBVEjHlZZpQ9pAEIZHI3cJUs5wBgJ4Yo+UYqFYpFos1latbam9wfP9/z+ggSC7CYTAfMnyzpPNzu7sDEQmW1oWVhxOwOlYEZaXaKa53B4YzON2WcNen0Y88ouB1WBwNSD6H2s/fV6LF0JhIByJ8lI0MtBCU+BYHJASSbOcTEhAPGaWU2lAiNG0eQQgnTJqmSzknFVMORnZDC/ks1AK1htWVJDNc98rQVmbtcFrCkpspXHIBZppBRnxh/E6sEE2tgGs6yNXGIIdTSQgrJ+XF9KmPb4pwTucfAsJe5ooga3B9NsoJ+fBk2Vsaw8PIvPQRBF4iHYALquKT54+e66qLyqViqq+rO6+KjJfFNihGupMeS3DZD7uhtRRowb2mPAGE+Zm3j00qIl9JjR0pPWW4dyR7KNJCg6YcKgj79q7Y/yQeQ+g0BHaTKiOcKL3nRHeYd42jggIMuF4jBN9KA3HJ8wbBIw4m50+ftIDODbipzhjwvkD/vniy2gxX5n3DKfkQIAJowjPG85xqN+YNwAHnUCc2EjeuswraoE04GeCexL/zrwX2jFd8knwo2WmWz/5JLg0pVjwV/y3lmJqpfJH/Vvt/OtxBWaYYgsm8KLXQ7t84jy4qF8+6kGK2dMxCb3hYMHCQSEgZ0fngHGZ789T9PpsXWn7kprm4kvNLtgFB7KGhpC5gnxtRV/LuMoYpXxpVrMp5SfUvtbKxMlWJmqtrD9tnkGjLN/c8tLtTdmiUWrm6g3acJ214fqgjPVm9O07c5O/s4aHdl/rNvW/EM1u7d7s/Q/wxMOxltlThAAAAABJRU5ErkJggg==" width="46" height="46"/></svg>
-										</i>
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+				
+				<div class="footer-secure">
+					<h3 class="footer__tlt">Sua compra segura</h3>
+					<span class="footer-compra-segura__img">
+						<vtex:contentPlaceHolder id="footer-secure__img" />
+					</span>
 				</div>
 			</div>
 		</div>
+		<div class="top-footer top-footer--half">
+			<div class="footer-novidades">
+				<h3 class="footer__tlt">Fique ligado nas novidades das Frates</h3>
+				<form action="javascript:masterDataNewsletter()" method="POST" class="form-newsletter" data-module="newsletter">
+					<input type="hidden" name="newsInternalPart" value="newsletter" />
+					<input type="hidden" name="newsInternalPage" value="_" />
+					<input type="hidden" name="newsInternalCampaign" value="newsletter:opt-in" />
+					<fieldset class="nome">
+						<input type="text" name="newsletterClientNome" id="cl_nome" class="nome" placeholder="Seu nome" data-validation="required nome" data-msg-required="seu nome" data-msg-email="Insira o seu nome" />
+					</fieldset>
+					<fieldset class="email">
+						<input type="text" name="newsletterClientEmail" id="cl_email" class="email" placeholder="seu e-mail" data-validation="required email" data-msg-required="seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" />
+					</fieldset>
+					<button type="submit" class="newsletter-button-ok submit">Cadastrar</button>    
+				</form> 
+			</div>
+			<div class="top-footer--column">
+				<div class="footer-revendedor">
+					<div class="footer__tlt">
+						<a href="/">Seja um<br />Lojista ou Revendedor</a>
+					</div>
+					<span class="footer-revendedor__img">
+						<vtex:contentPlaceHolder id="footer-revendedor__img" />
+					</span>
+				</div>
+				<div class="footer-follow">
+					<h3 class="footer__tlt">Me segue ;)</h3>
+					<nav>
+						<ul>
+							<li>
+								<a href="/" alt="instagram" target="_blank">
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAADAnd05AAAAW3RSTlMAGF2Vw+L6DGjGgO7em2pGLCBV54YpDanpaQgi1tct5e9K5iPhJhxXSQ7tZugbfpB/6xbdYWCwkpyxwmv3uvXbR8EZ+yrfGlC2ty75CRX2lM+1nVuoS4UoK2cXxbipjgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAJFSURBVEjHlZZpX9pAEMZHIiKIIVxJgCBQgicC2npFjeIVi9Bovft8/+/RhPwouwkhdd7sMPvPstmdmSdEPluICYvxJWApvijEFmiuJZaT4Cy5nAiHUysOkV4VM1I2K2XE1bTzcyUV8kAuD+QLRTZULLix3AxYVgC1VPaHyyUVUGR/uKIBgkyz1hGAaoWPrdVQb4S9U6OOb2tsoFmD3go/sJaOWpP5Pw36+rwDXtehTXeqoN6iudaqQ5n4G8AmRdgmsOF5iTyEKJpIQN67rxTUrWh8S0VqvPg2StE0UQnb7vI7aDN3udvpMtbbnc6U29hxhiQKDL3HZ+QewxeQJNoHmKzqMOj3HwcKOtO5IrBPMaSZDXYZ/JDoAF1mMo0YHeE4BD/x48c4IgOnQfzs/PwM5snhBYefwiAdlwG8f0V01R+7LH4Jna5xw+G3Gsw7170zod1y+A2uCchyuCXh3vN/QrI4PAsE8cEEv8cgiD9A4vGhaY5cd2T+GvK4hAeKI8PjZMNw+JEBm3g8gzj1Ifpw+RHm05OJR9mHi+g71/Tbh5Nsm4BpO9VmBa7p2ZcEljsMB4OhO1q+JHgOpJhiMRZMsS8m8Nzy6ATLwyk+9mxCTfSKj3pQ5WhaVtEbO19sHJQDGlF0A/jX5l/+p+m9TPdVjW6pVeb9KtENmxMEVw5ew+jXOmprfKg5V2y0ZiDqSpkYlDJxppSRJ5Ttt3c29P7WDhFKxxK9iQx/ZLMfExnuzdHtT7/If4bDY/sTsw3vE8Kwg58QfwH1UqJ/Euax3wAAAABJRU5ErkJggg==" width="46" height="46"/></svg>
+									</i>
+								</a>
+							</li>
+							<li>
+								<a href="/" alt="facebook" target="_blank">
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABDlBMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAAA07IBdAAAAWHRSTlMAGF2VwuL6DGjGgO7cm2pGKyBV54YoDanpaQgi19Yt5e9KI+EmHFdJDgftsPX4Zugy81AWKf6ScN63nDCga0ey+yrqyfksBRA9pgvBnVt/CR6oS4XdZxeU8C6/4gAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAIgSURBVEjHlZZpQ9pAEIbHBERQEgIYEg45gkdtK60HUokHrZa2Vlrq9f7/X9JNqCXZ3RzOFzaTh2F2d2ZeiDhbUdRMdhVYzWZUZYViLbeWR8jya7louLDOiI2ippcMo6RrxQ32uF6I+EK5AlSqm0HXZtXzlSWwWQMsu86767YF1Eze3WgCqkmyOCrQaoR9W210ulF76nbQ3go6em04/egD6zto9wK/14KzHXfA2w5ay0xr6PQp1vod1F7WO8AuJdgusLNY5SpQk2giFZXFfRVg7Unevwk/7lko+MH3YQts6e074H0oRRv7XvgDDIS7/PDRL7DDoK8+wAH7yKMqBM9AxKmKPNERcMzT5glwMjw97YW8x8ARKRiJp8wifxI3P4JCQ5wJ/jHDXRE/w5CleZ4WP0eGHFxwp+K6l15Tua7LteoFHLrCJOw8XHYq13YTXBFgROGfuWQMIA7/IsGvcRN2fp1OvzH2+3T6g8NvcE1Z6GlPRkeWbqGlxTXcvuaafrJrupMUQQQ+wp20xOS4X2KyApbjfgHL2kOK/2sP1nxaGlxbNB/NYHHD8dd4PP7N0aaFmb945eCgMtBNorvA/zE/TzP05su8mskjtRnYXyN5YIcEwZODP5F583LABKEVKzY9wTtnUqaJUqYxKZvL4nhCObgPC+X9IEIomeVmngw/FG19YhgT3S4+eDI8i9HtR17kH6Nh356U55e/EM/KE//2L7krgOxZ7nBoAAAAAElFTkSuQmCC" width="46" height="46"/></svg>
+									</i>
+								</a>
+							</li>
+							<li>
+								<a href="/" alt="twitter" target="_blank">
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABdFBMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAAAhqNSCAAAAenRSTlMAGF2VwuL6DGjGgO7cm2pGKyBV54YohQ2p6WkIItYt5e9KI+EmJRxXSQ7tZugCk8zRPTbw9JTQrhYpD+QG4FDeGvW+kpzqWwluugdrt6ZHFM9z+ypI/tm7+Swh/FhZ1ATBAaz9PJ4Dbdh160V/WveWF8nXmhGo5kvdZwFWGHAAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAChElEQVRIx5WW60MSQRTFrzxEUBZ5KOwq8ljyiWX5JC01jUpSCrK0rCyzJ5VZpJ6/vmVhd2dGlrX7heWe3w4zc+/MgUiILpfb4+0Gur0et6uLOoavxw8u/D0+ezjQqxF9QSnUHw73h6Rgn/a1N2DzQiQKRGMDbGpgsJGLtIHjCUBWhsT0kCIDibiYHk4C7ji1G8cNJIf53EgK6YzdmjJppEbYRDYFNWe/YddUpLLM7yWhjnba4FEVSWumCaRz1DFyaSSM5zFgnBxiHBhrPvmicDvRRG5Em/UKQJ5wxidkBPTBJ6E400QKJhvDTyFv1XLaksPXb8wEtR242VKH8pjSPvyIWUzCLN+t2UZHzs0vLBqZGPxES0DBpG9juVW+lTutFvZKd1tiAVgiF1atwdeAdUWfUMZs+XsrhroKF21g08Kn72v6QvEB0UODfrRlqkFskAclZvkBHZl7PLht4AFLLMFDKnasRLn0BEI8tdQdqFRB1UpsVUQazyy1igoBYWYy2yK9W2YqAQh4+bmAvyAe38M+W+qXwVccfsBo+9gjL0Is/pof/M1bRgvBS4eQWPzde5Y++sBqEg61Mh1zjffx0+ddE//CSZtamYpsE+iVPfjapkTNJijyLVYofKuZezP7naf1FuMauLp4ZMA/fq7xdLOB+eNBJ8rxr5lTz++DPwJsHA/t8El0hZCah49qkOPOdFxGTX/4z4uDIkDGidZOl3nN169y6dWteZ06X6mnzPqGO1/YORV/OUMYWUb6zI4+E+3A0Wyyl7J1zcqky1YmtbUyahplflAwyryNUWrhqzVs+Fyz4Wo4XA0pwfOGDdc6+PaFaPIX9rAeJ6554y/EvOtEVP8Bn9LgDIrD1LsAAAAASUVORK5CYII=" width="46" height="46"/></svg>
+									</i>
+								</a>
+							</li>
+							<li>
+								<a href="/" alt="youtube" target="_blank">
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="46" height="46" viewBox="0 0 46 46"><image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABRFBMVEUAAACAdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU6AdU4AAACPnGlEAAAAanRSTlMAGF6Vw+L6DGjGgO7cm2pGKyDdVeeGKQ2p6WkIItct5e9KI+EmJdYcV0kO7WboFpCsucfQ1eDIwK6MXd4Tkpxgwmvs/kevoCr7NLjEQMEkp/kstR6d/LeqlGVbFBWButPJo3+o5EuFKGcXx+KhYQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAJUSURBVEjHlZZpQ9pAEIZHI3cJUs5wBgJ4Yo+UYqFYpFos1latbam9wfP9/z+ggSC7CYTAfMnyzpPNzu7sDEQmW1oWVhxOwOlYEZaXaKa53B4YzON2WcNen0Y88ouB1WBwNSD6H2s/fV6LF0JhIByJ8lI0MtBCU+BYHJASSbOcTEhAPGaWU2lAiNG0eQQgnTJqmSzknFVMORnZDC/ks1AK1htWVJDNc98rQVmbtcFrCkpspXHIBZppBRnxh/E6sEE2tgGs6yNXGIIdTSQgrJ+XF9KmPb4pwTucfAsJe5ooga3B9NsoJ+fBk2Vsaw8PIvPQRBF4iHYALquKT54+e66qLyqViqq+rO6+KjJfFNihGupMeS3DZD7uhtRRowb2mPAGE+Zm3j00qIl9JjR0pPWW4dyR7KNJCg6YcKgj79q7Y/yQeQ+g0BHaTKiOcKL3nRHeYd42jggIMuF4jBN9KA3HJ8wbBIw4m50+ftIDODbipzhjwvkD/vniy2gxX5n3DKfkQIAJowjPG85xqN+YNwAHnUCc2EjeuswraoE04GeCexL/zrwX2jFd8knwo2WmWz/5JLg0pVjwV/y3lmJqpfJH/Vvt/OtxBWaYYgsm8KLXQ7t84jy4qF8+6kGK2dMxCb3hYMHCQSEgZ0fngHGZ789T9PpsXWn7kprm4kvNLtgFB7KGhpC5gnxtRV/LuMoYpXxpVrMp5SfUvtbKxMlWJmqtrD9tnkGjLN/c8tLtTdmiUWrm6g3acJ214fqgjPVm9O07c5O/s4aHdl/rNvW/EM1u7d7s/Q/wxMOxltlThAAAAABJRU5ErkJggg==" width="46" height="46"/></svg>
+									</i>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+		</div>
 	</section>
-	<section class="row">
+	
+	<section class="container">
 		<div class="light-brown bottom-footer container">
 			<div class="col-md-3">
 				<a href="http://loja.agapemoda.com.br" target="_blank">

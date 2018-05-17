@@ -447,11 +447,7 @@ header {
 			}
 		}
 	}
-	.main-header {
-		.lupa-gold {
-			fill: #756B45;
-		}
-	}
+
 	@include mq($screen-md) {
 		&:hover {
 			.black-logo {
@@ -488,7 +484,15 @@ header {
 			display: flex;
 		}
 	}
-	.searchbox .busca input.fulltext-search-box{
-		color:#999 ;
+	.main-header {
+		@include mq ($screen-md) {
+			.lupa-gold {
+				fill: #fff;
+			}
+		}
+		.lupa-gold {
+			fill: #756B45;
+		}
 	}
+	
 }
