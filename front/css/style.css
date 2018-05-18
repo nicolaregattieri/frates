@@ -1004,6 +1004,180 @@ footer {
 	display: flex;
 	-ms-flex-direction: column;
 	    flex-direction: column;
+	color: #766A47;
+	font-size: 1.2em;
+}
+
+footer * > a {
+	text-decoration: none;
+	color: #766A47;
+}
+
+.section-footer--bg-grey {
+	background: #E5E4E5;
+}
+
+.section-footer__direction {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+}
+
+.section-footer__direction--space-between {
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+.section-footer__column {
+	-ms-flex-direction: column;
+	    flex-direction: column;
+}
+
+.section-footer__tlt {
+	color: #766A47;
+	margin-bottom: 15px;
+}
+
+.section-footer--right {
+	-ms-flex: 1;
+	    flex: 1;
+}
+
+.top-footer {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.top-footer__ajuda {
+	text-align: center;
+	height: 100%;
+	font-size: 0.9em;
+}
+
+.top-footer__ajuda__ul-column {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+}
+
+.top-footer__ajuda__ul-column li {
+	margin-bottom: 15px;
+}
+
+.top-footer__ajuda__ul-column a {
+	text-decoration: none;
+}
+
+.top-footer__compra-segura {
+	text-align: center;
+}
+
+.top-footer__compra-segura__img img:first-child {
+	width: 90px;
+	height: auto;
+}
+
+.top-footer__compra-segura__img img:nth-child(2) {
+	width: 90px;
+	height: auto;
+}
+
+.top-footer__novidades {
+	width: 100%;
+	margin-bottom: 40px;
+	-ms-flex-direction: row;
+	    flex-direction: row;
+	text-align: center;
+}
+
+.top-footer__novidades .form-newsletter {
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	text-align: center;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+	margin-top: 33px;
+}
+
+.top-footer__novidades .form-newsletter .newsletter-button-ok {
+	width: 30%;
+	margin: 5% auto;
+	background-color: #766A47;
+	padding: 10px 35px;
+	font-size: .9em;
+	color: #fff;
+}
+
+.top-footer__novidades .form-newsletter input {
+	margin-bottom: 20px;
+	width: 80%;
+	outline: none;
+	border: none;
+	font-size: .9em;
+	font-weight: 300;
+	font-style: italic;
+	background: transparent;
+	border-bottom: 1px solid #766A47;
+}
+
+.top-footer__novidades .form-newsletter input:focus {
+	outline: none;
+}
+
+.top-footer__follow {
+	text-align: center;
+}
+
+.top-footer__follow nav {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.top-footer__follow__ul-row {
+	display: -ms-flexbox;
+	display: flex;
+	width: 220px;
+}
+
+.top-footer__follow__ul-row--space {
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.top-footer__revendedor {
+	text-align: center;
+}
+
+.top-footer__compra {
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.top-footer--half {
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex: 1;
+	    flex: 1;
+}
+
+.top-footer--half:nth-child(2) {
+	margin-right: 0;
+}
+
+.top-footer--left {
+	-ms-flex: 1;
+	    flex: 1;
+}
+
+.top-footer .divisor {
+	margin-bottom: 30px;
+	border-bottom: #766A47 solid 1px;
 }
 
 /* ==========================================================================
@@ -4418,11 +4592,11 @@ body.account .slider .address-display-block {
 .slick-prev {
 	-ms-transform: rotate(180deg);
 	    transform: rotate(180deg);
-	left: 0;
+	left: 15px;
 }
 
 .slick-next {
-	right: 0px;
+	right: 15px;
 }
 
 .slick-disabled {
@@ -5234,6 +5408,68 @@ header .main-header .lupa-gold {
 	fill: #fff;
 }
 
+.section-footer__direction {
+	-ms-flex-direction: row;
+	    flex-direction: row;
+}
+
+.top-footer__ajuda {
+	text-align: left;
+}
+
+.top-footer__compra-segura {
+	text-align: left;
+}
+
+.top-footer__novidades {
+	text-align: left;
+}
+
+.top-footer__novidades .form-newsletter {
+	-ms-flex-direction: row;
+	    flex-direction: row;
+	text-align: left;
+}
+
+.top-footer__novidades .form-newsletter .newsletter-button-ok {
+	width: auto;
+	margin: 0;
+}
+
+.top-footer__novidades .form-newsletter input {
+	margin-right: 5%;
+	margin-bottom: 0;
+}
+
+.top-footer__follow {
+	text-align: left;
+}
+
+.top-footer__follow nav {
+	display: block;
+}
+
+.top-footer__revendedor {
+	text-align: left;
+}
+
+.top-footer__compra {
+	text-align: left;
+}
+
+.top-footer--half {
+	-ms-flex-direction: row;
+	    flex-direction: row;
+	width: 50%;
+	margin-right: 5%;
+	padding: 30px 0;
+}
+
+.top-footer .divisor {
+	border-bottom: 0;
+	margin-bottom: inherit;
+}
+
 .prateleira li {
 	width: 32%;
 }
@@ -5485,11 +5721,11 @@ body.favoritos main ul#favList li {
 }
 
 .slick-prev {
-	left: 0;
+	left: 15px;
 }
 
 .slick-next {
-	right: 0;
+	right: 15px;
 }
 
 }

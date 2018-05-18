@@ -168,18 +168,18 @@ $slick-opacity-not-active: .25 !default;
 
 .slick-prev {
     @include rotate(180deg);
-    left: 0;
+    left: 15px;
 
     @include mq($screen-md){
-      left: 0;
+      left: 15px;
     }
 }
 
 .slick-next {
-    right: 0px;
+    right: 15px;
 
     @include mq($screen-md){
-      right: 0;
+      right: 15px;
     }
 }
 

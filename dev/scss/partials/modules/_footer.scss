@@ -2,7 +2,195 @@
    Footer
    ========================================================================== */
 
-footer{
-	display: flex;
-	flex-direction: column;
+footer {
+    display: flex;
+    flex-direction: column;
+    color: #766A47;
+    font-size: 1.2em;
+    *>a {
+        text-decoration: none;
+        color: #766A47;
+    }
+}
+
+.section-footer {
+    &--bg-grey {
+        background: #E5E4E5;
+    }
+    &__direction{
+        display: flex;
+        flex-direction: column;
+        @include mq($screen-md){
+            flex-direction: row;
+        }
+        
+        &--space-between {
+            justify-content: space-between;
+        }
+    }
+    &__column {
+        flex-direction: column;
+    }
+    &__tlt {
+        color: #766A47;
+        margin-bottom: 15px;
+    }
+    &--right {
+        flex: 1;
+    }
+}
+
+.top-footer {
+    display: flex;
+    &__ajuda {
+        text-align: center;
+        height: 100%;
+        font-size: 0.9em;
+        @include mq($screen-md) {
+            text-align: left;
+        }
+        &__ul-column {
+            display: flex;
+            flex-direction: column;
+            li {
+                margin-bottom: 15px;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    &__compra-segura {
+        text-align: center;
+        @include mq($screen-md){
+            text-align: left;
+        }
+        &__img {
+            img {
+                &:first-child {
+                    width: 90px;
+                    height: auto;
+                }
+                &:nth-child(2) {
+                    width: 90px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    &__novidades {
+        width: 100%;
+        margin-bottom: 40px;
+        flex-direction: row;
+        text-align: center;
+        @include mq ($screen-md) {
+            text-align: left;
+        }
+        .form-newsletter {
+            flex-direction: column;
+            text-align: center;
+            @include mq ($screen-md) {
+                flex-direction: row;
+                text-align: left;
+            }
+            display: flex;
+            justify-content: space-between;
+            margin-top: 33px;
+            .newsletter-button-ok {
+                width: 30%;
+                margin: 5% auto;
+
+                @include mq($screen-md) {
+                    width: auto;
+                    margin: 0;
+                }
+                background-color: #766A47;
+                padding: 10px 35px;
+                font-size: .9em;
+                color: #fff;
+            }
+            input {
+                margin-bottom: 20px;
+                width: 80%;
+                outline: none;
+                border: none;
+                font-size: .9em;
+                font-weight: 300;
+                font-style: italic;
+                background: transparent;
+                border-bottom: 1px solid #766A47;
+                &:focus{
+                    outline: none;
+                }
+                @include mq($screen-md) {
+                    margin-right: 5%;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+    &__follow {
+        text-align: center;
+        @include mq($screen-md) {
+            text-align: left;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            @include mq($screen-md) {
+               display: block;
+            }
+        }
+        &__ul-row {
+            display: flex;
+            width: 220px;
+            &--space {
+                justify-content: space-around;
+            }
+        }
+    }
+
+    &__revendedor{
+        text-align: center;
+        @include mq($screen-md) {
+            text-align: left;
+        }
+    }
+
+    &__compra{
+        margin-bottom: $mg-btm-footer;
+        text-align: center;
+        @include mq($screen-md){
+            text-align: left;
+        }
+    }
+
+    &--half {
+        flex-direction: column;
+        flex: 1;
+        @include mq($screen-md) {
+            flex-direction: row;
+            width: 50%;
+            margin-right: 5%;
+            padding: 30px 0;
+
+        }
+       
+        
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+    &--left {
+        flex: 1;
+    }
+    .divisor{
+        margin-bottom: 30px;
+        border-bottom: #766A47 solid 1px;
+        @include mq($screen-md) {
+            border-bottom: 0;
+            margin-bottom: inherit;
+        }
+    }
 }
