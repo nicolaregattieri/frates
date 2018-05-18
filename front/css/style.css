@@ -1100,7 +1100,6 @@ footer * > a {
 	display: flex;
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
-	margin-top: 33px;
 }
 
 .top-footer__novidades .form-newsletter .newsletter-button-ok {
@@ -1155,7 +1154,6 @@ footer * > a {
 }
 
 .top-footer__compra {
-	margin-bottom: 25px;
 	text-align: center;
 }
 
@@ -1176,7 +1174,7 @@ footer * > a {
 }
 
 .top-footer .divisor {
-	margin-bottom: 30px;
+	padding: 35px 0;
 	border-bottom: #766A47 solid 1px;
 }
 
@@ -5419,6 +5417,7 @@ header .main-header .lupa-gold {
 
 .top-footer__compra-segura {
 	text-align: left;
+	margin-top: 20px;
 }
 
 .top-footer__novidades {
@@ -5429,6 +5428,7 @@ header .main-header .lupa-gold {
 	-ms-flex-direction: row;
 	    flex-direction: row;
 	text-align: left;
+	margin-top: 33px;
 }
 
 .top-footer__novidades .form-newsletter .newsletter-button-ok {
@@ -5467,7 +5467,7 @@ header .main-header .lupa-gold {
 
 .top-footer .divisor {
 	border-bottom: 0;
-	margin-bottom: inherit;
+	padding: 0;
 }
 
 .prateleira li {

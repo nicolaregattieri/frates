@@ -64,6 +64,7 @@ footer {
         text-align: center;
         @include mq($screen-md){
             text-align: left;
+            margin-top: 20px;
         }
         &__img {
             img {
@@ -92,10 +93,11 @@ footer {
             @include mq ($screen-md) {
                 flex-direction: row;
                 text-align: left;
+                margin-top: 33px;
             }
             display: flex;
             justify-content: space-between;
-            margin-top: 33px;
+           
             .newsletter-button-ok {
                 width: 30%;
                 margin: 5% auto;
@@ -159,10 +161,10 @@ footer {
     }
 
     &__compra{
-        margin-bottom: $mg-btm-footer;
         text-align: center;
         @include mq($screen-md){
             text-align: left;
+
         }
     }
 
@@ -186,11 +188,11 @@ footer {
         flex: 1;
     }
     .divisor{
-        margin-bottom: 30px;
+        padding: 35px 0;
         border-bottom: #766A47 solid 1px;
         @include mq($screen-md) {
             border-bottom: 0;
-            margin-bottom: inherit;
+            padding: 0;
         }
     }
 }
