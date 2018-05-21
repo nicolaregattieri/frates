@@ -81,11 +81,12 @@ footer {
     }
     &__novidades {
         width: 100%;
-        margin-bottom: 40px;
         flex-direction: row;
         text-align: center;
         @include mq ($screen-md) {
             text-align: left;
+            margin-bottom: 40px;
+
         }
         .form-newsletter {
             flex-direction: column;
@@ -187,12 +188,25 @@ footer {
     &--left {
         flex: 1;
     }
-    .divisor{
-        padding: 35px 0;
-        border-bottom: #766A47 solid 1px;
-        @include mq($screen-md) {
-            border-bottom: 0;
-            padding: 0;
-        }
+
+}
+.divisor{
+  padding: 35px 0;
+  border-bottom: #766A47 solid 1px;
+  @include mq($screen-md) {
+      border-bottom: 0;
+      padding: 0;
+  }
+}
+
+.svg-bigger {
+  ul li a svg{
+    height: 84px;
+    width: auto;
+    @include mq($screen-md){
+      height: 46px;
+      width: auto;
     }
+  }
+ 
 }

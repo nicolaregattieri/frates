@@ -84,12 +84,13 @@ header {
 	}
 	.main-header {
 		@include mq($screen-md) {
-			padding: 60px;
+      padding: 60px;
+      height: 85px;
 		}
 		display: flex;
 		align-items: center;
 		overflow: visible;
-		height: 85px;
+	
 		.logo-mobile {
 			display: block;
 			padding-left: 20%;
