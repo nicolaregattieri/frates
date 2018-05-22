@@ -3,10 +3,33 @@
    ========================================================================== */
 
 .prateleira {
+	article {
+		display: flex;
+		flex-direction: column;
+		margin-top: -20px;
+		position: relative;
+		text-align: center;
+		font-size: .8em;
+		
+		@include mq ($screen-md) {
+			display: block;
+			margin-top: 0;
+			font-size: .9em;
+		}
+		h4{
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: .5em;
+		}
+		.bestPrice {
+			font-weight: 600;
+		}
+	}
 	padding: 0 5.5%;
 	margin: 40px 0;
 	a {
 		text-decoration: none;
+		color: #092234;
 	}
 	>h2 {
 		display: none;
@@ -16,44 +39,53 @@
 		top: 40%;
 		@include mq($screen-md) {
 			svg {
-			  width: 30px;
-			  height: 30px;
-			  fill: #092234;
+				width: 30px;
+				height: 30px;
+				fill: #092234;
 			}
-		  }
+		}
 	}
 	.slick-next {
 		right: -5.5%;
 		top: 40%;
 		@include mq($screen-md) {
 			svg {
-			  width: 30px;
-			  height: 30px;
-			  fill: #092234;
+				width: 30px;
+				height: 30px;
+				fill: #092234;
 			}
-		  }
+		}
 	}
-
-	.category_page_title{
+	.category_page_title {
 		padding: 0 20px;
 		position: relative;
+		&:hover {
+			.btn-buy{
+				top: -70px;
+				opacity: 1;
+			}
+		}
 	}
-
 	.btn-buy {
+		order: -1;
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		position: absolute;
-		top: 71%;
 		background: rgba(255, 254, 254, 0.801);
-		left: 8%;
 		height: 60px;
-		width: 84%;
+		width: 100%;
+		@include mq($screen-md) {
+			position: absolute;
+			top: -8px;
+			left: 0;
+			opacity: 0;
+			transition: all ease-in-out .3s;
+		}
 		i {
 			margin-right: 5px;
 			svg {
-			width: 20px;
-			height: 20px;
+				width: 20px;
+				height: 20px;
 			}
 		}
 	}
@@ -65,5 +97,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 85%;
+		@include mq ($screen-md){
+
+		}
 	}
 }

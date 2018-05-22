@@ -39,9 +39,9 @@ header {
 			}
 			ul {
 				li {
-					a.first-menu {
-						color: #756B45;
-					}
+					// a.first-menu {
+					// 	color: #756B45;
+					// }
 				}
 			}
 		}
@@ -56,6 +56,9 @@ header {
 
 		a.first-menu {
 			color: #776c46;
+			&:hover{
+				border-bottom: #756B45 solid 2px;
+			}
 		}
 
 		.top-box {

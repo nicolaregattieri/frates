@@ -118,6 +118,7 @@ footer {
            
             .newsletter-button-ok {
                 margin: 5% auto;
+                border: none;
 
                 @include mq($screen-md) {
                     width: auto;
