@@ -240,7 +240,7 @@ $(function() {
         effect: "overlay",
         cartButton: $(".sta-cart")
     })
-    $('header #mini-cart, .minicart-mbl').click(function(){
+    $('header #mini-cart, header .minicart-mbl').click(function(){
     	$('.sta-cart-overlay').show();
     	$('.sta-cart-container').animate({right: 0},300);
     });

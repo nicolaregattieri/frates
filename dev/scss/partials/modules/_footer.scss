@@ -17,6 +17,16 @@ footer {
     &--bg-grey {
         background: #E5E4E5;
     }
+
+    &--bg-gold {
+        background: #766A47;
+    }
+
+    &--white-text {
+        color: #fff;
+    }
+
+
     &__direction{
         display: flex;
         flex-direction: column;
@@ -34,11 +44,18 @@ footer {
     &__tlt {
         color: #766A47;
         margin-bottom: 15px;
+        font-size: 1em;
+        font-weight: 400;
+        @include mq($screen-md){
+            font-weight: 600;
+        }
     }
     &--right {
         flex: 1;
     }
 }
+
+// TOP FOOTER
 
 .top-footer {
     display: flex;
@@ -100,7 +117,6 @@ footer {
             justify-content: space-between;
            
             .newsletter-button-ok {
-                width: 30%;
                 margin: 5% auto;
 
                 @include mq($screen-md) {
@@ -147,9 +163,12 @@ footer {
         }
         &__ul-row {
             display: flex;
-            width: 220px;
+            width: 90%;
             &--space {
                 justify-content: space-around;
+            }
+            @include mq($screen-md) {
+                width: 220px;
             }
         }
     }
@@ -190,19 +209,61 @@ footer {
     }
 
 }
+
+
+// BOTTOM FOOTER 
+.bottom-footer {
+    font-weight: 300;
+    font-size: .8em;
+    text-align: center;
+    @include mq($screen-md){
+        padding: 20px;
+        text-align: left;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+    .copyright {
+        @include mq($screen-md) {
+            font-size: .7em;
+        }
+    }
+    
+}
+
+
+
+
+
+// COMMON
+
 .divisor{
   padding: 35px 0;
-  border-bottom: #766A47 solid 1px;
+  border-bottom: rgba(118, 106, 71, 0.712) solid 1px;
+  width: 95%;
+  margin: 0 auto;
   @include mq($screen-md) {
       border-bottom: 0;
       padding: 0;
   }
+  &--white{
+    border-bottom: #E5E4E5 solid 1px;
+  }
+  &--no-border{
+    padding: 35px 0;
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 0;
+  }
 }
 
 .svg-bigger {
-  ul li a svg{
-    height: 84px;
+  i svg{
+    height: 60px;
     width: auto;
+    fill: #766A47;
     @include mq($screen-md){
       height: 46px;
       width: auto;

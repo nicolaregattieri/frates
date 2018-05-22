@@ -15,10 +15,17 @@
     <vtex:template id="eCore-FRATES-HEADER" />
 
     <main>
-        <section class="banners-top">
+        <section class="banners-top hidden-xs hidden-sm">
             <div class="slider slide-wrap">
                 <div class="slide">
-                    <vtex:contentPlaceHolder id="banners-slide" />
+                    <vtex:contentPlaceHolder class="banner-web" id="banners-slide" />
+                </div>
+            </div>
+        </section>
+        <section class="banners-top hidden-md hidden-lg">
+            <div class="slider slide-wrap">
+                <div class="slide">
+                    <vtex:contentPlaceHolder class="banner-mobile" id="banners-slide-mobile" />
                 </div>
             </div>
         </section>
@@ -47,8 +54,13 @@
         </section>
 
         <section class="row">
-            <div class="container estilo-box">
+            <div class="container estilo-box hidden-xs hidden-sm">
                 <vtex:contentPlaceHolder id="banner-static" />
+            </div>
+        </section>
+        <section class="row hidden-md hidden-lg">
+            <div class="container estilo-box">
+                <vtex:contentPlaceHolder id="banner-mobile-static" />
             </div>
         </section>
 

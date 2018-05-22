@@ -9,7 +9,7 @@ header {
 		left: 0;
 		width: 100%;
 		position: fixed;
-		min-height: 77px;
+		// min-height: 77px;
 		z-index: 999999999;
 		background-color: #fff;
 		animation: grow .7s;
@@ -19,6 +19,41 @@ header {
 		box-shadow: 0 0 50px rgba(#000, .4);
 		background-image: none;
 
+		.black-logo {
+			display: none;
+		}
+		.gold-logo {
+			display: block;
+		}
+		background: #fff;
+		.top-box {
+			background: #062134;
+		}
+		.main-header {
+			.lupa-gold {
+				fill: #756B45;
+			}
+			.container .searchbox .busca input.fulltext-search-box {
+				color: #756B45;
+				border-bottom: 1px solid #756B45;
+			}
+			ul {
+				li {
+					a.first-menu {
+						color: #756B45;
+					}
+				}
+			}
+		}
+
+
+
+		.menu-header {
+			*>a{
+				color: #776c46;
+			}
+		}
+
 		a.first-menu {
 			color: #776c46;
 		}
@@ -27,9 +62,6 @@ header {
 			display: none;
 		}
 		.main-header {
-			header .main-header .menu-header ul li.has-sub a.first-menu  {
-				color: red !important;
-			}
 			.logo {
 				.black-logo {
 					display: none;

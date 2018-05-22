@@ -115,7 +115,8 @@ module.exports = function(grunt) {
         src: [
           'front/js/animations.min.js',
           'front/js/mobile-detect.min.js',
-          'front/js/scripts.min.js'
+          'front/js/scripts.min.js',
+          'front/js/minicart.min.js'
         ],
         dest: 'front/frates.js'
       },

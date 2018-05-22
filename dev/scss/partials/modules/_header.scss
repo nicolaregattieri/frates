@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Header
-   ========================================================================== */
+Header
+========================================================================== */
 
 header {
 	@include mq($screen-md) {
@@ -82,22 +82,35 @@ header {
 		font-weight: lighter;
 		font-size: .9em;
 	}
+	
+	
+	// MAIN HEADER
+
 	.main-header {
-		@include mq($screen-md) {
-      padding: 60px;
-      height: 85px;
-		}
 		display: flex;
 		align-items: center;
 		overflow: visible;
-	
+		@include mq($screen-md) {
+			padding: 60px;
+			height: 85px;
+			.lupa-gold {
+				fill: #fff;
+			}
+		}
+		.lupa-gold {
+			fill: #756B45;
+		}
+
+		.mobile-container{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
 		.logo-mobile {
 			display: block;
-			padding-left: 20%;
-			padding-top: 1.1%;
-			svg image {
-				height: 77%;
-			}
+			padding-left: 10px;
+			padding-bottom: 5px;
 			@include mq($screen-md) {
 				display: none;
 				padding-left: 0;
@@ -342,7 +355,7 @@ header {
 			}
 			&.slideActive {
 				left: 0;
-				top: 80px;
+				// top: 80px;
 				opacity: 1;
 				background: #fff;
 				border-top: 4px solid #2e2b3e;
@@ -403,7 +416,10 @@ header {
 				}
 			}
 		}
+		
 	}
+
+
 	.flex-ul {
 		font-size: 0.9em;
 		font-weight: lighter;
@@ -448,7 +464,9 @@ header {
 			}
 		}
 	}
+	
 
+	// HEADER HOVER STATE
 	@include mq($screen-md) {
 		&:hover {
 			.black-logo {
@@ -485,14 +503,20 @@ header {
 			display: flex;
 		}
 	}
-	.main-header {
-		@include mq ($screen-md) {
-			.lupa-gold {
-				fill: #fff;
-			}
-		}
-		.lupa-gold {
-			fill: #756B45;
+
+	// MOBILE ARRANGEMENT
+	.left-side-header {
+		width: 25%;
+		padding: 0 15px;
+	}
+
+	.right-side-header {
+		width: 25%;
+		margin-right: 10px;
+		display: flex;
+		justify-content: space-between;
+		@include mq($screen-sm){
+			margin-right: 15px;
 		}
 	}
 	
