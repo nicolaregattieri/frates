@@ -2,6 +2,7 @@
 Header
 ========================================================================== */
 
+// HEADER E HOVER ON HEADER
 header {
 	@include mq($screen-md) {
 		background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -13,6 +14,8 @@ header {
 	position: relative;
 	width: 100%;
 	z-index: 9999;
+	
+	// TOP-BOX	
 	.top-box {
 		padding: 2px;
 		overflow: visible;
@@ -75,17 +78,68 @@ header {
 		}
 	}
 	.account-box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #fff;
+	
+		
+		a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			font-weight: lighter;
+			font-size: .9em;
+			text-decoration: none;
+		}
+	}
+	
+	// EDITANDO O HOVER DO TOP-BOX
+	.flex-ul {
+		font-size: 0.9em;
 		font-weight: lighter;
-		font-size: .9em;
+		li {
+			position: relative;
+			display: flex;
+			&:hover {
+				.tip {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					top: 105%;
+					left: 25%;
+					margin-left: -25%;
+					line-height: 1.4em;
+				}
+			}
+			.tip {
+				width: 250px;
+				height: auto;
+				background: #756B45;
+				position: relative;
+				z-index: 9999;
+				display: none;
+				border-radius: 20px;
+				transition: all 350ms;
+				&::after {
+					content: "";
+					position: absolute;
+					width: 0px;
+					height: 0px;
+					top: -10px;
+					left: 25%;
+					border-bottom: 10px solid #756B45;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+				}
+				p {
+					padding: 10px;
+				}
+			}
+		}
 	}
 	
 	
 	// MAIN HEADER
-
+	
 	.main-header {
 		display: flex;
 		align-items: center;
@@ -100,13 +154,13 @@ header {
 		.lupa-gold {
 			fill: #756B45;
 		}
-
+		
 		.mobile-container{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 		}
-
+		
 		.logo-mobile {
 			display: block;
 			padding-left: 10px;
@@ -148,17 +202,22 @@ header {
 			}
 			ul {
 				margin-right: 20px;
+
 				li {
 					@extend .transition;
 					margin: 0;
 					position: relative;
 					@include mq($screen-md) {
-						position: initial;
+						position: relative;
 						display: inline-block;
 						vertical-align: middle;
+						border-bottom: 3px solid transparent;
 						&:after {
 							content: "";
 							position: relative;
+						}
+						&:hover{
+							border-bottom: 3px solid #776c46;
 						}
 					}
 					a {
@@ -247,17 +306,17 @@ header {
 							overflow: hidden;
 							background: #f1f1f1;
 							pointer-events: all;
-							@include mq($screen-md) {
-								pointer-events: none;
-							}
 							a {
 								&:before {
 									margin-top: 9px;
 								}
 							}
 							@include mq($screen-md) {
+								top: 49.8px;
+								pointer-events: none;
 								top: 0;
-								left: -13%;
+								left: 50%;
+								margin-left: -125px;
 								z-index: -1;
 								height: auto;
 								margin-top: 0;
@@ -265,6 +324,7 @@ header {
 								background: #fff;
 								overflow: visible;
 								position: absolute;
+								width: 250px;
 								a {
 									margin-right: 0;
 									&:before {
@@ -345,7 +405,7 @@ header {
 							.submenu {
 								opacity: 1;
 								@include mq($screen-md) {
-									top: 65px;
+									top: 45px;
 									pointer-events: all;
 								}
 							}
@@ -417,54 +477,9 @@ header {
 		}
 		
 	}
-
-
-	.flex-ul {
-		font-size: 0.9em;
-		font-weight: lighter;
-		li {
-			position: relative;
-			display: flex;
-			&:hover {
-				.tip {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					position: absolute;
-					top: 105%;
-					left: 25%;
-					margin-left: -25%;
-					line-height: 1.4em;
-				}
-			}
-			.tip {
-				width: 250px;
-				height: auto;
-				background: #756B45;
-				position: relative;
-				z-index: 9999;
-				display: none;
-				border-radius: 20px;
-				transition: all 350ms;
-				&::after {
-					content: "";
-					position: absolute;
-					width: 0px;
-					height: 0px;
-					top: -10px;
-					left: 25%;
-					border-bottom: 10px solid #756B45;
-					border-left: 10px solid transparent;
-					border-right: 10px solid transparent;
-				}
-				p {
-					padding: 10px;
-				}
-			}
-		}
-	}
 	
-
+	
+	
 	// HEADER HOVER STATE
 	@include mq($screen-md) {
 		&:hover {
@@ -502,13 +517,13 @@ header {
 			display: flex;
 		}
 	}
-
+	
 	// MOBILE ARRANGEMENT
 	.left-side-header {
 		width: 25%;
 		padding: 0 15px;
 	}
-
+	
 	.right-side-header {
 		width: 25%;
 		margin-right: 10px;
@@ -520,3 +535,47 @@ header {
 	}
 	
 }
+
+// HEADER PAGINAS INTERNAS
+
+body.internas {
+	main {
+		margin-top: 40px;
+	}
+	header {
+		position: sticky;
+		border-bottom: 1.2px solid #c5c5c5;
+
+		.black-logo {
+			display: none;
+		}
+		.gold-logo {
+			display: block;
+		}
+		background: #fff;
+		.top-box {
+			background: #062134;
+		}
+		.main-header{
+			a.first-menu{
+				color: #756B45;
+			}
+			input.fulltext-search-box {
+				color: #756B45;
+				border-bottom: 1px solid #756B45;
+				font-weight: 300;
+				
+			}
+			.search-button {
+				svg path {
+					fill: #756B45;
+				}
+				
+			}
+		}
+	}
+	
+	
+}
+
+

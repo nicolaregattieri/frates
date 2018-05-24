@@ -3,6 +3,7 @@
    ========================================================================== */
 
 footer {
+    clear: both;
     display: flex;
     flex-direction: column;
     color: #766A47;
@@ -32,6 +33,7 @@ footer {
         flex-direction: column;
         @include mq($screen-md){
             flex-direction: row;
+            padding: 0 20px;
         }
         
         &--space-between {

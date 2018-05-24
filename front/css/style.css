@@ -287,7 +287,7 @@ main {
 .container {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1170px;
+	max-width: 1330px;
 }
 
 /* ==========================================================================
@@ -653,7 +653,7 @@ header .top-box .container .row .flex .right {
 	margin-left: 30px;
 }
 
-header .account-box {
+header .account-box a {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: center;
@@ -663,6 +663,59 @@ header .account-box {
 	color: #fff;
 	font-weight: lighter;
 	font-size: .9em;
+	text-decoration: none;
+}
+
+header .flex-ul {
+	font-size: 0.9em;
+	font-weight: lighter;
+}
+
+header .flex-ul li {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+header .flex-ul li:hover .tip {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+	position: absolute;
+	top: 105%;
+	left: 25%;
+	margin-left: -25%;
+	line-height: 1.4em;
+}
+
+header .flex-ul li .tip {
+	width: 250px;
+	height: auto;
+	background: #756B45;
+	position: relative;
+	z-index: 9999;
+	display: none;
+	border-radius: 20px;
+	transition: all 350ms;
+}
+
+header .flex-ul li .tip::after {
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	top: -10px;
+	left: 25%;
+	border-bottom: 10px solid #756B45;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+header .flex-ul li .tip p {
+	padding: 10px;
 }
 
 header .main-header {
@@ -942,58 +995,6 @@ header .main-header .menu-header.slideActive ul li.has-sub .submenu ul li a {
 	width: 100%;
 }
 
-header .flex-ul {
-	font-size: 0.9em;
-	font-weight: lighter;
-}
-
-header .flex-ul li {
-	position: relative;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-header .flex-ul li:hover .tip {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-	    justify-content: center;
-	-ms-flex-align: center;
-	    align-items: center;
-	position: absolute;
-	top: 105%;
-	left: 25%;
-	margin-left: -25%;
-	line-height: 1.4em;
-}
-
-header .flex-ul li .tip {
-	width: 250px;
-	height: auto;
-	background: #756B45;
-	position: relative;
-	z-index: 9999;
-	display: none;
-	border-radius: 20px;
-	transition: all 350ms;
-}
-
-header .flex-ul li .tip::after {
-	content: "";
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	top: -10px;
-	left: 25%;
-	border-bottom: 10px solid #756B45;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-}
-
-header .flex-ul li .tip p {
-	padding: 10px;
-}
-
 header .left-side-header {
 	width: 25%;
 	padding: 0 15px;
@@ -1008,11 +1009,49 @@ header .right-side-header {
 	    justify-content: space-between;
 }
 
+body.internas main {
+	margin-top: 40px;
+}
+
+body.internas header {
+	position: -webkit-sticky;
+	position: sticky;
+	border-bottom: 1.2px solid #c5c5c5;
+	background: #fff;
+}
+
+body.internas header .black-logo {
+	display: none;
+}
+
+body.internas header .gold-logo {
+	display: block;
+}
+
+body.internas header .top-box {
+	background: #062134;
+}
+
+body.internas header .main-header a.first-menu {
+	color: #756B45;
+}
+
+body.internas header .main-header input.fulltext-search-box {
+	color: #756B45;
+	border-bottom: 1px solid #756B45;
+	font-weight: 300;
+}
+
+body.internas header .main-header .search-button svg path {
+	fill: #756B45;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
 
 footer {
+	clear: both;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: column;
@@ -1442,6 +1481,7 @@ footer * > a {
 	color: #756B45;
 	background-color: transparent;
 	font-size: .9em;
+	font-weight: 300;
 }
 
 .searchbox .busca input.btn-buscar {
@@ -1674,13 +1714,14 @@ footer * > a {
 	width: 100%;
 	height: 80px;
 	display: table;
-	background: #f0f0f0;
+	background: #756B46;
 	color: #000;
 }
 
 .sta-cart-title button {
 	position: absolute;
-	float: left;
+	right: 100px;
+	float: right;
 	display: block;
 	width: 40px;
 	height: 30px;
@@ -1690,16 +1731,17 @@ footer * > a {
 	cursor: pointer;
 	border: 0;
 	z-index: 99999;
+	fill: #fff;
 }
 
 .sta-cart-title h3 {
 	text-transform: uppercase;
-	color: #000;
+	color: #fff;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	line-height: 80px;
 	font-size: 20px;
-	font-weight: bolder;
+	font-weight: 300;
 }
 
 .sta-cart-items {
@@ -1710,7 +1752,7 @@ footer * > a {
 
 .sta-cart-resume {
 	height: 141px;
-	background: #000;
+	background: #756B46;
 }
 
 .sta-cart-title .qtd-cart {
@@ -1823,7 +1865,7 @@ footer * > a {
 }
 
 .sta-cart-total {
-	background-color: #000;
+	background-color: #756B46;
 	color: #fff;
 	display: block;
 	width: 100%;
@@ -2028,6 +2070,10 @@ header.menu-persistente .main-header .lupa-gold {
 header.menu-persistente .main-header .container .searchbox .busca input.fulltext-search-box {
 	color: #756B45;
 	border-bottom: 1px solid #756B45;
+}
+
+header.menu-persistente .main-header ul li a.first-menu {
+	color: #756B45;
 }
 
 header.menu-persistente .menu-header * > a {
@@ -2372,6 +2418,44 @@ body.modal-active .modal {
 	z-index: 2147483647;
 	overflow: auto;
 	box-shadow: 0px 0px 11px -2px rgba(191, 191, 191, 0.75);
+}
+
+.line {
+	font-size: 1.1em;
+	text-align: center;
+	color: #001E2F;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	position: relative;
+	text-align: center;
+}
+
+.line span {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	padding: 0 2px;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.line span::before,
+.line span::after {
+	content: "";
+	max-width: 100%;
+	height: 2px;
+	background: #c5c5c5;
+	width: 33.5%;
+}
+
+.line span::before {
+	margin-right: 23px;
+}
+
+.line span::after {
+	margin-left: 23px;
 }
 
 /* ==========================================================================
@@ -3740,7 +3824,7 @@ body.account #profile-submit {
 }
 
 body.account main {
-	background-color: #f0f0f0;
+	background-color: #fff;
 	overflow: hidden;
 	padding: 5% 0 15%;
 }
@@ -3754,18 +3838,10 @@ body.account main .container .row {
 	margin: 0;
 }
 
-body.account main .container h3 {
-	font-size: 20px;
-	color: #333;
-	font-weight: bolder;
-	margin: 20px 0;
-	text-transform: uppercase;
-}
-
 body.account .profile-detail-display,
 body.account .address-display-block {
 	font-size: 13px;
-	background-color: #fff;
+	background-color: #F9F9F9;
 	padding: 20px 40px;
 	margin-top: 20px;
 }
@@ -3777,11 +3853,14 @@ body.account .address-display-block h5 {
 
 body.account .profile-detail-display h4,
 body.account .address-display-block h4 {
-	font-size: 18px;
 	color: #333;
-	font-weight: 900;
+	font-weight: 400;
 	margin: 40px 0 20px;
 	text-transform: uppercase;
+	font-size: 2em;
+	padding-bottom: 20px;
+	border-bottom: 1.5px solid #c5c5c5;
+	text-align: center;
 }
 
 body.account .profile-detail-display h5,
@@ -3928,7 +4007,7 @@ body.account .modal-body .profile-detail-form-personal-data h5 {
 }
 
 body.account .modal-body h5 {
-	display: none;
+	display: block;
 }
 
 body.account .modal-body .control-group {
@@ -4072,183 +4151,45 @@ body.500 main span {
    ========================================================================== */
 
 body.institucional main {
-	overflow: hidden;
-	margin-top: 4%;
-}
-
-body.institucional main .content {
-	font-size: 14px;
-	margin-bottom: 100px;
-	color: #272123;
-	padding: 0 20px;
-	line-height: 22px;
-	margin-top: 20px;
-}
-
-body.institucional main .content p {
-	font-size: 16px;
-	text-decoration: none;
-	color: #000;
-	-webkit-text-decoration-line: none;
-	        text-decoration-line: none;
-	line-height: 20px;
-	font-weight: 500;
-	margin-bottom: 20px;
-	display: block;
-}
-
-body.institucional main .content img {
-	margin-top: 30px;
-}
-
-body.institucional main .content h2 {
-	font-size: 28px;
-	margin: 20px 0;
-	text-transform: uppercase;
-}
-
-body.institucional main .content h3,
-body.institucional main .content h4 {
-	font-size: 18px;
-	font-weight: 700;
-	margin: 25px 0;
-	text-transform: uppercase;
-}
-
-body.institucional main .content span {
-	font-size: 13px;
-	line-height: 17px;
-	color: #000;
-}
-
-body.institucional main .content div#contactForm .cl_first_name,
-body.institucional main .content div#contactForm .cl_email,
-body.institucional main .content div#contactForm .cl_home_phone,
-body.institucional main .content div#contactForm .co_type,
-body.institucional main .content div#contactForm .cl_assunto {
-	font-size: 13px;
-	width: 100%;
-	margin: 10px auto;
-}
-
-body.institucional main .content div#contactForm .cl_first_name input,
-body.institucional main .content div#contactForm .cl_email input,
-body.institucional main .content div#contactForm .cl_home_phone input,
-body.institucional main .content div#contactForm .co_type input,
-body.institucional main .content div#contactForm .cl_assunto input {
-	display: block;
-	width: 100%;
-	height: 27px;
-}
-
-body.institucional main .content div#contactForm .cl_first_name label,
-body.institucional main .content div#contactForm .cl_email label,
-body.institucional main .content div#contactForm .cl_home_phone label,
-body.institucional main .content div#contactForm .co_type label,
-body.institucional main .content div#contactForm .cl_assunto label {
-	margin-bottom: 5px;
-	display: block;
-}
-
-body.institucional main .content div#contactForm select#co_type {
-	width: 100%;
-	height: 30px;
-}
-
-body.institucional main .content div#contactForm .co_description {
-	font-size: 15px;
-	margin-top: 25px;
-}
-
-body.institucional main .content div#contactForm .co_description textarea {
-	width: 100%;
-	height: 80px;
-	display: block;
-}
-
-body.institucional main .content div#contactForm .co_description label {
-	margin-bottom: 5px;
-	display: block;
-}
-
-body.institucional main .content div#contactForm input#commit {
-	font-size: 16px;
-	margin: 10px 0;
-	width: 100px;
-	background-color: #272123;
-	border: none;
-	color: #fff;
-	text-transform: uppercase;
-	padding: 10px 0;
-	text-align: center;
-	font-weight: bolder;
-	cursor: pointer;
-}
-
-body.institucional main ul {
-	display: block;
-	margin-bottom: 20px;
+	padding: 5% 0 15%;
 	overflow: hidden;
 }
 
-body.institucional main ul li {
-	font-size: 16px;
-	list-style-type: none;
-}
-
-body.institucional main img {
-	margin-bottom: 30px;
-}
-
-body.institucional .franqueado {
-	display: none;
+body.institucional .institucional {
 	margin-bottom: 40px;
 }
 
-body.institucional.seja-um-franqueado .franqueado {
-	display: block !important;
+body.institucional .institucional__img {
+	max-width: 100%;
 }
 
-body.institucional.zip-nautica img {
-	width: 100%;
-	height: auto;
+body.institucional .institucional__sub-tlt {
+	font-size: 1.3em;
+	color: #776c46;
+	margin: 24px 0px;
 }
 
-body.institucional.zip-nautica .txt {
-	margin-top: 3%;
+body.institucional .institucional__sub-txt {
+	color: #757575;
+	font-weight: 200;
+	line-height: 1.5em;
 }
 
-body.institucional.lojas main {
-	margin-top: 0;
+body.institucional .sidebar-inst__item {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: 600;
+	color: #776c46;
+	margin-bottom: 24px;
 }
 
-body.institucional.lojas main .content {
-	margin-top: 0;
-	padding-top: 0;
+body.institucional .sidebar-inst__item a {
+	text-decoration: none;
+	color: #a7a7a7;
 }
 
-body.institucional.lojas main .banner-lojas img {
-	width: 100%;
-	height: auto;
-}
-
-body.institucional.lojas .sidebar-lojas {
-	overflow-y: scroll;
-	max-height: 390px;
-}
-
-body.institucional.lojas .sidebar-lojas h3 {
-	font-size: 15px;
-	margin: 20px 0 0;
-}
-
-body.institucional.lojas .sidebar-lojas p {
-	font-size: 14px;
-}
-
-body.institucional.lojas .map-lojas {
-	padding: 0;
-	margin: 0;
+body.institucional .sidebar-inst__item--selected a {
+	color: #776c46;
 }
 
 /* ==========================================================================
@@ -4450,6 +4391,14 @@ body.favoritos main ul#favList button.remove:hover:after {
 	text-decoration: none;
 }
 
+body.login main {
+	height: 33vh;
+}
+
+body.login header {
+	z-index: 999;
+}
+
 /* ==========================================================================
    Slick
    ========================================================================== */
@@ -4597,7 +4546,7 @@ body.account .slider .address-display-block {
 .slick-next {
 	display: none;
 	font-size: 0;
-	padding: 15px;
+	padding: 10px;
 	line-height: 0;
 	cursor: pointer;
 	color: transparent;
@@ -4700,6 +4649,7 @@ html {
 
 body.account .modal form {
 	margin-left: -195px;
+	margin-top: 200px;
 }
 
 }
@@ -5358,9 +5308,10 @@ header .main-header .menu-header {
 }
 
 header .main-header .menu-header ul li {
-	position: initial;
+	position: relative;
 	display: inline-block;
 	vertical-align: middle;
+	border-bottom: 3px solid transparent;
 }
 
 header .main-header .menu-header ul li:after {
@@ -5368,13 +5319,16 @@ header .main-header .menu-header ul li:after {
 	position: relative;
 }
 
-header .main-header .menu-header ul li.has-sub .submenu {
-	pointer-events: none;
+header .main-header .menu-header ul li:hover {
+	border-bottom: 3px solid #776c46;
 }
 
 header .main-header .menu-header ul li.has-sub .submenu {
+	top: 49.8px;
+	pointer-events: none;
 	top: 0;
-	left: -13%;
+	left: 50%;
+	margin-left: -125px;
 	z-index: -1;
 	height: auto;
 	margin-top: 0;
@@ -5383,6 +5337,7 @@ header .main-header .menu-header ul li.has-sub .submenu {
 	background: #fff;
 	overflow: visible;
 	position: absolute;
+	width: 250px;
 }
 
 header .main-header .menu-header ul li.has-sub .submenu a {
@@ -5399,7 +5354,7 @@ header .main-header .menu-header ul li.has-sub .submenu .banner-submenu {
 }
 
 header .main-header .menu-header ul li.has-sub:hover .submenu {
-	top: 65px;
+	top: 45px;
 	pointer-events: all;
 }
 
@@ -5444,6 +5399,7 @@ header .row {
 .section-footer__direction {
 	-ms-flex-direction: row;
 	    flex-direction: row;
+	padding: 0 20px;
 }
 
 .section-footer__tlt {
@@ -5602,8 +5558,13 @@ header .row {
 	margin-left: 268px;
 }
 
-body.home .tlt-shelf {
+.line {
 	font-size: 2em;
+	margin-bottom: 40px;
+}
+
+body.home .tlt-shelf {
+	font-size: 2.6em;
 	margin-top: 60px;
 }
 
@@ -5704,86 +5665,9 @@ body.orders main .container,
 	padding: 0;
 }
 
-body.institucional main .content {
-	padding: 0;
-}
-
-body.institucional main .content div#contactForm form#co_form .cl_first_name,
-body.institucional main .content div#contactForm form#co_form .cl_email,
-body.institucional main .content div#contactForm form#co_form .cl_home_phone {
-	font-size: 15px;
-	width: 27%;
-	display: inline-block;
-	margin-right: 25px;
-	margin-top: 20px;
-}
-
-body.institucional main .content div#contactForm form#co_form .cl_first_name input,
-body.institucional main .content div#contactForm form#co_form .cl_email input,
-body.institucional main .content div#contactForm form#co_form .cl_home_phone input {
-	display: block;
-	height: 30px;
-	width: 235px;
-}
-
-body.institucional main .content div#contactForm form#co_form .cl_first_name label,
-body.institucional main .content div#contactForm form#co_form .cl_email label,
-body.institucional main .content div#contactForm form#co_form .cl_home_phone label {
-	margin-bottom: 5px;
-	display: block;
-}
-
-body.institucional main .content div#contactForm form#co_form select#co_type {
-	height: 30px;
-	width: 235px;
-}
-
-body.institucional main .content div#contactForm form#co_form .co_type,
-body.institucional main .content div#contactForm form#co_form .cl_assunto {
-	font-size: 15px;
-	width: 27%;
-	display: inline-block;
-	margin-right: 25px;
-	margin-top: 20px;
-}
-
-body.institucional main .content div#contactForm form#co_form .co_type input,
-body.institucional main .content div#contactForm form#co_form .cl_assunto input {
-	display: block;
-	height: 30px;
-	width: 235px;
-}
-
-body.institucional main .content div#contactForm form#co_form .co_description {
-	font-size: 15px;
-	margin-top: 25px;
-}
-
-body.institucional main .content div#contactForm form#co_form .co_description textarea {
-	width: 80%;
-	height: 80px;
-	display: block;
-}
-
-body.institucional main .content div#contactForm form#co_form .co_description label {
-	margin-bottom: 5px;
-	display: block;
-}
-
-body.institucional main .content div#contactForm form#co_form textarea {
-	resize: none;
-}
-
-body.institucional.zip-nautica img {
-	width: auto;
-}
-
-body.institucional.zip-nautica .txt {
-	margin-top: 6%;
-}
-
-body.institucional.lojas .lojas-lista div {
-	padding-right: 8%;
+body.institucional .institucional__sub-tlt {
+	font-size: 1.8em;
+	margin: 30px 0px;
 }
 
 body.favoritos main ul#favList li {
