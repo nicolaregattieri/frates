@@ -15,6 +15,7 @@ body.home{
 		z-index: -1;
 		max-width: 100%;
 		width: 100%;
+		position: relative;
 
 
 		img{
@@ -74,28 +75,29 @@ body.home{
 		}
 	}
 
-	.tlt-shelf {
-		font-size: 1.2em;
-		font-weight: 400;
-		text-align: center;
-		text-transform: uppercase;
-		margin-top: 22px;
-		color: #092234;
-		span{
-			height: 60%;
-			margin: 10px 0;
-			display: block;
-		}
-		@include mq($screen-md) {
-			font-size: 2.6em;
-			margin-top: 60px;
-			
-			span{
-				display: block;
-				margin: 20px 0;
-				height: 80%;
-			}
-		}
-		
+	
+}
+.tlt-shelf {
+	font-size: 1.2em;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 22px;
+	color: #092234;
+	span{
+		height: 60%;
+		margin: 10px 0;
+		display: block;
 	}
+	@include mq($screen-md) {
+		font-size: 2.6em;
+		margin-top: 60px;
+		
+		span{
+			display: block;
+			margin: 20px 0;
+			height: 80%;
+		}
+	}
+	
 }

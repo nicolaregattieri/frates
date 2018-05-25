@@ -491,22 +491,39 @@ body.dep-cat-bus{
 
 
 body.busca-vazia{
-	.mainShelf{
-		@include font-size (2);
-	    text-align: center;
-	    margin: 5% 0;
-	    line-height: 8px;
+	.naoencontrada-box {
+		background: #EDECED;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 200px;
+		position: relative;
 
-	    h2{
-	    	margin-bottom: 20px;
-	    }
+		&__tlt {
+			font-size: 1.3em;
+			font-style: italic;
+			font-weight: 300;
+			z-index: 2;
+		}
 
-	    span{
-	    	display: block;
-		    overflow: hidden;
-		    font-size: 17px;
-		    line-height: 30px;
-	    }
+		&__dica {
+			color: #756B46;
+			z-index: 2;
+		}
+		&--lupa-background-icon{
+			position: absolute;
+			svg{
+				width: 100px;
+				height: 100px;
+				path{
+					fill:#DCDBDC;
+				}
+			}
+		}
+		
 	}
+	
 }
 

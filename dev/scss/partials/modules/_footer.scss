@@ -180,6 +180,8 @@ footer {
         text-align: center;
         @include mq($screen-md) {
             text-align: left;
+            display: flex;
+            align-items: center;
         }
     }
 

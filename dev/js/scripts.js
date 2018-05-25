@@ -73,10 +73,10 @@ $(function() {
 
 			if (scroll >= 350) {
 				$('header').addClass('menu-persistente');
-				$('body').addClass('top-height-active');
+				// $('body').addClass('top-height-active');
 			} else {
 				$('header').removeClass('menu-persistente');
-				$('body').removeClass('top-height-active');
+				// $('body').removeClass('top-height-active');
 			}
 		});
     // Menu Persistente END //
@@ -118,20 +118,23 @@ $(function() {
   	// Voltar ao Topo //
 
 	// Slider //
-	$(document).ready(function() {
+
+		// PROGRESSBAR DO SLIDER
 		var $slider = $('.slider');
 		var $progressBar = $('.progress');
 		var $progressBarLabel = $( '.slider__label' );
 		
 		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-		  var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+		  var calc = ( (nextSlide) / (slick.slideCount) ) * 100;
 		  
 		  $progressBar
 			.css('background-size', calc + '% 100%')
 			.attr('aria-valuenow', calc );
 		  
-		  $progressBarLabel.text( calc + '% completed' );
+		  $progressBarLabel.text( (currentSlide) + '|' + (slick.slideCount-1) );
 		});
+		
+
 		if (slide.length > 0) {
 			slide.slick({
 				adaptiveHeight: true,
@@ -146,13 +149,13 @@ $(function() {
 				slidesToScroll: 1
 			});
 		}
-	  });
+	 
 		
 		
 	// Slider //
 
 	if (slideShelf.length > 0) {
-		$('.home').find('.slideShelf .prateleira').find('ul').slick({
+		$('.home, .busca-vazia').find('.slideShelf .prateleira').find('ul').slick({
 			adaptiveHeight: true,
 			autoplay: false,
 			arrows: true,
