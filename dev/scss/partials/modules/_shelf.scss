@@ -3,103 +3,150 @@
    ========================================================================== */
 
 .prateleira {
-	article {
-		display: flex;
-		flex-direction: column;
-		margin-top: -20px;
-		position: relative;
-		text-align: center;
-		font-size: .8em;
-		
-		@include mq ($screen-md) {
-			display: block;
-			margin-top: 0;
-			font-size: .9em;
-		}
-		h4{
-			text-transform: uppercase;
-			font-weight: 600;
-			margin-bottom: .5em;
-		}
-		.bestPrice {
-			font-weight: 600;
-		}
-	}
-	padding: 0 5.5%;
-	margin: 40px 0;
-	a {
-		text-decoration: none;
-		color: #092234;
-	}
-	>h2 {
-		display: none;
-	}
-	.slick-prev {
-		left: -5.5%;
-		top: 40%;
-		@include mq($screen-md) {
-			svg {
-				width: 30px;
-				height: 30px;
-				fill: #092234;
-			}
-		}
-	}
-	.slick-next {
-		right: -5.5%;
-		top: 40%;
-		@include mq($screen-md) {
-			svg {
-				width: 30px;
-				height: 30px;
-				fill: #092234;
-			}
-		}
-	}
-	.category_page_title {
-		padding: 0 20px;
-		position: relative;
-		&:hover {
-			.btn-buy{
-				top: -70px;
-				opacity: 1;
-			}
-		}
-	}
-	.btn-buy {
-		order: -1;
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		background: rgba(255, 254, 254, 0.801);
-		height: 60px;
-		width: 100%;
-		@include mq($screen-md) {
-			position: absolute;
-			top: -8px;
-			left: 0;
-			opacity: 0;
-			transition: all ease-in-out .3s;
-		}
-		i {
-			margin-right: 5px;
-			svg {
-				width: 20px;
-				height: 20px;
-			}
-		}
-	}
-	.button-buy {
-		background: #232e3c;
-		padding: 7px 50px;
-		color: #fff;
-		font-weight: 300;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 85%;
-		@include mq ($screen-md){
+  article {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    position: relative;
+    text-align: center;
+    font-size: .8em;
+    @include mq ($screen-md) {
+      display: block;
+      margin-top: 0;
+      font-size: .9em;
+    }
+    h4 {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: .5em;
+    }
+    .bestPrice {
+      font-weight: 600;
+    }
+  }
+  padding: 0 5.5%;
+  margin: 40px 0;
+  a {
+    text-decoration: none;
+    color: #092234;
+  }
+  >h2 {
+    display: none;
+  }
+  .slick-prev {
+    left: -5.5%;
+    top: 40%;
+    @include mq($screen-md) {
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: #092234;
+      }
+    }
+  }
+  .slick-next {
+    right: -5.5%;
+    top: 40%;
+    @include mq($screen-md) {
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: #092234;
+      }
+    }
+  }
+  .category_page_title {
+    padding: 0 20px;
+    position: relative;
+    &:hover {
+      .btn-buy {
+        top: -70px;
+        opacity: 1;
+      }
+    }
+  }
+  .btn-buy {
+    order: -1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 254, 254, 0.801);
+    height: 60px;
+    width: 100%;
+    @include mq($screen-md) {
+      position: absolute;
+      top: -8px;
+      left: 0;
+      opacity: 0;
+      transition: all ease-in-out .3s;
+    }
+    i {
+      margin-right: 5px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .button-buy {
+    background: #232e3c;
+    padding: 7px 50px;
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    @include mq ($screen-md) {}
+  }
+  .flag {
+    height: 25px;
+    width: 60px;
+    border-radius: 0 0 0 10px;
+    position: absolute;
+    top: 30px;
+    right: 14px;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: "";
+      border-bottom: 6px solid #5F5A44;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      width: 0;
+      height: 0;
+      -ms-transform: rotate(135deg);
+      transform: rotate(-145deg);
+      position: absolute;
+      top: -2.3px;
+      right: .9px;
+      z-index: -1;
+    }
+  }
+  .flags {
+    &__destaque .flag {
+      background: #756B45;
+      color: #092234;
+    }
+    &__desconto .flag {
+      background: #0B2539;
+      color: #fff;
+    }
+  }
+}
 
-		}
-	}
+.shelf-destaques {
+  .flags__desconto {
+    color: #fff;
+    display: none;
+  }
+}
+
+.shelf-semana {
+  .flags__destaque {
+    color: #0B2539;
+    display: none;
+  }
 }
