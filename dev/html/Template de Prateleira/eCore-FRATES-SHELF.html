@@ -4,13 +4,13 @@
   <span class="principal">$product.GetImageTag(30)</span>
   <span class="secundario">$product.GetImageTag(30,"verso")</span>
   <span class="flags">
-      <div class="flags__desconto labeled">
-        $product.DiscountHightLight
-      </div>
-      <div class="flags__destaque labeled">
-        $product.HightLight
-      </div>
-    </span>
+    <div class="flags__desconto labeled">
+      $product.DiscountHightLight
+    </div>
+    <div class="flags__destaque labeled">
+      $product.HightLight
+    </div>
+  </span>
   <article>
     <h4>$product.Name</h4>
 
@@ -23,7 +23,7 @@
     <span class="bestPrice">$product.BestPrice</span>
     #end
 
-    
+
 
     <em class="installment">
       #if ($product.NumbersOfInstallment > 1) ou

@@ -56,7 +56,12 @@ var body = $('body'),
 	depCatBus = $('.dep-cat-bus'),
 	pagProduto = $('.produto'),
 	pagInstitucional = $('.institucional'),
-	sidebar = $('.sidebar');
+  sidebar = $('.sidebar'),
+  addPercent = $('.prateleira .flags__desconto .flag');
+
+
+  // ADD PERCENT TO DISCOUNT
+  addPercent.append("% OFF");
 
 $(function() {
 
@@ -121,18 +126,18 @@ $(function() {
 
 		// PROGRESSBAR DO SLIDER
 		var $slider = $('.slider');
-		var $progressBar = $('.progress');
-		var $progressBarLabel = $( '.slider__label' );
-		
-		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-		  var calc = ( (nextSlide) / (slick.slideCount) ) * 100;
-		  
-		  $progressBar
-			.css('background-size', calc + '% 100%')
-			.attr('aria-valuenow', calc );
-		  
-		  $progressBarLabel.text( (currentSlide) + '|' + (slick.slideCount-1) );
-		});
+    var $progressBar = $('.progress');
+    var $progressBarLabel = $( '.slider__label' );
+  
+    $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+      var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    
+      $progressBar
+        .css('background-size', calc + '% 100%')
+        .attr('aria-valuenow', calc );
+    
+      $progressBarLabel.text( (nextSlide+1) + " | " + (slick.slideCount) );
+    });
 		
 
 		if (slide.length > 0) {

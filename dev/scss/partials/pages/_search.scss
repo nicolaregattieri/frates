@@ -26,7 +26,7 @@ body.dep-cat-bus {
       overflow: hidden;
       border: 1px solid #c4c4c4;
       .orderBy {
-        padding: 10px;
+        padding: 10px 30px;
         position: relative;
         @include font-size(1.2);
         float: right;
@@ -42,7 +42,7 @@ body.dep-cat-bus {
           transform: rotate(-90deg);
           top: -6.7px;
           font-size: 1.8em;
-          right: 13px;
+          right: 3.8px;
           color: #c4c4c4;
         }
         label {

@@ -261,9 +261,8 @@ $slick-opacity-not-active: .25 !default;
   position: absolute;
   bottom: 100px;
   right: 20px;
-  
-  background-color: #f5f5f5;
-  background-image: linear-gradient(to right, black, black);
+  background-color: rgba(255, 255, 255, 0.471) !important;
+  background-image: linear-gradient(to right,#fff,#fff);
   background-repeat: no-repeat;
   background-size: 0 100%;
   transition: background-size .4s ease-in-out;

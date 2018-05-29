@@ -21,7 +21,11 @@
       margin-bottom: .5em;
     }
     .bestPrice {
-      font-weight: 600;
+      font-weight: 400;
+      &::after{
+        content:" | ";
+        color: inherit;
+      }
     }
   }
   padding: 0 5.5%;
@@ -29,12 +33,16 @@
   a {
     text-decoration: none;
     color: #092234;
+    em {
+      font-style: normal;
+      font-weight: bold;
+    }
   }
   >h2 {
     display: none;
   }
   .slick-prev {
-    left: -5.5%;
+    left: -2.8%;
     top: 40%;
     @include mq($screen-md) {
       svg {
@@ -45,7 +53,7 @@
     }
   }
   .slick-next {
-    right: -5.5%;
+    right: -2.8%;
     top: 40%;
     @include mq($screen-md) {
       svg {
@@ -99,54 +107,81 @@
     width: 85%;
     @include mq ($screen-md) {}
   }
-  .flag {
-    height: 25px;
-    width: 60px;
-    border-radius: 0 0 0 10px;
+  
+}
+.flag {
+  height: 25px;
+  width: 60px;
+  border-radius: 0 0 0 10px;
+  position: absolute;
+  top: 30px;
+  right: 14px;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "";
+    border-bottom: 6px solid #5F5A44;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    width: 0;
+    height: 0;
+    -ms-transform: rotate(135deg);
+    transform: rotate(-145deg);
     position: absolute;
-    top: 30px;
-    right: 14px;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &::after {
-      content: "";
-      border-bottom: 6px solid #5F5A44;
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      width: 0;
-      height: 0;
-      -ms-transform: rotate(135deg);
-      transform: rotate(-145deg);
-      position: absolute;
-      top: -2.3px;
-      right: .9px;
-      z-index: -1;
+    top: -2.3px;
+    right: .9px;
+    z-index: -1;
+  }
+}
+.flags {
+  &__destaque .flag {
+    background: #756B45;
+    color: #092234;
+  }
+  &__desconto .flag {
+    background: #0B2539;
+    color: #fff;
+    font-size: .7em;
+  }
+}
+.shelf-destaques {
+  a {
+    .bestPrice{
+      color: #092234;;
+      font-size: 1.1em;
+    }
+    .installment{
+      color: #756B45;
     }
   }
-  .flags {
-    &__destaque .flag {
-      background: #756B45;
-      color: #092234;
-    }
-    &__desconto .flag {
-      background: #0B2539;
+  @include mq ($screen-md) {
+    padding: 0 30px;
+  }
+  .flags__desconto {
+    display: none;
+    p {
       color: #fff;
     }
   }
 }
 
-.shelf-destaques {
-  .flags__desconto {
-    color: #fff;
+
+.shelf-semana {
+  a span, em {
+      color: #756B45;
+  }
+  @include mq ($screen-md) {
+    padding: 0 30px;
+  }
+  .flags__destaque {
     display: none;
+    p {
+      color: #0B2539;
+    }
   }
 }
 
-.shelf-semana {
-  .flags__destaque {
-    color: #0B2539;
-    display: none;
-  }
-}
+
+
