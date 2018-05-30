@@ -3037,6 +3037,8 @@ body.produto main .product-view .buy-box .qtd-sku {
 	display: flex;
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 
 body.produto main .product-view .buy-box .qtd {
@@ -3056,6 +3058,8 @@ body.produto main .product-view .buy-box .qtd::before {
 	content: " | ";
 	color: inherit;
 	padding: 0 8px;
+	font-size: 2.4em;
+	font-weight: lighter;
 }
 
 body.produto main .product-view .buy-box .qtd span {
@@ -3094,39 +3098,71 @@ body.produto main .product-view .buy-box .qtd .quantidade i {
 	cursor: pointer;
 }
 
-body.produto main .product-view .buy-box .qtd-frete {
-	clear: both;
-	border-bottom: 1px solid #dbd7d7;
+body.produto main .product-view .buy-box .qtd-frete-medidas {
 	margin-bottom: 10px;
 	overflow: hidden;
 	padding-bottom: 25px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
+	margin: 40px 0;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete {
+body.produto main .product-view .buy-box .qtd-frete-medidas .frete__text {
+	font-size: .7em;
+	margin-bottom: 8px;
+}
+
+body.produto main .product-view .buy-box .qtd-frete-medidas .frete {
 	position: relative;
 	overflow: hidden;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete svg {
-	font-size: 14px;
+body.produto main .product-view .buy-box .qtd-frete-medidas .medidas {
 	display: inline-block;
-	vertical-align: middle;
-	text-transform: uppercase;
-	font-weight: bolder;
-	color: #333;
-	overflow: hidden;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #popupCalculoFreteWrapper {
+body.produto main .product-view .buy-box .qtd-frete-medidas .medidas svg {
+	-ms-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	fill: #999;
+}
+
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value {
+	position: relative;
+	-ms-flex-preferred-size: 70%;
+	    flex-basis: 70%;
+}
+
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value__text {
+	font-size: .7em;
+	margin-bottom: 8px;
+}
+
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value::after {
+	content: " | ";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 3em;
+	color: #999;
+	font-weight: lighter;
+}
+
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #popupCalculoFreteWrapper {
 	display: none;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete .header,
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete .footer {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete .header,
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete .footer {
 	display: none;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .prefixo {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .prefixo {
 	font-size: 0;
 	display: inline-block;
 	width: 78%;
@@ -3134,25 +3170,26 @@ body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_
 	vertical-align: top;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .prefixo input {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .prefixo input {
 	font-size: 14px;
 	display: block;
 	padding: 8px;
 	width: 100%;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .quantity {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .quantity {
 	display: none;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .frete-calcular {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .frete-calcular {
 	width: 20%;
 	display: inline-block;
 	margin: 0;
 	vertical-align: top;
+	display: none;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .frete-calcular input {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .frete-calcular input {
 	padding: 10px;
 	background-color: #333;
 	text-transform: uppercase;
@@ -3163,15 +3200,19 @@ body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_
 	cursor: pointer;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .cep-busca a {
-	text-transform: lowercase;
-	color: #333;
-	font-size: 13px;
-	margin-top: 5px;
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .cep-busca a {
+	text-transform: initial;
 	display: block;
+	position: absolute;
+	top: 0;
+	right: 92px;
+	font-size: .7em;
+	text-decoration: none;
+	font-weight: 700;
+	color: #756B4B;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table {
 	width: 100%;
 	display: block;
 	margin-top: 10px;
@@ -3179,18 +3220,18 @@ body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_
 	padding: 5px;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table thead {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table thead {
 	background-color: #F0F0F0;
 	width: 100%;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table thead tr th {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table thead tr th {
 	font-size: 12px;
 	padding: 5px;
 	text-align: center;
 }
 
-body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table tbody tr td {
+body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-value #calculoFrete #ctl00_Conteudo_upnlContent .freight-values table tbody tr td {
 	font-size: 12px;
 	padding: 5px;
 	text-align: center;
