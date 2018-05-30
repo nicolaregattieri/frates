@@ -212,7 +212,7 @@ body.produto {
                 .choose-skus{
                     overflow: hidden;
                     margin: 20px 0;
-                    clear: both;
+                    flex: 1;
 
                     .sku-selector-container{
                         ul{
@@ -437,6 +437,7 @@ body.produto {
                 }
 
                 .compra-box{
+                  margin-top: 40px;
                   .buy-button{
                       @include font-size(1.8);
                       background-color: #09253B;
@@ -466,6 +467,56 @@ body.produto {
                       }
                   }
               }
+              .qtd-sku{
+                display: flex;
+                justify-content: space-between;
+
+              }
+              .qtd{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 300;
+                padding: 0;
+                flex: 1;
+                &::before{
+                  content: " | ";
+                  color: inherit;
+                  padding: 0 8px;
+                }
+                span{
+                    @include font-size(1.4);
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                    display: block;
+                    overflow: hidden;
+                    line-height: 26px;
+                    color: #2e2b3e;
+                    flex: 1;
+                }
+
+                .quantidade{
+                    border: 1px solid #c1c1c1;
+                    padding: 5px;
+                    flex: 1;
+
+                    i, input{
+                        @include font-size(1.8);
+                        text-transform: uppercase;
+                        font-weight: bolder;
+                        display: inline-block;
+                        font-style: normal;
+                        border: none;
+                        width: 33.3%;
+                        background-color: transparent;
+                        text-align: center;
+                    }
+
+                    i{
+                        cursor: pointer;
+                    }
+                }
+            }
 
                 .qtd-frete{
                     clear: both;
@@ -486,17 +537,6 @@ body.produto {
                             font-weight: bolder;
                             color: #333;
                             overflow: hidden;
-                        }
-
-                        &:after{
-                            @include font-size(1.4);
-                            content: "Calcule o seu frete:";
-                            position: absolute;
-                            text-transform: uppercase;
-                            font-weight: bolder;
-                            color: #333;
-                            top: 7px;
-                            left: 48px;
                         }
 
                         #popupCalculoFreteWrapper{
@@ -589,40 +629,6 @@ body.produto {
                                         }
                                     }
                                 }
-                            }
-                        }
-                    }
-
-                    .qtd{
-                        span{
-                            @include font-size(1.4);
-                            text-transform: uppercase;
-                            font-weight: bolder;
-                            display: block;
-                            overflow: hidden;
-                            margin-bottom: 7px;
-                            line-height: 26px;
-                            color: #2e2b3e;
-                        }
-
-                        .quantidade{
-                            border: 1px solid #c1c1c1;
-                            padding: 5px;
-
-                            i, input{
-                                @include font-size(1.8);
-                                text-transform: uppercase;
-                                font-weight: bolder;
-                                display: inline-block;
-                                font-style: normal;
-                                border: none;
-                                width: 33.3%;
-                                background-color: transparent;
-                                text-align: center;
-                            }
-
-                            i{
-                                cursor: pointer;
                             }
                         }
                     }

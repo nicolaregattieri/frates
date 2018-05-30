@@ -777,7 +777,7 @@ header .main-header .menu-header ul li a {
 	text-decoration: none;
 	display: block;
 	padding: 15px 8px;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 header .main-header .menu-header ul li.magenta a {
@@ -881,7 +881,7 @@ header .main-header .menu-header ul li.has-sub .submenu nav ul li {
 	display: list-item;
 	text-align: center;
 	padding: 15px 0;
-	border-bottom: 0.5px solid #4b4b4b;
+	border-bottom: .5px solid #999;
 	font-size: 0.9em;
 }
 
@@ -938,16 +938,22 @@ header .main-header .menu-header ul li.has-sub:hover .submenu {
 
 header .main-header .menu-header.slideActive {
 	left: 0;
+	padding: 0;
 	opacity: 1;
 	background: #fff;
-	padding: 20px 20px 100px;
 	overflow-y: auto;
 	overflow-x: hidden;
+	border-top: 1px solid #999;
+	width: 80%;
+}
+
+header .main-header .menu-header.slideActive ul {
+	margin-right: 0;
 }
 
 header .main-header .menu-header.slideActive ul li a {
 	font-size: 14px;
-	color: #000;
+	color: #776c46;
 	line-height: 20px;
 }
 
@@ -958,6 +964,7 @@ header .main-header .menu-header.slideActive ul li a.first-menu {
 
 header .main-header .menu-header.slideActive ul li.has-sub a {
 	display: block;
+	color: #776c46;
 }
 
 header .main-header .menu-header.slideActive ul li.has-sub a.first-menu:after {
@@ -977,8 +984,14 @@ header .main-header .menu-header.slideActive ul li.has-sub a.first-menu.active:a
 header .main-header .menu-header.slideActive ul li.has-sub .submenu {
 	height: auto;
 	opacity: 1;
-	background-color: #fff;
+	background-color: #eeeeee;
 	display: none;
+	padding: 0;
+}
+
+header .main-header .menu-header.slideActive ul li.has-sub .submenu ul li {
+	width: 84%;
+	margin: 0 auto;
 }
 
 header .main-header .menu-header.slideActive ul li.has-sub .submenu ul li a {
@@ -988,6 +1001,8 @@ header .main-header .menu-header.slideActive ul li.has-sub .submenu ul li a {
 	padding: 5px 5px 5px 20px;
 	display: block;
 	width: 100%;
+	font-weight: 600;
+	text-align: left;
 }
 
 header .left-side-header {
@@ -2779,7 +2794,8 @@ body.produto main .product-view .buy-box .price-flag-table .flag-table-info .fla
 body.produto main .product-view .buy-box .choose-skus {
 	overflow: hidden;
 	margin: 20px 0;
-	clear: both;
+	-ms-flex: 1;
+	    flex: 1;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul {
@@ -2985,6 +3001,10 @@ body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul
 	background-color: #BA2161;
 }
 
+body.produto main .product-view .buy-box .compra-box {
+	margin-top: 40px;
+}
+
 body.produto main .product-view .buy-box .compra-box .buy-button {
 	font-size: 18px;
 	background-color: #09253B;
@@ -3012,6 +3032,68 @@ body.produto main .product-view .buy-box .compra-box .portal-notify-me-ref input
 	display: none !important;
 }
 
+body.produto main .product-view .buy-box .qtd-sku {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+body.produto main .product-view .buy-box .qtd {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
+	font-weight: 300;
+	padding: 0;
+	-ms-flex: 1;
+	    flex: 1;
+}
+
+body.produto main .product-view .buy-box .qtd::before {
+	content: " | ";
+	color: inherit;
+	padding: 0 8px;
+}
+
+body.produto main .product-view .buy-box .qtd span {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	display: block;
+	overflow: hidden;
+	line-height: 26px;
+	color: #2e2b3e;
+	-ms-flex: 1;
+	    flex: 1;
+}
+
+body.produto main .product-view .buy-box .qtd .quantidade {
+	border: 1px solid #c1c1c1;
+	padding: 5px;
+	-ms-flex: 1;
+	    flex: 1;
+}
+
+body.produto main .product-view .buy-box .qtd .quantidade i,
+body.produto main .product-view .buy-box .qtd .quantidade input {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	display: inline-block;
+	font-style: normal;
+	border: none;
+	width: 33.3%;
+	background-color: transparent;
+	text-align: center;
+}
+
+body.produto main .product-view .buy-box .qtd .quantidade i {
+	cursor: pointer;
+}
+
 body.produto main .product-view .buy-box .qtd-frete {
 	clear: both;
 	border-bottom: 1px solid #dbd7d7;
@@ -3033,17 +3115,6 @@ body.produto main .product-view .buy-box .qtd-frete .frete svg {
 	font-weight: bolder;
 	color: #333;
 	overflow: hidden;
-}
-
-body.produto main .product-view .buy-box .qtd-frete .frete:after {
-	font-size: 14px;
-	content: "Calcule o seu frete:";
-	position: absolute;
-	text-transform: uppercase;
-	font-weight: bolder;
-	color: #333;
-	top: 7px;
-	left: 48px;
 }
 
 body.produto main .product-view .buy-box .qtd-frete .frete #popupCalculoFreteWrapper {
@@ -3123,39 +3194,6 @@ body.produto main .product-view .buy-box .qtd-frete .frete #calculoFrete #ctl00_
 	font-size: 12px;
 	padding: 5px;
 	text-align: center;
-}
-
-body.produto main .product-view .buy-box .qtd-frete .qtd span {
-	font-size: 14px;
-	text-transform: uppercase;
-	font-weight: bolder;
-	display: block;
-	overflow: hidden;
-	margin-bottom: 7px;
-	line-height: 26px;
-	color: #2e2b3e;
-}
-
-body.produto main .product-view .buy-box .qtd-frete .qtd .quantidade {
-	border: 1px solid #c1c1c1;
-	padding: 5px;
-}
-
-body.produto main .product-view .buy-box .qtd-frete .qtd .quantidade i,
-body.produto main .product-view .buy-box .qtd-frete .qtd .quantidade input {
-	font-size: 18px;
-	text-transform: uppercase;
-	font-weight: bolder;
-	display: inline-block;
-	font-style: normal;
-	border: none;
-	width: 33.3%;
-	background-color: transparent;
-	text-align: center;
-}
-
-body.produto main .product-view .buy-box .qtd-frete .qtd .quantidade i {
-	cursor: pointer;
 }
 
 body.produto main .product-view .buy-box .vantagens {
@@ -3513,15 +3551,25 @@ body.dep-cat-bus .mainShelf .pager.bottom {
 	padding: 0;
 }
 
+.prateleira img {
+	width: 100%;
+	height: auto;
+}
+
 .prateleira ul {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
+	-ms-flex-pack: center;
+	    justify-content: center;
 }
 
 .prateleira ul li {
 	list-style: none;
+	-ms-flex-preferred-size: 32%;
+	    flex-basis: 32%;
+	margin-bottom: 40px;
 }
 
 body.busca-vazia .naoencontrada-box {
@@ -3530,8 +3578,8 @@ body.busca-vazia .naoencontrada-box {
 	display: flex;
 	-ms-flex-direction: column;
 	    flex-direction: column;
-	-ms-flex-pack: center;
-	    justify-content: center;
+	-ms-flex-pack: space-evenly;
+	    justify-content: space-evenly;
 	-ms-flex-align: center;
 	    align-items: center;
 	text-align: center;

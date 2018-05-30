@@ -31,7 +31,7 @@ body.dep-cat-bus {
         @include font-size(1.2);
         float: right;
         text-transform: uppercase;
-        &:after{
+        &:after {
           content: "<";
           width: 40px;
           height: 20px;
@@ -48,7 +48,6 @@ body.dep-cat-bus {
         label {
           font-family: 'Open Sans', sans-serif;
           font-weight: 900;
-          
         }
         select {
           font-weight: 900;
@@ -132,11 +131,18 @@ body.dep-cat-bus {
 
 .prateleira {
   padding: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     li {
       list-style: none;
+      flex-basis: 32%;
+      margin-bottom: 40px;
     }
   }
 }
@@ -146,7 +152,7 @@ body.busca-vazia {
     background: #EDECED;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     height: 200px;

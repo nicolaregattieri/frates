@@ -147,7 +147,7 @@ $(function() {
 				autoplaySpeed: 5000,
 				pauseOnHover: false,
 				arrows: true,
-				dots: true,
+				dots: false,
 				draggable: true,
 				touchMove: true,
 				slidesToShow: 1,
