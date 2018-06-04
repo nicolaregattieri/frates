@@ -110,6 +110,9 @@ input, select {
   width: 100%;
   margin: 0 auto;
   max-width: 1330px; }
+  .container--narrow {
+    width: 80%;
+    margin: 0 auto; }
 
 /* ==========================================================================
    Responsive: Utility classes

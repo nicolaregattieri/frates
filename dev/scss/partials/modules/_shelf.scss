@@ -3,6 +3,11 @@
    ========================================================================== */
 
 .prateleira {
+  padding: 0 5.5%;
+  margin: 40px 0;
+  h2 {
+    display: none;
+  }
   article {
     display: flex;
     flex-direction: column;
@@ -28,8 +33,7 @@
       }
     }
   }
-  padding: 0 5.5%;
-  margin: 40px 0;
+  
   a {
     text-decoration: none;
     color: #092234;
@@ -38,9 +42,7 @@
       font-weight: bold;
     }
   }
-  >h2 {
-    display: none;
-  }
+  
   .slick-prev {
     left: -2.8%;
     top: 40%;

@@ -28,7 +28,7 @@ header {
 		background: #fff;
 		.top-box {
 			background: #062134;
-			display: none;
+			display: block;
 		}
 		.main-header {
 			.lupa-gold {
@@ -63,7 +63,7 @@ header {
 		}
 
 		.top-box {
-			display: none;
+			display: block;
 		}
 		.main-header {
 			.logo {
@@ -77,7 +77,6 @@ header {
 		}
 		.row {
 			@extend .transition;
-			padding: 20px 0;
 			overflow: hidden;
 			margin-left: 0 !important;
 			position: inherit !important;
@@ -95,7 +94,8 @@ header {
 	}
 	&.ha-hide {
 		top: -100%;
-	}
+  }
+ 
 }
 
 

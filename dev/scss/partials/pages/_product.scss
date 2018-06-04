@@ -85,6 +85,7 @@ body.produto {
         overflow: hidden;
         @include mq($screen-md) {
           padding-left: 5%;
+          width: 45%;
         }
         .productName {
           font-size: 1.4em;
@@ -94,15 +95,7 @@ body.produto {
           height: 50px;
           overflow: hidden;
         }
-        .productReference {
-          display: none;
-          &:before {
-            content: "cód:";
-            display: inline-block;
-            margin-right: 5px;
-            text-transform: uppercase;
-          }
-        }
+        
         .price-flag-table {
           clear: both;
           margin-bottom: 10px;
@@ -356,7 +349,6 @@ body.produto {
           }
         }
         .compra-box {
-          margin-top: 40px;
           .buy-button {
             @include font-size(1.8);
             background-color: #09253B;
@@ -398,7 +390,6 @@ body.produto {
           &::before {
             content: " | ";
             color: inherit;
-            padding: 0 8px;
             font-size: 2.4em;
             font-weight: lighter;
           }
@@ -460,7 +451,7 @@ body.produto {
             
 
           }
-          .shipping-value {
+          .shipping-values {
             position: relative;
             flex-basis: 70%;
             &__text{
@@ -622,26 +613,46 @@ body.produto {
         }
       }
     }
-    .product-info {
-      clear: both;
-      overflow: hidden;
+    .product-info, .social-section {
+     
+      position: relative;
       h3 {
-        @include font-size(3.6);
+        font-size: .9em;
         display: block;
-        text-transform: uppercase;
-        margin-bottom: 25px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
         font-weight: 900;
         color: #2e2b3e;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #999;
+        padding: 5px 0;
       }
+
+      .productReference {
+        position: absolute;
+        top: 9px;
+        right: 140px;
+        display: block;
+        font-size: .6em;
+        &:before {
+          content: "ref:";
+          display: inline-block;
+          margin-right: 5px;
+          text-transform: uppercase;
+        }
+      }
+
       .description {
+        position: relative;
         @include mq($screen-md) {
-          padding-right: 5%;
+
         }
         .productDescription {
-          @include font-size(1.5);
           text-transform: unset;
           line-height: 20px;
+          font-size: .9em;
+          color: #999;
+
         }
       }
       .specification {
@@ -667,33 +678,41 @@ body.produto {
           }
         }
       }
-    }
-    .shelfRelacionados {
-      overflow: hidden;
-      clear: both;
-      margin-top: 60px;
-      padding-bottom: 60px;
-      .prateleira {
-        h2 {
-          @include font-size(3.6);
-          display: block;
-          text-transform: uppercase;
-          font-weight: bolder;
-          color: #2e2b3e;
-        }
-        ul {
-          li {
-            width: 100%;
-            @include mq($screen-sm) {
-              width: 49%;
-            }
-            @include mq($screen-md) {
-              width: 23%;
-            }
-          }
+      .social-share{
+        &__icons{
+          list-style: none;
+          display: flex;
+          width: 40%;
+          justify-content: space-between;
         }
       }
     }
+    // .shelfRelacionados {
+    //   overflow: hidden;
+    //   clear: both;
+    //   margin-top: 60px;
+    //   padding-bottom: 60px;
+    //   .prateleira {
+    //     h2 {
+    //       @include font-size(3.6);
+    //       display: block;
+    //       text-transform: uppercase;
+    //       font-weight: bolder;
+    //       color: #2e2b3e;
+    //     }
+    //     ul {
+    //       li {
+    //         width: 100%;
+    //         @include mq($screen-sm) {
+    //           width: 49%;
+    //         }
+    //         @include mq($screen-md) {
+    //           width: 23%;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -787,4 +806,5 @@ body.produto {
       line-height: 18px;
     }
   }
+
 }
