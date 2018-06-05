@@ -27,13 +27,12 @@
     }
     .bestPrice {
       font-weight: 400;
-      &::after{
-        content:" | ";
+      &::after {
+        content: " | ";
         color: inherit;
       }
     }
   }
-  
   a {
     text-decoration: none;
     color: #092234;
@@ -42,7 +41,6 @@
       font-weight: bold;
     }
   }
-  
   .slick-prev {
     left: -2.8%;
     top: 40%;
@@ -70,7 +68,7 @@
     position: relative;
     &:hover {
       .btn-buy {
-        top: -70px;
+        top: -60px;
         opacity: 1;
       }
     }
@@ -109,8 +107,8 @@
     width: 85%;
     @include mq ($screen-md) {}
   }
-  
 }
+
 .flag {
   height: 25px;
   width: 60px;
@@ -137,6 +135,7 @@
     z-index: -1;
   }
 }
+
 .flags {
   &__destaque .flag {
     background: #756B45;
@@ -148,13 +147,15 @@
     font-size: .7em;
   }
 }
+
 .shelf-destaques {
   a {
-    .bestPrice{
-      color: #092234;;
+    .bestPrice {
+      color: #092234;
+      ;
       font-size: 1.1em;
     }
-    .installment{
+    .installment {
       color: #756B45;
     }
   }
@@ -169,10 +170,10 @@
   }
 }
 
-
 .shelf-semana {
-  a span, em {
-      color: #756B45;
+  a span,
+  em {
+    color: #756B45;
   }
   @include mq ($screen-md) {
     padding: 0 30px;
@@ -184,6 +185,3 @@
     }
   }
 }
-
-
-

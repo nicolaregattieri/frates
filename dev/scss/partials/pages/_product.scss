@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Página de Produto
-   ========================================================================== */
+Página de Produto
+========================================================================== */
 
 body.produto {
   main {
@@ -25,7 +25,7 @@ body.produto {
               margin: 0 auto;
               width: 100%;
               @include mq($screen-md) {
-                width: 100%;
+                width: auto;
               }
             }
           }
@@ -95,7 +95,6 @@ body.produto {
           height: 50px;
           overflow: hidden;
         }
-        
         .price-flag-table {
           clear: both;
           margin-bottom: 10px;
@@ -439,26 +438,22 @@ body.produto {
           .frete {
             position: relative;
             overflow: hidden;
-            
           }
           .medidas {
             display: inline-block;
-          
-            svg{
+            svg {
               transform: rotate(90deg);
               fill: #999;
             }
-            
-
           }
           .shipping-values {
             position: relative;
             flex-basis: 70%;
-            &__text{
+            &__text {
               font-size: .7em;
               margin-bottom: 8px;
             }
-            &::after{
+            &::after {
               content: " | ";
               display: inline-block;
               position: absolute;
@@ -471,7 +466,6 @@ body.produto {
             #popupCalculoFreteWrapper {
               display: none;
             }
-       
             #calculoFrete {
               .header,
               .footer {
@@ -510,7 +504,6 @@ body.produto {
                     width: 100%;
                     cursor: pointer;
                   }
-                 
                 }
                 .cep-busca {
                   a {
@@ -613,8 +606,8 @@ body.produto {
         }
       }
     }
-    .product-info, .social-section {
-     
+    .product-info,
+    .social-section {
       position: relative;
       h3 {
         font-size: .9em;
@@ -627,7 +620,6 @@ body.produto {
         border-bottom: 1px solid #999;
         padding: 5px 0;
       }
-
       .productReference {
         position: absolute;
         top: 9px;
@@ -641,18 +633,14 @@ body.produto {
           text-transform: uppercase;
         }
       }
-
       .description {
         position: relative;
-        @include mq($screen-md) {
-
-        }
+        @include mq($screen-md) {}
         .productDescription {
           text-transform: unset;
           line-height: 20px;
           font-size: .9em;
           color: #999;
-
         }
       }
       .specification {
@@ -678,16 +666,15 @@ body.produto {
           }
         }
       }
-      .social-share{
-        &__icons{
+      .social-share {
+        &__icons {
           list-style: none;
           display: flex;
           width: 40%;
           justify-content: space-between;
         }
       }
-    }
-    // .shelfRelacionados {
+    } // .shelfRelacionados {
     //   overflow: hidden;
     //   clear: both;
     //   margin-top: 60px;
@@ -714,7 +701,50 @@ body.produto {
     //   }
     // }
   }
+  .flags .flag {
+    right: 153px;
+  }
+  .buy-together {
+    position: relative;
+    text-align: center;
+    @extend .conteudo-tabela;
+
+    hr {
+      display: none;
+    }
+    a {
+      font-size: .9em;
+      color: #092234;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    h3 {
+      padding: 30px 0;
+    }
+    h4 {
+      display: none
+    }
+    table {
+      margin: 90px auto 0;
+    }
+    .itemA {
+      padding: 40px;
+    }
+    .plus {
+      padding: 0 30px;
+      vertical-align: middle;
+      font-size: 3em;
+      font-weight: bold;
+      color: #726846;
+    }
+    .itemB {
+      @extend .itemA;
+    }
+  }
 }
+
+
 
 .conteudo-tabela {
   img {
@@ -806,5 +836,4 @@ body.produto {
       line-height: 18px;
     }
   }
-
 }
