@@ -24,8 +24,9 @@ body.produto {
               display: block;
               margin: 0 auto;
               width: 100%;
+              max-width: 100%;
               @include mq($screen-md) {
-                width: auto;
+                width: 100%;
               }
             }
           }
@@ -226,6 +227,7 @@ body.produto {
                 }
               }
               &.Tamanho {
+                width: 100%;
                 li.skuList {
                   label {
                     width: auto;
@@ -234,7 +236,8 @@ body.produto {
                   }
                 }
               }
-              &.Cor {
+              &.Cores {
+                display: none;
                 li.skuList {
                   label {
                     font-size: 0;
@@ -400,7 +403,8 @@ body.produto {
             overflow: hidden;
             line-height: 26px;
             color: #2e2b3e;
-            flex: 1;
+            flex-shrink: 0;
+            margin-right: 5px;
           }
           .quantidade {
             border: 1px solid #c1c1c1;
@@ -702,11 +706,13 @@ body.produto {
     // }
   }
   .flags .flag {
-    right: 153px;
+    right: 3px;
+    top: 70px;
   }
   .buy-together {
     position: relative;
     text-align: center;
+    background: #EAEAEA;
     @extend .conteudo-tabela;
 
     hr {
@@ -731,7 +737,7 @@ body.produto {
     .itemA {
       padding: 40px;
     }
-    .plus {
+    .plus, .equal {
       padding: 0 30px;
       vertical-align: middle;
       font-size: 3em;

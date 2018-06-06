@@ -2666,6 +2666,7 @@ body.produto main .product-view .product-box .apresentacao #include .sku-rich-im
 	display: block;
 	margin: 0 auto;
 	width: 100%;
+	max-width: 100%;
 }
 
 body.produto main .product-view .product-box .apresentacao .zoomPad {
@@ -2853,149 +2854,157 @@ body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul
 	font-weight: 500;
 }
 
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Tamanho {
+	width: 100%;
+}
+
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Tamanho li.skuList label {
 	width: auto;
 	height: 40px;
 	line-height: 20px;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores {
+	display: none;
+}
+
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label {
 	font-size: 0;
 	width: 40px;
 	height: 40px;
 	border: 1px solid transparent;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Amarelo {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Amarelo {
 	background-color: #FCBB23;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Azul {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Azul {
 	background-color: #0000ff;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Azul_Claro {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Azul_Claro {
 	background-color: #658EBC;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Azul_Marinho {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Azul_Marinho {
 	background-color: #0F1D42;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Bege {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Bege {
 	background-color: #E2CFAE;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Branco {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Branco {
 	background-color: #fff;
 	border: 1px solid #ccc;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Bronze {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Bronze {
 	background-color: #895837;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Caqui {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Caqui {
 	background-color: #856D41;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Caramelo {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Caramelo {
 	background-color: #D0822F;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Castanho {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Castanho {
 	background-color: #3E2101;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Chocolate {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Chocolate {
 	background-color: #57362F;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Cinza {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Cinza {
 	background-color: #6B6B6B;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Creme {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Creme {
 	background-color: #6B6B6B;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Estampado {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Estampado {
 	background-color: #844345;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Laranja {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Laranja {
 	background-color: #F73C07;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Lilas {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Lilas {
 	background-color: #9D8DCB;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Limao {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Limao {
 	background-color: #48F86D;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Madeira {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Madeira {
 	background-color: #644B35;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Marfim {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Marfim {
 	background-color: #E0B370;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Marrom {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Marrom {
 	background-color: #301701;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Ocre {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Ocre {
 	background-color: #272725;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Ouro {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Ouro {
 	background-color: #BE9B47;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Prata {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Prata {
 	background-color: #76757B;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Preto {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Preto {
 	background-color: #000;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Rosa {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Rosa {
 	background-color: #F968A9;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Roxo {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Roxo {
 	background-color: #8756A1;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Salmao {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Salmao {
 	background-color: #FD7360;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Tangerina {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Tangerina {
 	background-color: #E8740D;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Turquesa {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Turquesa {
 	background-color: #24C7B1;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Verde {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Verde {
 	background-color: #4ED1C3;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Vermelho {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Vermelho {
 	background-color: #E45049;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Vinho {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Vinho {
 	background-color: #630015;
 }
 
-body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cor li.skuList label.skuespec_Violeta {
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores li.skuList label.skuespec_Violeta {
 	background-color: #BA2161;
 }
 
@@ -3063,8 +3072,9 @@ body.produto main .product-view .buy-box .qtd span {
 	overflow: hidden;
 	line-height: 26px;
 	color: #2e2b3e;
-	-ms-flex: 1;
-	    flex: 1;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	margin-right: 5px;
 }
 
 body.produto main .product-view .buy-box .qtd .quantidade {
@@ -3367,12 +3377,14 @@ body.produto main .social-section .social-share__icons {
 }
 
 body.produto .flags .flag {
-	right: 153px;
+	right: 3px;
+	top: 70px;
 }
 
 body.produto .buy-together {
 	position: relative;
 	text-align: center;
+	background: #EAEAEA;
 }
 
 body.produto .buy-together hr {
@@ -3404,7 +3416,8 @@ body.produto .buy-together .itemB {
 	padding: 40px;
 }
 
-body.produto .buy-together .plus {
+body.produto .buy-together .plus,
+body.produto .buy-together .equal {
 	padding: 0 30px;
 	vertical-align: middle;
 	font-size: 3em;
@@ -5925,7 +5938,7 @@ body.produto main .product-view .product-box .apresentacao #include {
 }
 
 body.produto main .product-view .product-box .apresentacao #include .sku-rich-image-main {
-	width: auto;
+	width: 100%;
 }
 
 body.produto main .product-view .product-box .apresentacao .zoomPad .zoomWindow {

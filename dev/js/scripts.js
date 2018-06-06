@@ -56,12 +56,20 @@ var body = $('body'),
 	depCatBus = $('.dep-cat-bus'),
 	pagProduto = $('.produto'),
 	pagInstitucional = $('.institucional'),
-  sidebar = $('.sidebar'),
-  addPercent = $('.prateleira .flags__desconto .flag');
+	sidebar = $('.sidebar'),
+	addPercent = $('.prateleira .flags__desconto .flag'),
+	addTotalBuyTogether = $('.buy-together .buy');
 
 
   // ADD PERCENT TO DISCOUNT
   addPercent.append("% OFF");
+
+  // EXTRACT VALUE FROM BUY TOGETHER
+  
+  var myStr = $('.buy').text();
+  var subStr = myStr.match("total:(.*)Comprando");
+  addTotalBuyTogether.text(subStr[1]);
+
 
 $(function() {
 
