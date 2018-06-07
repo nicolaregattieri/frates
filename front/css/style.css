@@ -2648,6 +2648,10 @@ body.produto main {
 	margin-top: 4%;
 }
 
+body.produto main .breadcrumb {
+	display: none;
+}
+
 body.produto main .product-view {
 	overflow: hidden;
 	margin: 20px 0 40px;
@@ -2684,9 +2688,7 @@ body.produto main .product-view .product-box .apresentacao .zoomPad .zoomWindow 
 }
 
 body.produto main .product-view .product-box .apresentacao .thumbs {
-	margin-top: 10px;
-	text-align: center;
-	overflow: hidden;
+	display: none;
 }
 
 body.produto main .product-view .product-box .apresentacao .thumbs li {
@@ -5933,6 +5935,10 @@ header .row {
 	height: 80%;
 }
 
+body.produto main .breadcrumb {
+	display: block;
+}
+
 body.produto main .product-view .product-box .apresentacao #include {
 	padding-left: 118px;
 }
@@ -5954,10 +5960,14 @@ body.produto main .product-view .product-box .apresentacao .zoomPad .zoomWindow 
 }
 
 body.produto main .product-view .product-box .apresentacao .thumbs {
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 530px;
+	margin-top: 10px;
+	text-align: center;
+	overflow: hidden;
 }
 
 body.produto main .product-view .product-box .apresentacao .thumbs li {

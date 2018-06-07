@@ -6,6 +6,14 @@ body.produto {
   main {
     overflow: hidden;
     margin-top: 4%;
+
+    .breadcrumb{
+      display: none;
+      @include mq($screen-md){
+        display: block;
+      }
+    }
+
     .product-view {
       overflow: hidden;
       margin: 20px 0 40px;
@@ -52,14 +60,16 @@ body.produto {
             }
           }
           .thumbs {
-            margin-top: 10px;
-            text-align: center;
-            overflow: hidden;
+            display: none;
             @include mq($screen-md) {
+              display: block;
               position: absolute;
               top: 0;
               left: 0;
               height: 530px;
+              margin-top: 10px;
+             text-align: center;
+              overflow: hidden;
             }
             li {
               margin: 0 5px 10px;

@@ -16,3 +16,35 @@ $.getJSON(data, function(data) {
 
 console.log(arr);
 
+
+
+var slide = $('.slide'),
+$slider = $('.slider'),
+$progressBar = $('.progress'),
+$progressBarLabel = $('.slider__label');
+
+
+$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+
+    $progressBar
+        .css('background-size', calc + '% 100%')
+        .attr('aria-valuenow', calc);
+
+    $progressBarLabel.text((nextSlide + 1) + " | " + (slick.slideCount));
+});
+
+if (slide.length > 0) {
+    slide.slick({
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
+        arrows: true,
+        dots: false,
+        draggable: true,
+        touchMove: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+}
