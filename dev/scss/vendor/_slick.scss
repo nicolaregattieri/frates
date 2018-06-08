@@ -157,7 +157,6 @@ $slick-opacity-not-active: .25 !default;
 .slick-next {
   display: none;
   font-size: 0;
-  padding: 10px;
   line-height: 0;
   cursor: pointer;
   color: transparent;
@@ -167,7 +166,7 @@ $slick-opacity-not-active: .25 !default;
   border-radius: 50%;
   background: #fff;
   border: 1px solid #766A47;
-  @include mq ($screen-md){
+  @include mq ($screen-md) {
     border: 0;
     background: transparent;
   }
@@ -176,6 +175,8 @@ $slick-opacity-not-active: .25 !default;
 .slick-prev {
   left: 2.5%;
   @include rotate(180deg); // left: 33px;
+  width: 30px;
+  height: 30px;
   svg {
     width: 15px;
     height: 15px;
@@ -192,6 +193,8 @@ $slick-opacity-not-active: .25 !default;
 
 .slick-next {
   right: 2.5%;
+  width: 30px;
+  height: 30px;
   svg {
     width: 15px;
     height: 15px;
@@ -262,12 +265,9 @@ $slick-opacity-not-active: .25 !default;
   bottom: 100px;
   right: 20px;
   background-color: rgba(255, 255, 255, 0.471) !important;
-  background-image: linear-gradient(to right,#fff,#fff);
+  background-image: linear-gradient(to right, #fff, #fff);
   background-repeat: no-repeat;
   background-size: 0 100%;
   transition: background-size .4s ease-in-out;
   z-index: 99;
 }
-
-
-

@@ -287,7 +287,7 @@ main {
 .container {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1330px;
+	max-width: 1340px;
 }
 
 .container--narrow {
@@ -1330,8 +1330,7 @@ footer * > a {
    ========================================================================== */
 
 .prateleira {
-	padding: 0 5.5%;
-	margin: 40px 0;
+	margin: 43px 0;
 }
 
 .prateleira h2 {
@@ -1374,23 +1373,19 @@ footer * > a {
 	font-weight: bold;
 }
 
-.prateleira .slick-prev {
-	left: -2.8%;
-	top: 40%;
-}
-
+.prateleira .slick-prev,
 .prateleira .slick-next {
-	right: -2.8%;
 	top: 40%;
+	padding: 0;
 }
 
 .prateleira .category_page_title {
-	padding: 0 20px;
+	margin: 0 20px;
 	position: relative;
 }
 
 .prateleira .category_page_title:hover .btn-buy {
-	top: -60px;
+	top: -80px;
 	opacity: 1;
 }
 
@@ -1437,7 +1432,7 @@ footer * > a {
 	border-radius: 0 0 0 10px;
 	position: absolute;
 	top: 30px;
-	right: 14px;
+	right: -7px;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: center;
@@ -1500,6 +1495,20 @@ footer * > a {
 
 .shelf-semana .flags__destaque p {
 	color: #0B2539;
+}
+
+.tlt-shelf {
+	font-size: 1.2em;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 22px;
+	color: #092234;
+}
+
+.tlt-shelf span {
+	height: 60%;
+	display: block;
 }
 
 /* ==========================================================================
@@ -1821,11 +1830,11 @@ footer * > a {
 
 .sta-cart-title button {
 	position: absolute;
-	right: 100px;
+	left: 0;
 	float: right;
 	display: block;
-	width: 40px;
-	height: 30px;
+	width: 30px;
+	height: 33px;
 	margin: 24px -75px auto 30px;
 	background-color: transparent;
 	outline: 0;
@@ -1841,7 +1850,7 @@ footer * > a {
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	line-height: 80px;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 300;
 }
 
@@ -1970,12 +1979,11 @@ footer * > a {
 	color: #fff;
 	display: block;
 	width: 100%;
-	font-size: 15px;
-	font-weight: 600;
+	background-color: #756B46;
 	text-align: center;
 	text-transform: uppercase;
-	font: 15px/1.3 'PT Sans', sans-serif;
-	padding: 22px 25px 0;
+	font: 100 15px/1.3 'Open Sans', sans-serif;
+	padding: 15px 25px 0;
 }
 
 .sta-cart-total strong {
@@ -2097,27 +2105,28 @@ footer * > a {
 
 .ui-autocomplete {
 	background-color: #fff;
-	border: 1px solid #999;
-	width: 313px !important;
-	padding: 0;
+	left: 1183px !important;
+	width: 600px !important;
+	padding: 0 35px;
 }
 
 .ui-autocomplete .ui-menu-item {
 	border-bottom: 1px solid #999;
-	padding: 10px;
 	list-style-type: none;
 }
 
 .ui-autocomplete .ui-menu-item .ui-corner-all {
 	cursor: pointer;
 	color: #000;
+	padding: 20px 0;
 }
 
 .ui-autocomplete .ui-menu-item .ui-corner-all img {
 	display: inline-block;
 	margin-right: 5px;
 	vertical-align: middle;
-	margin-bottom: 5px;
+	width: 9%;
+	height: 9%;
 }
 
 .ui-autocomplete .ui-menu-item:last-child {
@@ -2599,6 +2608,7 @@ body.home .banners-bottom .box-banner {
 	height: auto;
 	margin-bottom: 10px;
 	overflow: hidden;
+	margin: 123px 0;
 }
 
 body.home .banners-secundarios .box-banner img,
@@ -2622,21 +2632,6 @@ body.home .news-shelf {
 body.home .news-shelf .banner-news img {
 	width: 100%;
 	height: auto;
-}
-
-.tlt-shelf {
-	font-size: 1.2em;
-	font-weight: 400;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 22px;
-	color: #092234;
-}
-
-.tlt-shelf span {
-	height: 60%;
-	margin: 10px 0;
-	display: block;
 }
 
 /* ==========================================================================
@@ -4042,31 +4037,6 @@ body.dep-cat-bus .mainShelf .pager.bottom {
 	text-align: center;
 }
 
-.prateleira {
-	padding: 0;
-}
-
-.prateleira img {
-	width: 100%;
-	height: auto;
-}
-
-.prateleira ul {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: center;
-	    justify-content: center;
-}
-
-.prateleira ul li {
-	list-style: none;
-	-ms-flex-preferred-size: 32%;
-	    flex-basis: 32%;
-	margin-bottom: 40px;
-}
-
 body.busca-vazia .naoencontrada-box {
 	background: #EDECED;
 	display: -ms-flexbox;
@@ -4885,7 +4855,6 @@ body.account .slider .address-display-block {
 .slick-next {
 	display: none;
 	font-size: 0;
-	padding: 10px;
 	line-height: 0;
 	cursor: pointer;
 	color: transparent;
@@ -4901,6 +4870,8 @@ body.account .slider .address-display-block {
 	left: 2.5%;
 	-ms-transform: rotate(180deg);
 	    transform: rotate(180deg);
+	width: 30px;
+	height: 30px;
 }
 
 .slick-prev svg {
@@ -4911,6 +4882,8 @@ body.account .slider .address-display-block {
 
 .slick-next {
 	right: 2.5%;
+	width: 30px;
+	height: 30px;
 }
 
 .slick-next svg {
@@ -5628,7 +5601,7 @@ header .line-div {
 }
 
 header .main-header {
-	padding: 60px;
+	padding: 60px 0;
 	height: 85px;
 }
 
@@ -5806,6 +5779,10 @@ header .row {
 	    align-items: center;
 }
 
+.top-footer__revendedor .link-revendedor {
+	margin-right: 150px;
+}
+
 .top-footer__compra {
 	text-align: left;
 }
@@ -5839,20 +5816,23 @@ header .row {
 
 .prateleira article {
 	display: block;
-	margin-top: 0;
+	margin-top: 20px;
 	font-size: .9em;
 }
 
-.prateleira .slick-prev svg {
-	width: 30px;
-	height: 30px;
+.prateleira .slick-prev svg,
+.prateleira .slick-next svg {
+	width: 48px;
+	height: 51px;
 	fill: #092234;
 }
 
-.prateleira .slick-next svg {
-	width: 30px;
-	height: 30px;
-	fill: #092234;
+.prateleira .slick-next {
+	right: -30px;
+}
+
+.prateleira .slick-prev {
+	left: -30px;
 }
 
 .prateleira .btn-buy {
@@ -5869,6 +5849,17 @@ header .row {
 
 .shelf-semana {
 	padding: 0 30px;
+}
+
+.tlt-shelf {
+	font-size: 2.6em;
+	margin-top: 64px;
+}
+
+.tlt-shelf span {
+	display: block;
+	margin: 8px 0;
+	height: 80%;
 }
 
 .searchbox .search-button {
@@ -5924,15 +5915,8 @@ header .row {
 	margin-bottom: 40px;
 }
 
-.tlt-shelf {
-	font-size: 2.6em;
-	margin-top: 60px;
-}
-
-.tlt-shelf span {
-	display: block;
-	margin: 20px 0;
-	height: 80%;
+body.home .estilo-box {
+	margin-top: 123px;
 }
 
 body.produto main .breadcrumb {

@@ -2,46 +2,44 @@
    Autocomplete Busca
    ========================================================================== */
 
-.typeahead { display: none !important; }
+.typeahead {
+	display: none !important;
+}
 
 .ui-corner-all {
-  display: block;
-  cursor: pointer;
+	display: block;
+	cursor: pointer;
 }
 
 .ui-autocomplete {
-    background-color: #fff;
-    border: 1px solid #999;
-    width: 313px !important;
-    padding: 0;
-
-    .ui-menu-item {
-	    border-bottom: 1px solid #999;
-	    padding: 10px;
-	    list-style-type: none;
-
-	    .ui-corner-all{
+	background-color: #fff;
+	left: 1183px !important;
+	width: 600px !important;
+	padding: 0 35px;
+	.ui-menu-item {
+		border-bottom: 1px solid #999;
+		list-style-type: none;
+		.ui-corner-all {
 			cursor: pointer;
 			color: #000;
-
-			img{
+			padding: 20px 0;
+			img {
 				display: inline-block;
-			    margin-right: 5px;
-			    vertical-align: middle;
-			    margin-bottom: 5px;
+				margin-right: 5px;
+				vertical-align: middle;
+				width: 9%;
+				height: 9%;
 			}
-	    }
-
-	    &:last-child{
-	    	border: none;
-	    }
-
-	    &:hover{
-	    	background-color: #666;
-
-	    	.ui-corner-all{
+		}
+		
+		&:last-child {
+			border: none;
+		}
+		&:hover {
+			background-color: #666;
+			.ui-corner-all {
 				color: #fff;
-		    }
-	    }
+			}
+		}
 	}
 }

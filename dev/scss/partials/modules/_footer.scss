@@ -182,8 +182,15 @@ footer {
             text-align: left;
             display: flex;
             align-items: center;
+        } 
+        .link-revendedor {
+            @include mq ($screen-md){
+                margin-right: 150px;
+            }
         }
     }
+   
+    
 
     &__compra{
         text-align: center;

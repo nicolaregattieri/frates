@@ -3,8 +3,7 @@
    ========================================================================== */
 
 .prateleira {
-  padding: 0 5.5%;
-  margin: 40px 0;
+  margin: 43px 0;
   h2 {
     display: none;
   }
@@ -17,7 +16,7 @@
     font-size: .8em;
     @include mq ($screen-md) {
       display: block;
-      margin-top: 0;
+      margin-top: 20px;
       font-size: .9em;
     }
     h4 {
@@ -41,34 +40,36 @@
       font-weight: bold;
     }
   }
-  .slick-prev {
-    left: -2.8%;
+  .slick-prev, .slick-next {
     top: 40%;
+    padding: 0;
     @include mq($screen-md) {
       svg {
-        width: 30px;
-        height: 30px;
+        width: 48px;
+        height: 51px;
         fill: #092234;
       }
     }
   }
   .slick-next {
-    right: -2.8%;
-    top: 40%;
-    @include mq($screen-md) {
-      svg {
-        width: 30px;
-        height: 30px;
-        fill: #092234;
-      }
+    @include mq ($screen-md) {
+      right: -30px;
     }
+    
+  }
+  .slick-prev {
+    @include mq ($screen-md) {
+      left: -30px;
+    }
+
+ 
   }
   .category_page_title {
-    padding: 0 20px;
+    margin: 0 20px;
     position: relative;
     &:hover {
       .btn-buy {
-        top: -60px;
+        top: -80px;
         opacity: 1;
       }
     }
@@ -115,7 +116,7 @@
   border-radius: 0 0 0 10px;
   position: absolute;
   top: 30px;
-  right: 14px;
+  right: -7px;
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
@@ -184,4 +185,27 @@
       color: #0B2539;
     }
   }
+}
+.tlt-shelf {
+	font-size: 1.2em;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 22px;
+	color: #092234;
+	span{
+		height: 60%;
+		display: block;
+	}
+	@include mq($screen-md) {
+		font-size: 2.6em;
+		margin-top: 64px;
+		
+		span{
+			display: block;
+			margin: 8px 0;
+			height: 80%;
+		}
+	}
+	
 }

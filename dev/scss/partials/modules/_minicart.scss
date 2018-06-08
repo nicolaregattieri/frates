@@ -2,12 +2,12 @@
    Minicart
    ========================================================================== */
 
-#mini-cart, .minicart-mbl{
+#mini-cart,
+.minicart-mbl {
 	@extend .transition;
 	display: flex;
 	vertical-align: middle;
-	cursor: pointer;
-	// padding-top: 20px;
+	cursor: pointer; // padding-top: 20px;
 	text-align: right;
 	position: relative;
 	font-size: .8em;
@@ -36,7 +36,7 @@
 				&.amount-items {
 					display: block;
 					height: 28.5px;
-					@include mq($screen-md){
+					@include mq($screen-md) {
 						&::after {
 							content: "";
 							position: absolute;
@@ -50,7 +50,6 @@
 							z-index: 1;
 						}
 					}
-					
 					strong {
 						display: none;
 					}
@@ -216,11 +215,11 @@
 
 .sta-cart-title button {
 	position: absolute;
-	right: 100px;
+	left: 0;
 	float: right;
 	display: block;
-	width: 40px;
-	height: 30px;
+	width: 30px;
+	height: 33px;
 	margin: 24px -75px auto 30px;
 	background-color: transparent;
 	outline: 0;
@@ -236,7 +235,7 @@
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	line-height: 80px;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 300;
 }
 
@@ -367,12 +366,11 @@
 	color: #fff;
 	display: block;
 	width: 100%;
-	font-size: 15px;
-	font-weight: 600;
+	background-color: #756B46;
 	text-align: center;
 	text-transform: uppercase;
-	font: 15px/1.3 'PT Sans', sans-serif;
-	padding: 22px 25px 0;
+	font: 100 15px/1.3 'Open Sans', sans-serif;
+	padding: 15px 25px 0;
 }
 
 .sta-cart-total strong {

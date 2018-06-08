@@ -145,7 +145,7 @@ header {
 		align-items: center;
 		overflow: visible;
 		@include mq($screen-md) {
-			padding: 60px;
+			padding: 60px 0;
 			height: 85px;
 			.lupa-gold {
 				fill: #fff;
