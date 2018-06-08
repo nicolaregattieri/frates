@@ -1156,6 +1156,17 @@ footer * > a {
 	text-align: center;
 }
 
+.top-footer__compra-segura__img {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+.top-footer__compra-segura__img img {
+	margin-right: 15px;
+}
+
 .top-footer__compra-segura__img img:first-child {
 	width: 90px;
 	height: auto;
@@ -1164,6 +1175,10 @@ footer * > a {
 .top-footer__compra-segura__img img:nth-child(2) {
 	width: 90px;
 	height: auto;
+}
+
+.top-footer__compra-segura__img img:last-child {
+	margin-right: 0;
 }
 
 .top-footer__novidades {

@@ -18,24 +18,19 @@ footer {
     &--bg-grey {
         background: #E5E4E5;
     }
-
     &--bg-gold {
         background: #766A47;
     }
-
     &--white-text {
         color: #fff;
     }
-
-
-    &__direction{
+    &__direction {
         display: flex;
         flex-direction: column;
-        @include mq($screen-md){
+        @include mq($screen-md) {
             flex-direction: row;
             padding: 0 20px;
         }
-        
         &--space-between {
             justify-content: space-between;
         }
@@ -48,7 +43,7 @@ footer {
         margin-bottom: 15px;
         font-size: 1em;
         font-weight: 400;
-        @include mq($screen-md){
+        @include mq($screen-md) {
             font-weight: 600;
         }
     }
@@ -58,7 +53,6 @@ footer {
 }
 
 // TOP FOOTER
-
 .top-footer {
     display: flex;
     &__ajuda {
@@ -81,12 +75,15 @@ footer {
     }
     &__compra-segura {
         text-align: center;
-        @include mq($screen-md){
+        @include mq($screen-md) {
             text-align: left;
             margin-top: 20px;
         }
         &__img {
+            display: flex;
+            justify-content: space-between;
             img {
+                margin-right: 15px;
                 &:first-child {
                     width: 90px;
                     height: auto;
@@ -94,6 +91,9 @@ footer {
                 &:nth-child(2) {
                     width: 90px;
                     height: auto;
+                }
+                &:last-child{
+                    margin-right: 0;
                 }
             }
         }
@@ -105,7 +105,6 @@ footer {
         @include mq ($screen-md) {
             text-align: left;
             margin-bottom: 40px;
-
         }
         .form-newsletter {
             flex-direction: column;
@@ -117,11 +116,9 @@ footer {
             }
             display: flex;
             justify-content: space-between;
-           
             .newsletter-button-ok {
                 margin: 5% auto;
                 border: none;
-
                 @include mq($screen-md) {
                     width: auto;
                     margin: 0;
@@ -141,7 +138,7 @@ footer {
                 font-style: italic;
                 background: transparent;
                 border-bottom: 1px solid #766A47;
-                &:focus{
+                &:focus {
                     outline: none;
                 }
                 @include mq($screen-md) {
@@ -150,18 +147,17 @@ footer {
                 }
             }
         }
-
     }
     &__follow {
         text-align: center;
         @include mq($screen-md) {
             text-align: left;
         }
-        nav{
+        nav {
             display: flex;
             justify-content: center;
             @include mq($screen-md) {
-               display: block;
+                display: block;
             }
         }
         &__ul-row {
@@ -175,31 +171,25 @@ footer {
             }
         }
     }
-
-    &__revendedor{
+    &__revendedor {
         text-align: center;
         @include mq($screen-md) {
             text-align: left;
             display: flex;
             align-items: center;
-        } 
+        }
         .link-revendedor {
-            @include mq ($screen-md){
+            @include mq ($screen-md) {
                 margin-right: 150px;
             }
         }
     }
-   
-    
-
-    &__compra{
+    &__compra {
         text-align: center;
-        @include mq($screen-md){
+        @include mq($screen-md) {
             text-align: left;
-
         }
     }
-
     &--half {
         flex-direction: column;
         flex: 1;
@@ -208,10 +198,7 @@ footer {
             width: 50%;
             margin-right: 5%;
             padding: 30px 0;
-
         }
-       
-        
         &:nth-child(2) {
             margin-right: 0;
         }
@@ -219,67 +206,57 @@ footer {
     &--left {
         flex: 1;
     }
-
 }
-
 
 // BOTTOM FOOTER 
 .bottom-footer {
     font-weight: 300;
     font-size: .8em;
     text-align: center;
-    @include mq($screen-md){
+    @include mq($screen-md) {
         padding: 20px;
         text-align: left;
     }
-    .container{
+    .container {
         display: flex;
         align-items: center;
     }
-
     .copyright {
         @include mq($screen-md) {
             font-size: .7em;
         }
     }
-    
 }
 
-
-
-
-
 // COMMON
-
-.divisor{
-  padding: 35px 0;
-  border-bottom: rgba(118, 106, 71, 0.712) solid 1px;
-  width: 95%;
-  margin: 0 auto;
-  @include mq($screen-md) {
-      border-bottom: 0;
-      padding: 0;
-  }
-  &--white{
-    border-bottom: #E5E4E5 solid 1px;
-  }
-  &--no-border{
+.divisor {
     padding: 35px 0;
+    border-bottom: rgba(118, 106, 71, 0.712) solid 1px;
     width: 95%;
     margin: 0 auto;
-    border-bottom: 0;
-  }
+    @include mq($screen-md) {
+        border-bottom: 0;
+        padding: 0;
+    }
+    &--white {
+        border-bottom: #E5E4E5 solid 1px;
+    }
+    &--no-border {
+        padding: 35px 0;
+        width: 95%;
+        margin: 0 auto;
+        border-bottom: 0;
+    }
 }
 
 .svg-bigger {
-  i svg{
-    height: 60px;
-    width: auto;
-    fill: #766A47;
-    @include mq($screen-md){
-      height: 46px;
-      width: auto;
+    i svg {
+        height: 60px;
+        width: auto;
+        fill: #766A47;
+        @include mq($screen-md) {
+            height: 46px;
+            width: auto;
+        }
     }
-  }
- 
 }
