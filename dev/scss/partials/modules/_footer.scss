@@ -27,9 +27,11 @@ footer {
     &__direction {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         @include mq($screen-md) {
             flex-direction: row;
-            padding: 0 20px;
+            width: 95%;
+            margin: 0 auto;
         }
         &--space-between {
             justify-content: space-between;
@@ -75,15 +77,23 @@ footer {
     }
     &__compra-segura {
         text-align: center;
-        @include mq($screen-md) {
-            text-align: left;
-            margin-top: 20px;
-        }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       
         &__img {
+            list-style: none;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            width: 305px;
+            justify-content: space-around;
+            @include mq($screen-md){
+                justify-content: space-between;
+            }
             img {
                 margin-right: 15px;
+                list-style: none;
                 &:first-child {
                     width: 90px;
                     height: auto;
@@ -92,10 +102,15 @@ footer {
                     width: 90px;
                     height: auto;
                 }
-                &:last-child{
+                &:last-child {
                     margin-right: 0;
                 }
             }
+        }
+        @include mq($screen-md) {
+            text-align: left;
+            margin-top: 20px;
+            align-items: flex-start;
         }
     }
     &__novidades {
@@ -105,6 +120,7 @@ footer {
         @include mq ($screen-md) {
             text-align: left;
             margin-bottom: 40px;
+            margin-right: 0;
         }
         .form-newsletter {
             flex-direction: column;
@@ -113,6 +129,7 @@ footer {
                 flex-direction: row;
                 text-align: left;
                 margin-top: 33px;
+                padding-right: 20px;
             }
             display: flex;
             justify-content: space-between;
@@ -142,7 +159,6 @@ footer {
                     outline: none;
                 }
                 @include mq($screen-md) {
-                    margin-right: 5%;
                     margin-bottom: 0;
                 }
             }
@@ -162,12 +178,12 @@ footer {
         }
         &__ul-row {
             display: flex;
-            width: 90%;
+            min-width: 100%;
             &--space {
-                justify-content: space-around;
+                justify-content: space-between;
             }
             @include mq($screen-md) {
-                width: 220px;
+                max-width: 220px;
             }
         }
     }
@@ -179,9 +195,7 @@ footer {
             align-items: center;
         }
         .link-revendedor {
-            @include mq ($screen-md) {
-                margin-right: 150px;
-            }
+            @include mq ($screen-md) {}
         }
     }
     &__compra {
@@ -196,7 +210,6 @@ footer {
         @include mq($screen-md) {
             flex-direction: row;
             width: 50%;
-            margin-right: 5%;
             padding: 30px 0;
         }
         &:nth-child(2) {

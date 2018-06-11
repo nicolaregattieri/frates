@@ -171,7 +171,7 @@ $(function () {
 	// Slider //
 
 	if (slideShelf.length > 0) {
-		$('.home, .busca-vazia').find('.slideShelf .prateleira').find('ul').slick({
+		$('.home, .busca-vazia, .produto').find('.slideShelf .prateleira').find('ul').slick({
 			adaptiveHeight: true,
 			autoplay: false,
 			arrows: true,

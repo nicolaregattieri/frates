@@ -53,13 +53,13 @@
   }
   .slick-next {
     @include mq ($screen-md) {
-      right: -30px;
+      right: -10px;
     }
     
   }
   .slick-prev {
     @include mq ($screen-md) {
-      left: -30px;
+      left: -10px;
     }
 
  
@@ -149,7 +149,7 @@
   }
 }
 
-.shelf-destaques {
+.shelf-destaques,.shelfRelacionados {
   a {
     .bestPrice {
       color: #092234;

@@ -8,8 +8,7 @@ header {
 		top: 0;
 		left: 0;
 		width: 100%;
-		position: fixed;
-		// min-height: 77px;
+		position: fixed; // min-height: 77px;
 		z-index: 999999999;
 		background-color: #fff;
 		animation: grow .7s;
@@ -18,7 +17,6 @@ header {
 		-webkit-animation: grow .7s;
 		box-shadow: 0 0 50px rgba(#000, .4);
 		background-image: none;
-
 		.black-logo {
 			display: none;
 		}
@@ -46,22 +44,17 @@ header {
 				}
 			}
 		}
-
-
-
 		.menu-header {
-			*>a{
+			*>a {
 				color: #776c46;
 			}
 		}
-
 		a.first-menu {
 			color: #776c46;
-			&:hover{
+			&:hover {
 				border-bottom: #756B45 solid 2px;
 			}
 		}
-
 		.top-box {
 			display: block;
 		}
@@ -94,8 +87,5 @@ header {
 	}
 	&.ha-hide {
 		top: -100%;
-  }
- 
+	}
 }
-
-

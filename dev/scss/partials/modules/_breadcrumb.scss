@@ -5,6 +5,7 @@
 .bread-crumb {
 	overflow: hidden;
 	clear: both;
+	margin-bottom: 25px;
 
 	ul {
 		li {
@@ -13,6 +14,8 @@
 			display: inline-block;
 			vertical-align: middle;
 			line-height: 20px;
+			font-size: 1.5em;
+			font-weight: lighter;
 
 			&:after {
 				@include font-size(1.4);
@@ -21,16 +24,16 @@
 				display: inline-block;
 				font-weight: bolder;
 				padding-left: 5px;
-				vertical-align: top;
+				vertical-align: bottom;
 			}
 
 			&:first-child{
-				font-weight: 900;
+				
 			}
 			
 			a {
 				@include font-size(1.4);
-				color: #333;
+				color: #999;
 				text-decoration: none;
 
 				&:hover {
@@ -39,6 +42,12 @@
 			}
 
 			&:last-child {
+				a{
+					color: #726846;
+					
+				}
+				
+
 				&:after {
 					content: '';
 				}
