@@ -13,9 +13,7 @@ header {
 	}
 	position: relative;
 	width: 100%;
-	z-index: 9999;
-	
-	// TOP-BOX	
+	z-index: 9999; // TOP-BOX	
 	.top-box {
 		padding: 2px;
 		overflow: visible;
@@ -78,9 +76,7 @@ header {
 		}
 	}
 	.account-box {
-	
-		
-		a{
+		a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -89,9 +85,7 @@ header {
 			font-size: .9em;
 			text-decoration: none;
 		}
-	}
-	
-	// EDITANDO O HOVER DO TOP-BOX
+	} // EDITANDO O HOVER DO TOP-BOX
 	.flex-ul {
 		font-size: 0.9em;
 		font-weight: lighter;
@@ -135,11 +129,7 @@ header {
 				}
 			}
 		}
-	}
-	
-	
-	// MAIN HEADER
-	
+	} // MAIN HEADER
 	.main-header {
 		display: flex;
 		align-items: center;
@@ -154,13 +144,11 @@ header {
 		.lupa-gold {
 			fill: #756B45;
 		}
-		
-		.mobile-container{
+		.mobile-container {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 		}
-		
 		.logo-mobile {
 			display: block;
 			padding-left: 10px;
@@ -202,7 +190,7 @@ header {
 			}
 			ul {
 				margin-right: 20px;
-
+				padding-top: 25px;
 				li {
 					@extend .transition;
 					margin: 0;
@@ -216,7 +204,7 @@ header {
 							content: "";
 							position: relative;
 						}
-						&:hover{
+						&:hover {
 							border-bottom: 3px solid #776c46;
 						}
 					}
@@ -414,23 +402,21 @@ header {
 				}
 			}
 			&.slideActive {
-				left: 0;
-        // top: 80px;
-        padding: 0;
+				left: 0; // top: 80px;
+				padding: 0;
 				opacity: 1;
 				background: #fff;
 				overflow-y: auto;
-        overflow-x: hidden;
-        border-top: 1px solid #999;
-        width: 80%;
-        
+				overflow-x: hidden;
+				border-top: 1px solid #999;
+				width: 80%;
 				ul {
-          margin-right: 0;
+					margin-right: 0;
 					li {
 						a {
 							@include font-size(1.4);
 							color: #776c46;
-              line-height: 20px;
+							line-height: 20px;
 							&.first-menu {
 								@include font-size(1.8);
 								border: none !important;
@@ -438,8 +424,8 @@ header {
 						}
 						&.has-sub {
 							a {
-                display: block;
-                color: #776c46;
+								display: block;
+								color: #776c46;
 								&.first-menu {
 									&:after {
 										@include font-size(2.5);
@@ -461,21 +447,21 @@ header {
 								height: auto;
 								opacity: 1;
 								background-color: #eeeeee;
-                display: none;
-                padding: 0;
+								display: none;
+								padding: 0;
 								ul {
 									li {
-                    width: 84%;
-                    margin: 0 auto;
+										width: 84%;
+										margin: 0 auto;
 										a {
 											@include font-size(1.4);
 											padding-left: 20px;
 											line-height: 16px;
 											padding: 5px 5px 5px 20px;
 											display: block;
-                      width: 100%;
-                      font-weight: 600;
-                      text-align: left;
+											width: 100%;
+											font-weight: 600;
+											text-align: left;
 										}
 									}
 								}
@@ -485,12 +471,7 @@ header {
 				}
 			}
 		}
-		
-	}
-	
-	
-	
-	// HEADER HOVER STATE
+	} // HEADER HOVER STATE
 	@include mq($screen-md) {
 		&:hover {
 			.black-logo {
@@ -526,36 +507,30 @@ header {
 		.row {
 			display: flex;
 		}
-	}
-	
-	// MOBILE ARRANGEMENT
+	} // MOBILE ARRANGEMENT
 	.left-side-header {
 		width: 25%;
 		padding: 0 15px;
 	}
-	
 	.right-side-header {
 		width: 25%;
 		margin-right: 10px;
 		display: flex;
 		justify-content: space-between;
-		@include mq($screen-sm){
+		@include mq($screen-sm) {
 			margin-right: 15px;
 		}
 	}
-	
 }
 
 // HEADER PAGINAS INTERNAS
-
 body.internas {
 	main {
 		margin-top: 40px;
 	}
 	header {
-		position: sticky;
+		position: fixed;
 		border-bottom: 1.2px solid #c5c5c5;
-
 		.black-logo {
 			display: none;
 		}
@@ -566,26 +541,20 @@ body.internas {
 		.top-box {
 			background: #062134;
 		}
-		.main-header{
-			a.first-menu{
+		.main-header {
+			a.first-menu {
 				color: #756B45;
 			}
 			input.fulltext-search-box {
 				color: #756B45;
 				border-bottom: 1px solid #756B45;
 				font-weight: 300;
-				
 			}
 			.search-button {
 				svg path {
 					fill: #756B45;
 				}
-				
 			}
 		}
 	}
-	
-	
 }
-
-

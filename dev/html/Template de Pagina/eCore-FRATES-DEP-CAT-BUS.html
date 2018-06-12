@@ -40,10 +40,6 @@
         </div>
       </section>
 
-      <!-- <section class="sidebar col-xs-12 col-md-3">
-        <vtex.cmc:searchNavigator />
-      </section> -->
-
       <section class="mainShelf">
         <vtex.cmc:searchResult layout="38b97d2e-b065-4da2-9aca-e5d2c400f24e" itemCount="12" columnCount="12" />
       </section>
@@ -52,10 +48,11 @@
 
   <vtex:template id="eCore-FRATES-FOOTER" />
   <vtex:template id="eCore-FRATES-COMMONSCRIPTS" />
-
+  <script type="text/javascript" src="/arquivos/vtex-smartResearch.js"></script>
+  
   <script type="text/javascript">
     $(document).ready(function () {
-      $('.orderBy').first().appendTo('#nav-dep .right');
+      $(".controles__filtro input[type='checkbox']").vtexSmartResearch();
     });
   </script>
 </body>
