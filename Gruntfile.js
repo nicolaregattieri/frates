@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'front/css/checkout-custom.css': 'dev/scss/checkout-custom.scss',
+          'front/css/checkout5-custom.css': 'dev/scss/checkout-custom.scss',
           'front/css/style.css': 'dev/scss/style.scss'
         }
       }
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'front/css/checkout-custom.css',
+          'front/css/checkout5-custom.css',
           'front/css/style.css'
         ]
       }
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: {
-          "front/checkout-custom.css": "front/css/checkout-custom.css",
+          "front/checkout5-custom.css": "front/css/checkout5-custom.css",
           "front/frates.css": "front/css/style.css"
         }
       }

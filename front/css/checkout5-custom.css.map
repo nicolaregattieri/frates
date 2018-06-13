@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "checkout5-custom.css",
+	"sources": [
+		"../../dev/scss/checkout-custom.scss"
+	],
+	"mappings": "",
+	"names": []
+}

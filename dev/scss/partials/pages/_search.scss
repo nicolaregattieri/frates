@@ -92,21 +92,55 @@ body.dep-cat-bus {
             }
         }
     }
+    input[type='checkbox'] {
+        position: absolute;
+        left: 99999px;
+    }
+    .refino {
+        h5 {
+            text-transform: capitalize;
+        }
+    }
 }
 
-.Cores {
-    &::before {
-        content: "Cores";
-        position: absolute;
-        top: 0;
-        margin-bottom: 10px;
-        font-weight: bold;
+%flex-filter{
+    div{
+        display: flex;
+        margin-top: 10px;
     }
-    li {
+}
+
+.filtro {
+    &_tamanho {
+        @extend %flex-filter;
+        label {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            padding: 0 5px;
+            min-width: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 5px 15px 3px 2px;
+            border: 1px solid #bebebe;
+            background: #ececec none repeat scroll 0 0;
+            text-decoration: none;
+            color: #757575;
+            font-weight: lighter;
+            &:hover {
+                color: #fff;
+                background-color: #726846;
+                border: 1px solid #726846;
+            }
+        }
+    }
+    &_cores {
+        @extend %flex-filter;
         display: inline-block;
         margin-right: 5px;
         margin-bottom: 5px;
-        a {
+        label {
             @extend .transition;
             display: block;
             width: 30px;
@@ -215,29 +249,6 @@ body.dep-cat-bus {
             &[title~=violeta] {
                 background-color: #BA2161;
             }
-        }
-    }
-}
-
-.filtro-tamanho {
-    label {
-        display: inline-block;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        padding: 0 5px;
-        min-width: 30px;
-        line-height: 30px;
-        text-align: center;
-        margin: 5px 3px 3px 2px;
-        border: 1px solid #bebebe;
-        background: #ececec none repeat scroll 0 0;
-        text-decoration: none;
-        color: #757575;
-        &:hover {
-            color: #fff;
-            background-color: #726846;
-            border: 1px solid #726846;
         }
     }
 }

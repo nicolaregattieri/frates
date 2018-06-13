@@ -255,7 +255,7 @@ header.ha-hidding,
 #popup-wrapper .popup button[name="logIn"],
 #popup-wrapper .popup a.logIn,
 body.dep-cat-bus .controles__filtro .navigation-tabs,
-.Cores li a,
+.filtro_cores label,
 body.account [data-toggle="modal"],
 body.favoritos main ul#favList li a.productShelf span.prod-image,
 body.favoritos main ul#favList button.remove,
@@ -2601,6 +2601,11 @@ body.modal-active .modal {
 	margin-left: 23px;
 }
 
+.controles__filtro__slider #slider-container {
+	width: 350px;
+	margin-left: 30px;
+}
+
 /* ==========================================================================
    Home
    ========================================================================== */
@@ -3663,21 +3668,52 @@ body.dep-cat-bus .controles__filtro .search-single-navigator h4 a {
 	font-weight: 600;
 }
 
-.Cores::before {
-	content: "Cores";
+body.dep-cat-bus input[type='checkbox'] {
 	position: absolute;
-	top: 0;
-	margin-bottom: 10px;
-	font-weight: bold;
+	left: 99999px;
 }
 
-.Cores li {
+body.dep-cat-bus .refino h5 {
+	text-transform: capitalize;
+}
+
+.filtro_tamanho div,
+.filtro_cores div {
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 10px;
+}
+
+.filtro_tamanho label {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 0 5px;
+	min-width: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 5px 15px 3px 2px;
+	border: 1px solid #bebebe;
+	background: #ececec none repeat scroll 0 0;
+	text-decoration: none;
+	color: #757575;
+	font-weight: lighter;
+}
+
+.filtro_tamanho label:hover {
+	color: #fff;
+	background-color: #726846;
+	border: 1px solid #726846;
+}
+
+.filtro_cores {
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
 }
 
-.Cores li a {
+.filtro_cores label {
 	display: block;
 	width: 30px;
 	height: 30px;
@@ -3687,159 +3723,137 @@ body.dep-cat-bus .controles__filtro .search-single-navigator h4 a {
 	font-size: 0;
 }
 
-.Cores li a[title~=amarelo] {
+.filtro_cores label[title~=amarelo] {
 	background-color: #FCBB23;
 }
 
-.Cores li a[title~=azul] {
+.filtro_cores label[title~=azul] {
 	background-color: #0000ff;
 }
 
-.Cores li a[title~=azul_Claro] {
+.filtro_cores label[title~=azul_Claro] {
 	background-color: #658EBC;
 }
 
-.Cores li a[title~=azul_Marinho] {
+.filtro_cores label[title~=azul_Marinho] {
 	background-color: #0F1D42;
 }
 
-.Cores li a[title~=bege] {
+.filtro_cores label[title~=bege] {
 	background-color: #E2CFAE;
 }
 
-.Cores li a[title~=branco] {
+.filtro_cores label[title~=branco] {
 	background-color: #fff;
 	border: 1px solid #ccc;
 }
 
-.Cores li a[title~=bronze] {
+.filtro_cores label[title~=bronze] {
 	background-color: #895837;
 }
 
-.Cores li a[title~=caqui] {
+.filtro_cores label[title~=caqui] {
 	background-color: #856D41;
 }
 
-.Cores li a[title~=caramelo] {
+.filtro_cores label[title~=caramelo] {
 	background-color: #D0822F;
 }
 
-.Cores li a[title~=castanho] {
+.filtro_cores label[title~=castanho] {
 	background-color: #3E2101;
 }
 
-.Cores li a[title~=chocolate] {
+.filtro_cores label[title~=chocolate] {
 	background-color: #57362F;
 }
 
-.Cores li a[title~=cinza] {
+.filtro_cores label[title~=cinza] {
 	background-color: #6B6B6B;
 }
 
-.Cores li a[title~=creme] {
+.filtro_cores label[title~=creme] {
 	background-color: #6B6B6B;
 }
 
-.Cores li a[title~=estampado] {
+.filtro_cores label[title~=estampado] {
 	background-color: #844345;
 }
 
-.Cores li a[title~=laranja] {
+.filtro_cores label[title~=laranja] {
 	background-color: #F73C07;
 }
 
-.Cores li a[title~=lilas] {
+.filtro_cores label[title~=lilas] {
 	background-color: #9D8DCB;
 }
 
-.Cores li a[title~=limao] {
+.filtro_cores label[title~=limao] {
 	background-color: #48F86D;
 }
 
-.Cores li a[title~=madeira] {
+.filtro_cores label[title~=madeira] {
 	background-color: #644B35;
 }
 
-.Cores li a[title~=marfim] {
+.filtro_cores label[title~=marfim] {
 	background-color: #E0B370;
 }
 
-.Cores li a[title~=marrom] {
+.filtro_cores label[title~=marrom] {
 	background-color: #301701;
 }
 
-.Cores li a[title~=ocre] {
+.filtro_cores label[title~=ocre] {
 	background-color: #272725;
 }
 
-.Cores li a[title~=ouro] {
+.filtro_cores label[title~=ouro] {
 	background-color: #BE9B47;
 }
 
-.Cores li a[title~=prata] {
+.filtro_cores label[title~=prata] {
 	background-color: #76757B;
 }
 
-.Cores li a[title~=preto] {
+.filtro_cores label[title~=preto] {
 	background-color: #000;
 }
 
-.Cores li a[title~=rosa] {
+.filtro_cores label[title~=rosa] {
 	background-color: #F968A9;
 }
 
-.Cores li a[title~=roxo] {
+.filtro_cores label[title~=roxo] {
 	background-color: #8756A1;
 }
 
-.Cores li a[title~=salmao] {
+.filtro_cores label[title~=salmao] {
 	background-color: #FD7360;
 }
 
-.Cores li a[title~=tangerina] {
+.filtro_cores label[title~=tangerina] {
 	background-color: #E8740D;
 }
 
-.Cores li a[title~=turquesa] {
+.filtro_cores label[title~=turquesa] {
 	background-color: #24C7B1;
 }
 
-.Cores li a[title~=verde] {
+.filtro_cores label[title~=verde] {
 	background-color: #4ED1C3;
 }
 
-.Cores li a[title~=vermelho] {
+.filtro_cores label[title~=vermelho] {
 	background-color: #E45049;
 }
 
-.Cores li a[title~=vinho] {
+.filtro_cores label[title~=vinho] {
 	background-color: #630015;
 }
 
-.Cores li a[title~=violeta] {
+.filtro_cores label[title~=violeta] {
 	background-color: #BA2161;
-}
-
-.filtro-tamanho label {
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-	padding: 0 5px;
-	min-width: 30px;
-	line-height: 30px;
-	text-align: center;
-	margin: 5px 3px 3px 2px;
-	border: 1px solid #bebebe;
-	background: #ececec none repeat scroll 0 0;
-	text-decoration: none;
-	color: #757575;
-}
-
-.filtro-tamanho label:hover {
-	color: #fff;
-	background-color: #726846;
-	border: 1px solid #726846;
 }
 
 #nav-dep {

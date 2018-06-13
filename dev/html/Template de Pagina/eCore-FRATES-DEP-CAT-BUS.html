@@ -8,11 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <vtex:template id="eCore-FRATES-COMMONSTYLES" />
-  <style type="text/css">
-    body.dep-cat-bus main {
-      margin-top: 5px !important;
-    }
-  </style>
+  <link rel="stylesheet" href="arquivos/nouislider.min.css" />  
 </head>
 
 <body>
@@ -27,7 +23,12 @@
 
       <section class="controles">
         <div class="controles__filtro">
-            <vtex.cmc:searchNavigator />
+          <vtex.cmc:searchNavigator />
+          <div class="slider-wrapper">
+            <div id="nonlinear">
+          </div>
+
+          </div>
         </div>
       </section>
 
@@ -49,7 +50,8 @@
   <vtex:template id="eCore-FRATES-FOOTER" />
   <vtex:template id="eCore-FRATES-COMMONSCRIPTS" />
   <script type="text/javascript" src="/arquivos/vtex-smartResearch.js"></script>
-  
+  <script type="text/javascript" src="/arquivos/nouislider.min.js"></script>
+
   <script type="text/javascript">
     $(document).ready(function () {
       $(".controles__filtro input[type='checkbox']").vtexSmartResearch();
