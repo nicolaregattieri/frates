@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+body {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.border-bottom {
+    border-bottom: 1px solid #999;
+}
+
+.body-cart {
+    .fake-progress__img {
+        margin: 0 auto;
+        &:nth-child(1) {
+            display: block;
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+
+.body-order-form {
+    .fake-progress__img {
+        margin: 0 auto;
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(2) {
+            display: block;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+.body-order-form .orderform-template{
+    .fake-progress__img {
+        margin: 0 auto;
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(2) {
+            display: block;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+.my-class{
+    .fake-progress__img {
+        margin: 0 auto;
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: block;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+.body-checkout-confirmation {
+    .fake-progress__img {
+        margin: 0 auto;
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: block;
+        }
+    }
+}
+
+.fake-progress {
+    padding: 40px;
+}
+.checkout-header {
+    list-style: none;
+    text-decoration: none;
+    &__top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #032134;
+        color: #fff;
+    }
+    &__icon {
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+    }
+    &__nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    &__item-txt {
+        margin-left: 10px;
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding: 25px;
+    }
+}

@@ -2679,7 +2679,7 @@ Página de Produto
 
 body.produto main {
 	overflow: hidden;
-	margin-top: 4%;
+	margin-top: 200px;
 }
 
 body.produto main .breadcrumb {
