@@ -4,12 +4,18 @@ body {
     margin: 0;
     list-style: none;
     font-family: 'Open Sans', sans-serif;
+
+    .loading{
+        .fake-progress__img {
+          display: none;
+        }
+    }
 }
 .border-bottom {
     border-bottom: 1px solid #999;
 }
 
-.body-cart {
+.body-cart, .body-cart-change {
     .fake-progress__img {
         margin: 0 auto;
         &:nth-child(1) {
@@ -27,7 +33,7 @@ body {
     }
 }
 
-.body-order-form {
+.body-order-form, .body-order-form-change {
     .fake-progress__img {
         margin: 0 auto;
         &:nth-child(1) {
@@ -44,7 +50,7 @@ body {
         }
     }
 }
-.body-order-form .orderform-template{
+.body-order-form {
     .fake-progress__img {
         margin: 0 auto;
         &:nth-child(1) {

@@ -1494,6 +1494,15 @@ footer * > a {
 	font-size: .7em;
 }
 
+.oldPrice {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 1em;
+	text-decoration: line-through;
+	color: #999;
+	font-weight: normal;
+}
+
 .shelf-destaques a .bestPrice,
 .shelfRelacionados a .bestPrice {
 	color: #092234;
@@ -3677,6 +3686,23 @@ body.dep-cat-bus .refino h5 {
 	text-transform: capitalize;
 }
 
+body.dep-cat-bus .prateleira {
+	padding: 0 5px;
+}
+
+body.dep-cat-bus .prateleira ul {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+body.dep-cat-bus .prateleira ul .category_page_title {
+	list-style: none;
+}
+
 .filtro_tamanho div,
 .filtro_cores div {
 	display: -ms-flexbox;
@@ -3982,22 +4008,8 @@ body.dep-cat-bus .refino h5 {
 	text-align: center;
 }
 
-.prateleira {
-	padding: 0 5px;
-}
-
-.prateleira ul {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: center;
-	    justify-content: center;
-}
-
-.prateleira ul .category_page_title {
-	list-style: none;
-	margin: 30px 50px;
+body.busca-vazia main {
+	margin-top: 12%;
 }
 
 body.busca-vazia .naoencontrada-box {

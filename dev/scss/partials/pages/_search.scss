@@ -101,10 +101,22 @@ body.dep-cat-bus {
             text-transform: capitalize;
         }
     }
+    .prateleira {
+        padding: 0 5px;
+        img {}
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .category_page_title {
+                list-style: none;
+            }
+        }
+    }
 }
 
-%flex-filter{
-    div{
+%flex-filter {
+    div {
         display: flex;
         margin-top: 10px;
     }
@@ -366,21 +378,10 @@ body.dep-cat-bus {
     }
 }
 
-.prateleira {
-    padding: 0 5px;
-    img {}
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .category_page_title {
-            list-style: none;
-            margin: 30px 50px;
-        }
-    }
-}
-
 body.busca-vazia {
+    main {
+        margin-top: 12%;
+    }
     .naoencontrada-box {
         background: #EDECED;
         display: flex;

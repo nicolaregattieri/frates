@@ -4,19 +4,32 @@ body {
   margin: 0;
   list-style: none;
   font-family: 'Open Sans', sans-serif; }
+  body .loading .fake-progress__img {
+    display: none; }
 
 .border-bottom {
   border-bottom: 1px solid #999; }
 
-.body-cart .fake-progress__img {
+.body-cart .fake-progress__img, .body-cart-change .fake-progress__img {
   margin: 0 auto; }
-  .body-cart .fake-progress__img:nth-child(1) {
+  .body-cart .fake-progress__img:nth-child(1), .body-cart-change .fake-progress__img:nth-child(1) {
     display: block; }
-  .body-cart .fake-progress__img:nth-child(2) {
+  .body-cart .fake-progress__img:nth-child(2), .body-cart-change .fake-progress__img:nth-child(2) {
     display: none; }
-  .body-cart .fake-progress__img:nth-child(3) {
+  .body-cart .fake-progress__img:nth-child(3), .body-cart-change .fake-progress__img:nth-child(3) {
     display: none; }
-  .body-cart .fake-progress__img:nth-child(4) {
+  .body-cart .fake-progress__img:nth-child(4), .body-cart-change .fake-progress__img:nth-child(4) {
+    display: none; }
+
+.body-order-form .fake-progress__img, .body-order-form-change .fake-progress__img {
+  margin: 0 auto; }
+  .body-order-form .fake-progress__img:nth-child(1), .body-order-form-change .fake-progress__img:nth-child(1) {
+    display: none; }
+  .body-order-form .fake-progress__img:nth-child(2), .body-order-form-change .fake-progress__img:nth-child(2) {
+    display: block; }
+  .body-order-form .fake-progress__img:nth-child(3), .body-order-form-change .fake-progress__img:nth-child(3) {
+    display: none; }
+  .body-order-form .fake-progress__img:nth-child(4), .body-order-form-change .fake-progress__img:nth-child(4) {
     display: none; }
 
 .body-order-form .fake-progress__img {
@@ -28,17 +41,6 @@ body {
   .body-order-form .fake-progress__img:nth-child(3) {
     display: none; }
   .body-order-form .fake-progress__img:nth-child(4) {
-    display: none; }
-
-.body-order-form .orderform-template .fake-progress__img {
-  margin: 0 auto; }
-  .body-order-form .orderform-template .fake-progress__img:nth-child(1) {
-    display: none; }
-  .body-order-form .orderform-template .fake-progress__img:nth-child(2) {
-    display: block; }
-  .body-order-form .orderform-template .fake-progress__img:nth-child(3) {
-    display: none; }
-  .body-order-form .orderform-template .fake-progress__img:nth-child(4) {
     display: none; }
 
 .my-class .fake-progress__img {
