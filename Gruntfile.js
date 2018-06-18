@@ -1,11 +1,11 @@
 "use strict";
 
 module.exports = function(grunt) {
-
-  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+  require("matchdep")
+    .filterDev("grunt-*")
+    .forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
-
     watch: {
       images: {
         files: "dev/img/**/*.{png,jpg,gif}",
@@ -31,8 +31,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'front/css/checkout5-custom.css': 'dev/scss/checkout-custom.scss',
-          'front/css/style.css': 'dev/scss/style.scss'
+          "front/css/checkout5-custom.css": "dev/scss/checkout-custom.scss",
+          "front/css/style.css": "dev/scss/style.scss"
         }
       }
     },
@@ -40,16 +40,13 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         processors: [
-          require('autoprefixer')({
-            browsers: 'last 3 versions'
+          require("autoprefixer")({
+            browsers: "last 3 versions"
           })
         ]
       },
       dist: {
-        src: [
-          'front/css/checkout5-custom.css',
-          'front/css/style.css'
-        ]
+        src: ["front/css/checkout5-custom.css", "front/css/style.css"]
       }
     },
 
@@ -59,7 +56,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'front/css/style.css': 'front/css/style.css',
+          "front/css/style.css": "front/css/style.css"
         }
       }
     },
@@ -68,7 +65,7 @@ module.exports = function(grunt) {
       options: {
         keepSpecialComments: 0,
         noAdvanced: true,
-        banner: ''
+        banner: ""
       },
       css: {
         files: {
@@ -80,19 +77,23 @@ module.exports = function(grunt) {
 
     svgmin: {
       options: {
-        plugins: [{
-          removeViewBox: false
-        }, {
-          removeUselessStrokeAndFill: false
-        }, {
-          removeEmptyAttrs: false
-        }]
+        plugins: [
+          {
+            removeViewBox: false
+          },
+          {
+            removeUselessStrokeAndFill: false
+          },
+          {
+            removeEmptyAttrs: false
+          }
+        ]
       },
       dist: {
         expand: true,
-        cwd: 'dev/svg',
-        src: '**/*.svg',
-        dest: 'front/svg'
+        cwd: "dev/svg",
+        src: "**/*.svg",
+        dest: "front/svg"
       }
     },
 
@@ -109,17 +110,17 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        separator: ';'
+        separator: ";"
       },
       base: {
         src: [
-          'front/js/animations.min.js',
-          'front/js/mobile-detect.min.js',
-          'front/js/scripts.min.js',
-          'front/js/minicart.min.js'
+          "front/js/animations.min.js",
+          "front/js/mobile-detect.min.js",
+          "front/js/scripts.min.js",
+          "front/js/minicart.min.js"
         ],
-        dest: 'front/frates.js'
-      },
+        dest: "front/frates.js"
+      }
     },
 
     imagemin: {
@@ -128,19 +129,21 @@ module.exports = function(grunt) {
           optimizationLevel: 7,
           progressive: true
         },
-        files: [{
-          expand: true,
-          cwd: 'dev/img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'front/'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: "dev/img/",
+            src: ["**/*.{png,jpg,gif}"],
+            dest: "front/img"
+          }
+        ]
       }
     },
 
     devUpdate: {
       main: {
         options: {
-          updateType: 'force',
+          updateType: "force",
           reportUpdated: false,
           semver: false,
           packages: {
@@ -152,7 +155,6 @@ module.exports = function(grunt) {
         }
       }
     }
-
   });
 
   grunt.registerTask("default", ["watch"]);
@@ -160,7 +162,15 @@ module.exports = function(grunt) {
   grunt.registerTask("img", ["imagemin"]);
   grunt.registerTask("js", ["uglify", "concat"]);
   grunt.registerTask("svg", ["svgmin"]);
-  grunt.registerTask("compile", ["sass", "cmq", "postcss", "cssmin", "imagemin", "uglify", "concat", "svgmin"]);
+  grunt.registerTask("compile", [
+    "sass",
+    "cmq",
+    "postcss",
+    "cssmin",
+    "imagemin",
+    "uglify",
+    "concat",
+    "svgmin"
+  ]);
   grunt.registerTask("update", ["devUpdate"]);
-
 };
