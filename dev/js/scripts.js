@@ -1,9 +1,40 @@
 // $.getScript('http://io.vtex.com.br/vtex.js/2.2.0/vtex.min.js');
 
-(function() {
-  var method;
-  var noop = function() {};
-  var methods = [
+const body = $("body");
+const htmlBody = $("html, body");
+const $document = $(document);
+const header = $("#header");
+const submenuDesktopWrapper = $(".js-submenu-wrap");
+const userSubmenu = $(".submenu-user");
+const sidePanelMobile = $(".side-panel");
+const mobileSubmenu = $(".submenu-mobile");
+const minicart = $(".minicart");
+const slide = $(".slide");
+const slideShelf = $(".slideShelf");
+const slideBrands = $(".slideBrands");
+const carousel = $(".shelf-carousel");
+const backToTop = $(".js-back-to-top");
+const shelf = $(".prateleira");
+const paginatedShelf = $(".prateleira[id*=ResultItems]");
+const orderList = $(".order-list");
+const formNews = $(".newsletter");
+const depCatBus = $(".dep-cat-bus");
+const pagProduto = $(".produto");
+const pagInstitucional = $(".institucional");
+const sidebar = $(".sidebar");
+const addPercent = $(".prateleira .flags__desconto .flag");
+const addTotalBuyTogether = $(".buy-together .buy");
+const $slider = $(".slider");
+const $progressBar = $(".progress");
+const $progressBarLabel = $(".slider__label");
+
+// ADD PERCENT TO DISCOUNT
+addPercent.append("% OFF");
+
+() => {
+  let method;
+  const noop = () => {};
+  const methods = [
     "assert",
     "clear",
     "count",
@@ -27,8 +58,8 @@
     "trace",
     "warn"
   ];
-  var length = methods.length;
-  var console = (window.console = window.console || {});
+  let length = methods.length;
+  const console = (window.console = window.console || {});
 
   while (length--) {
     method = methods[length];
@@ -37,13 +68,15 @@
       console[method] = noop;
     }
   }
-});
+};
+
+// Simulate Click
 
 jQuery.fn.simulateClick = function() {
   return this.each(function() {
     if ("createEvent" in document) {
-      var doc = this.ownerDocument,
-        evt = doc.createEvent("MouseEvents");
+      const doc = this.ownerDocument;
+      const evt = doc.createEvent("MouseEvents");
       evt.initMouseEvent(
         "click",
         true,
@@ -68,44 +101,7 @@ jQuery.fn.simulateClick = function() {
   });
 };
 
-var body = $("body"),
-  htmlBody = $("html, body"),
-  $document = $(document),
-  header = $("#header"),
-  submenuDesktopWrapper = $(".js-submenu-wrap"),
-  userSubmenu = $(".submenu-user"),
-  sidePanelMobile = $(".side-panel"),
-  mobileSubmenu = $(".submenu-mobile"),
-  minicart = $(".minicart"),
-  slide = $(".slide"),
-  slideShelf = $(".slideShelf"),
-  slideBrands = $(".slideBrands"),
-  carousel = $(".shelf-carousel"),
-  backToTop = $(".js-back-to-top"),
-  shelf = $(".prateleira"),
-  paginatedShelf = $(".prateleira[id*=ResultItems]"),
-  orderList = $(".order-list"),
-  formNews = $(".newsletter"),
-  depCatBus = $(".dep-cat-bus"),
-  pagProduto = $(".produto"),
-  pagInstitucional = $(".institucional"),
-  sidebar = $(".sidebar"),
-  addPercent = $(".prateleira .flags__desconto .flag"),
-  addTotalBuyTogether = $(".buy-together .buy"),
-  $slider = $(".slider"),
-  $progressBar = $(".progress"),
-  $progressBarLabel = $(".slider__label");
-
-// ADD PERCENT TO DISCOUNT
-addPercent.append("% OFF");
-
-// EXTRACT VALUE FROM BUY TOGETHER
-
-//   var myStr = $('.buy').text();
-//   var subStr = myStr.match("total:(.*)Comprando");
-//   addTotalBuyTogether.text(subStr[1]);
-
-$(function() {
+$(() => {
   // Ajuste Meus Pedidos //
   if (orderList.length > 0) {
     orderList.find("link").remove();
@@ -114,17 +110,17 @@ $(function() {
   // Ajuste Meus Pedidos //
 
   // Menu Persistente Begin //
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+  // $(window).scroll(() => {
+  // 	const scroll = $(window).scrollTop();
 
-    if (scroll >= 350) {
-      $("header").addClass("menu-persistente");
-      // $('body').addClass('top-height-active');
-    } else {
-      $("header").removeClass("menu-persistente");
-      // $('body').removeClass('top-height-active');
-    }
-  });
+  // 	if (scroll >= 350) {
+  // 		$('header').addClass('menu-persistente');
+  // 		// $('body').addClass('top-height-active');
+  // 	} else {
+  // 		$('header').removeClass('menu-persistente');
+  // 		// $('body').removeClass('top-height-active');
+  // 	}
+  // });
   // Menu Persistente END //
 
   // Remocao de Li HelperComplement Prateleira //
@@ -134,7 +130,7 @@ $(function() {
   // Remocao de Li HelperComplement Prateleira //
 
   // Busca Mob //
-  $(".js-open-mobile-search").click(function() {
+  $(".js-open-mobile-search").click(() => {
     $(".searchbox").toggleClass("active-now");
     $(".searchbox").slideToggle();
   });
@@ -147,8 +143,8 @@ $(function() {
   // Condicao tabela //
 
   // Voltar ao Topo //
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+  $(window).scroll(() => {
+    const scroll = $(window).scrollTop();
 
     if (scroll >= 450) {
       $(".js-back-to-top").addClass("active");
@@ -157,7 +153,7 @@ $(function() {
     }
   });
 
-  body.on("click", ".js-back-to-top", function(event) {
+  body.on("click", ".js-back-to-top", event => {
     event.preventDefault();
     htmlBody.animate(
       {
@@ -184,14 +180,14 @@ $(function() {
       slidesToScroll: 1
     });
   }
-  $slider.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
-    var calc = (nextSlide / (slick.slideCount - 1)) * 100;
+  $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
+    const calc = (nextSlide / (slick.slideCount - 1)) * 100;
 
     $progressBar
-      .css("background-size", calc + "% 100%")
+      .css("background-size", `${calc}% 100%`)
       .attr("aria-valuenow", calc);
 
-    $progressBarLabel.text(nextSlide + 1 + " | " + slick.slideCount);
+    $progressBarLabel.text(`${nextSlide + 1} | ${slick.slideCount}`);
   });
 
   // Slider //
@@ -235,7 +231,7 @@ $(function() {
 
   // Frete Gratis Aberto //
   try {
-    $document.ready(function() {
+    $document.ready(() => {
       $(".shipping-value").simulateClick("click");
     });
   } catch (e) {}
@@ -267,8 +263,8 @@ $(function() {
 
   // Estilizar a quantidade em Departamento //
   $(".menu-departamento h4 a, .menu-departamento ul li a").each(function() {
-    var qtd = "";
-    var nome = "";
+    let qtd = "";
+    let nome = "";
     qtd = $(this).html();
     if (/\(/.test(qtd)) {
       qtd = qtd.split("(");
@@ -276,7 +272,7 @@ $(function() {
       qtd = qtd[1];
       qtd = qtd.split(")");
       qtd = qtd[0];
-      $(this).html(nome + '<span class="qtd-filter">' + qtd + "</span>");
+      $(this).html(`${nome}<span class="qtd-filter">${qtd}</span>`);
     }
   });
   // Estilizar a quantidade em Departamento //
@@ -288,7 +284,7 @@ $(function() {
         elemLoading: "",
         returnTopText: "",
         elemLoading: '<i class="shelf__loading"></i>',
-        filterScrollTop: function(shelfOffset) {
+        filterScrollTop(shelfOffset) {
           return 20;
         }
       });
@@ -299,34 +295,34 @@ $(function() {
   // Scripts Pagina de Produto //
   if (pagProduto.length > 0) {
     try {
-      $document.ready(function() {
+      $document.ready(() => {
         // Script Quantidade de Produtos END. Pego a quantidade de produtos pelo val e jogo na URL do botao.
         $(".qtd .more").click(function() {
-          var $input = $(this).prev();
+          const $input = $(this).prev();
           $input.val(+$input.val() + 1);
-          var opt_value = $input.val();
-          var link = $(this).next();
-          var currentURL = $(".buy-button").attr("href");
-          var nomedoproduto = currentURL.split(/\&/)[0];
+          const opt_value = $input.val();
+          const link = $(this).next();
+          const currentURL = $(".buy-button").attr("href");
+          const nomedoproduto = currentURL.split(/\&/)[0];
           $(".buy-button").removeAttr("href");
           $(".buy-button").attr(
             "href",
-            nomedoproduto + "&qty=" + opt_value + "&seller=1&redirect=true&sc=1"
+            `${nomedoproduto}&qty=${opt_value}&seller=1&redirect=true&sc=1`
           );
         });
 
         $(".qtd .less").click(function() {
-          var $input = $(this).next();
+          const $input = $(this).next();
           $input.val(+$input.val() - 1);
-          var opt_value = $input.val();
-          var encontraInput = $(this).next();
-          var currentURL = $(".buy-button").attr("href");
-          var nomedoproduto = currentURL.split(/\&/)[0];
+          const opt_value = $input.val();
+          const encontraInput = $(this).next();
+          const currentURL = $(".buy-button").attr("href");
+          const nomedoproduto = currentURL.split(/\&/)[0];
 
           $(".buy-button").removeAttr("href");
           $(".buy-button").attr(
             "href",
-            nomedoproduto + "&qty=" + opt_value + "&seller=1&redirect=true&sc=1"
+            `${nomedoproduto}&qty=${opt_value}&seller=1&redirect=true&sc=1`
           );
         });
         // Script Quantidade de Produtos END
@@ -338,7 +334,7 @@ $(function() {
   // Scripts Departamento //
   if ($(depCatBus).length > 0) {
     $(".Cor a").each(function() {
-      var $color = $(this).attr("title");
+      const $color = $(this).attr("title");
       $(this).addClass($color);
     });
   }
@@ -347,7 +343,7 @@ $(function() {
   // Scripts Modal //
   // Open Modal //
   // Open Modal //
-  $(".call_modal").click(function() {
+  $(".call_modal").click(() => {
     $(".tabelas").fadeIn(200);
     $(".bg_modal").fadeIn(600);
     $("body").addClass("modal_active");
@@ -355,13 +351,13 @@ $(function() {
   // Open Modal //
 
   // Close Modal //
-  $(".close_modal, .bg_modal").click(function() {
+  $(".close_modal, .bg_modal").click(() => {
     $(".tabelas").fadeOut(600);
     $(".bg_modal").fadeOut(600);
     $("body").removeClass("modal_active");
     $(".modal_loader").remove(); // remove o conteudo do modal ao fechar
   });
-  $(document).keyup(function(ev) {
+  $(document).keyup(ev => {
     if (ev.keyCode == 27) $(".tabelas").fadeOut(500);
     $(".bg_modal").fadeOut(600);
     $("body").removeClass("modal_active");
@@ -373,7 +369,7 @@ $(function() {
 
   // Remocao Loading Meus Pedidos//
   try {
-    $document.ajaxStop(function() {
+    $document.ajaxStop(() => {
       orderList.parents("html").removeClass("is-loading");
     });
   } catch (e) {}
