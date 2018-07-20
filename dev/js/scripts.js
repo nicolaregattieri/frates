@@ -31,35 +31,17 @@ const $progressBarLabel = $(".slider__label");
 // ADD PERCENT TO DISCOUNT
 addPercent.append("% OFF");
 
-() => {
-  let method;
-  const noop = () => {};
-  const methods = [
-    "assert",
-    "clear",
-    "count",
-    "debug",
-    "dir",
-    "dirxml",
-    "error",
-    "exception",
-    "group",
-    "groupCollapsed",
-    "groupEnd",
-    "info",
-    "log",
-    "markTimeline",
-    "profile",
-    "profileEnd",
-    "table",
-    "time",
-    "timeEnd",
-    "timeStamp",
-    "trace",
-    "warn"
+(function() {
+  var method;
+  var noop = function() {};
+  var methods = [
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+    'timeStamp', 'trace', 'warn'
   ];
-  let length = methods.length;
-  const console = (window.console = window.console || {});
+  var length = methods.length;
+  var console = (window.console = window.console || {});
 
   while (length--) {
     method = methods[length];
@@ -68,8 +50,7 @@ addPercent.append("% OFF");
       console[method] = noop;
     }
   }
-};
-
+});
 // Simulate Click
 
 jQuery.fn.simulateClick = function() {
@@ -101,12 +82,10 @@ jQuery.fn.simulateClick = function() {
   });
 };
 
-$(() => {
-  // Ajuste Meus Pedidos //
-  if (orderList.length > 0) {
-    orderList.find("link").remove();
-    orderList.find(".page-header").unwrap(".container");
-  }
+if (orderList.length > 0) {
+  orderList.find('link').remove();
+  orderList.find('.page-header').unwrap('.container');
+}
   // Ajuste Meus Pedidos //
 
   // Menu Persistente Begin //
@@ -130,8 +109,8 @@ $(() => {
   // Remocao de Li HelperComplement Prateleira //
 
   // Busca Mob //
-  $(".js-open-mobile-search").click(() => {
-    $(".searchbox").toggleClass("active-now");
+  $(".js-open-mobile-search").click(function() {
+    $(".searchbox").toggleClass("active");
     $(".searchbox").slideToggle();
   });
   // Busca Mob //
@@ -143,53 +122,41 @@ $(() => {
   // Condicao tabela //
 
   // Voltar ao Topo //
-  $(window).scroll(() => {
-    const scroll = $(window).scrollTop();
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
 
     if (scroll >= 450) {
-      $(".js-back-to-top").addClass("active");
+      $('.js-back-to-top').addClass('active');
     } else {
-      $(".js-back-to-top").removeClass("active");
+      $('.js-back-to-top').removeClass('active');
     }
   });
 
-  body.on("click", ".js-back-to-top", event => {
-    event.preventDefault();
-    htmlBody.animate(
-      {
-        scrollTop: 0
-      },
-      300
-    );
+  body.on('click', '.js-back-to-top', function(event) {
+      event.preventDefault();
+      htmlBody.animate({ scrollTop: 0 }, 300);
   });
   // Voltar ao Topo //
 
   // Slider //
-
-  if (slide.length > 0) {
-    slide.slick({
+try {
+  $document.ready(function(){
+    
+  if ($(".slide").length > 0) {
+    $(".slide").slick({
       adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 5000,
       pauseOnHover: false,
-      arrows: true,
-      dots: false,
+      arrows: false,
+      dots: true,
       draggable: true,
       touchMove: true,
       slidesToShow: 1,
       slidesToScroll: 1
     });
   }
-  $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
-    const calc = (nextSlide / (slick.slideCount - 1)) * 100;
-
-    $progressBar
-      .css("background-size", `${calc}% 100%`)
-      .attr("aria-valuenow", calc);
-
-    $progressBarLabel.text(`${nextSlide + 1} | ${slick.slideCount}`);
-  });
-
+  
   // Slider //
 
   if (slideShelf.length > 0) {
@@ -228,13 +195,26 @@ $(() => {
         ]
       });
   }
+  });
+}
+catch(e){}
+// $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
+  //   const calc = (nextSlide / (slick.slideCount - 1)) * 100;
+
+  //   $progressBar
+  //     .css("background-size", `${calc}% 100%`)
+  //     .attr("aria-valuenow", calc);
+
+  //   $progressBarLabel.text(`${nextSlide + 1} | ${slick.slideCount}`);
+  // });
 
   // Frete Gratis Aberto //
   try {
-    $document.ready(() => {
-      $(".shipping-value").simulateClick("click");
+    $document.ready(function(){
+      $('.shipping-value').simulateClick('click');
+      $('.ajax-temp').fadeOut(3500);
     });
-  } catch (e) {}
+  } catch(e) {}
   // Frete Gratis Aberto //
 
   // Menu SidePanel //
@@ -262,18 +242,18 @@ $(() => {
   // Open submenu mobile //
 
   // Estilizar a quantidade em Departamento //
-  $(".menu-departamento h4 a, .menu-departamento ul li a").each(function() {
-    let qtd = "";
-    let nome = "";
-    qtd = $(this).html();
-    if (/\(/.test(qtd)) {
-      qtd = qtd.split("(");
-      nome = qtd[0];
-      qtd = qtd[1];
-      qtd = qtd.split(")");
-      qtd = qtd[0];
-      $(this).html(`${nome}<span class="qtd-filter">${qtd}</span>`);
-    }
+  $('.menu-departamento h4 a, .menu-departamento ul li a').each(function() {
+    var qtd = '';
+      var nome = '';
+      qtd = $(this).html();
+      if (/\(/.test(qtd)) {
+          qtd = qtd.split('(');
+          nome = qtd[0];
+          qtd = qtd[1];
+          qtd = qtd.split(')');
+          qtd = qtd[0];
+          $(this).html(nome + '<span class="qtd-filter">' + qtd + '</span>');
+      }
   });
   // Estilizar a quantidade em Departamento //
 
@@ -281,124 +261,126 @@ $(() => {
   if (sidebar.length > 0) {
     try {
       sidebar.find('input[type="checkbox"]').vtexSmartResearch({
-        elemLoading: "",
-        returnTopText: "",
-        elemLoading: '<i class="shelf__loading"></i>',
-        filterScrollTop(shelfOffset) {
+        elemLoading: '',
+        returnTopText: '',
+        elemLoading:'<i class="shelf__loading"></i>',
+        filterScrollTop: function(shelfOffset) {
           return 20;
         }
       });
-    } catch (e) {}
+    } catch(e) {}
   }
   // Smart Research //
-
-  // Scripts Pagina de Produto //
-  if (pagProduto.length > 0) {
+  if (sidebar.length > 0) {
     try {
-      $document.ready(() => {
-        // Script Quantidade de Produtos END. Pego a quantidade de produtos pelo val e jogo na URL do botao.
-        $(".qtd .more").click(function() {
-          const $input = $(this).prev();
-          $input.val(+$input.val() + 1);
-          const opt_value = $input.val();
-          const link = $(this).next();
-          const currentURL = $(".buy-button").attr("href");
-          const nomedoproduto = currentURL.split(/\&/)[0];
-          $(".buy-button").removeAttr("href");
-          $(".buy-button").attr(
-            "href",
-            `${nomedoproduto}&qty=${opt_value}&seller=1&redirect=true&sc=1`
-          );
-        });
-
-        $(".qtd .less").click(function() {
-          const $input = $(this).next();
-          $input.val(+$input.val() - 1);
-          const opt_value = $input.val();
-          const encontraInput = $(this).next();
-          const currentURL = $(".buy-button").attr("href");
-          const nomedoproduto = currentURL.split(/\&/)[0];
-
-          $(".buy-button").removeAttr("href");
-          $(".buy-button").attr(
-            "href",
-            `${nomedoproduto}&qty=${opt_value}&seller=1&redirect=true&sc=1`
-          );
-        });
-        // Script Quantidade de Produtos END
+      sidebar.find('input[type="checkbox"]').vtexSmartResearch({
+        elemLoading: '',
+        returnTopText: '',
+        elemLoading:'<i class="shelf__loading"></i>',
+        filterScrollTop: function(shelfOffset) {
+          return 20;
+        }
       });
-    } catch (e) {}
+    } catch(e) {}
   }
+// Smart Research //
+
+  // Scripts Pagina de Produto //
+    if (pagProduto.length > 0) {
+    try {
+      $document.ready(function() {
+      // Script Quantidade de Produtos END. Pego a quantidade de produtos pelo val e jogo na URL do botao.
+        $('.qtd .more').click(function(){
+          var $input = $(this).prev();
+          $input.val( +$input.val() + 1 );
+          var opt_value = $input.val();
+          var link = $(this).next();
+          var currentURL = $('.buy-button').attr('href');
+          var nomedoproduto = currentURL.split(/\&/)[0];
+          $('.buy-button').removeAttr('href');
+          $('.buy-button').attr('href', nomedoproduto + '&qty=' + opt_value + '&seller=1&redirect=true&sc=1');
+        });
+
+        $('.qtd .less').click(function(){
+          var $input = $(this).next();
+          $input.val( +$input.val() - 1 );
+          var opt_value = $input.val();
+          var encontraInput = $(this).next();
+          var currentURL = $('.buy-button').attr('href');
+          var nomedoproduto = currentURL.split(/\&/)[0];
+
+          $('.buy-button').removeAttr('href');
+          $('.buy-button').attr('href', nomedoproduto + '&qty=' + opt_value + '&seller=1&redirect=true&sc=1');
+        });
+          // Script Quantidade de Produtos END
+
+      });
+    } catch(e) {}
+    }
   // Scripts Pagina de Produto //
 
+
   // Scripts Departamento //
-  if ($(depCatBus).length > 0) {
+  if($(depCatBus).length > 0){
+
     $(".Cor a").each(function() {
-      const $color = $(this).attr("title");
-      $(this).addClass($color);
+        var $color = $(this).attr("title");
+        $(this).addClass($color);
     });
+    
   }
   // Scripts Departamento //
 
-  // Scripts Modal //
-  // Open Modal //
-  // Open Modal //
-  $(".call_modal").click(() => {
-    $(".tabelas").fadeIn(200);
-    $(".bg_modal").fadeIn(600);
-    $("body").addClass("modal_active");
-  });
-  // Open Modal //
 
-  // Close Modal //
-  $(".close_modal, .bg_modal").click(() => {
-    $(".tabelas").fadeOut(600);
-    $(".bg_modal").fadeOut(600);
-    $("body").removeClass("modal_active");
-    $(".modal_loader").remove(); // remove o conteudo do modal ao fechar
-  });
-  $(document).keyup(ev => {
-    if (ev.keyCode == 27) $(".tabelas").fadeOut(500);
-    $(".bg_modal").fadeOut(600);
-    $("body").removeClass("modal_active");
-    $(".modal_loader").remove(); // remove o conteudo do modal ao fechar
-    $("#parcelamentoModal").removeClass("active");
-  });
-  // Close Modal //
-  // Scripts Modal //
+// Scripts Modal //
+  // Open Modal //
+    // Open Modal //
+        $('.call_modal').click(function() {
+            $('.tabelas').fadeIn(200);
+            $('.bg_modal').fadeIn(600);
+            $('body').addClass('modal_active');
+        });
+        // Open Modal //
+
+        // Close Modal //
+        $('.close_modal, .bg_modal').click(function() {
+            $('.tabelas').fadeOut(600);
+            $('.bg_modal').fadeOut(600);
+            $('body').removeClass('modal_active');
+            $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
+        });
+        $(document).keyup(function(ev) {
+            if (ev.keyCode == 27)
+                $('.tabelas').fadeOut(500);
+                $('.bg_modal').fadeOut(600);
+            $('body').removeClass('modal_active');
+            $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
+            $('#parcelamentoModal').removeClass('active');
+        });
+    // Close Modal //
+// Scripts Modal //
 
   // Remocao Loading Meus Pedidos//
   try {
-    $document.ajaxStop(() => {
-      orderList.parents("html").removeClass("is-loading");
+    $document.ajaxStop(function() {
+      orderList.parents('html').removeClass('is-loading');
     });
-  } catch (e) {}
+  } catch(e) {}
   // Remocao Loading Meus Pedidos//
-});
 
-$("body.dep-cat-bus").each(function() {
-  if (window.matchMedia("(max-width: 1219px)").matches) {
-    $(this)
-      .find(".navigation-tabs")
-      .each(function() {
-        $(this).prepend('<button class="close-filters">x</button>');
-        $(this)
-          .find(".close-filters")
-          .click(function() {
-            $(this)
-              .parent()
-              .removeClass("active");
-          });
-        $(this).after(
-          '<button class="open-filters"><svg xmlns="http://www.w3.org/2000/svg" width="459" height="459" viewBox="0 0 459 459"><path d="M178.5 382.5h102v-51h-102v51zM0 76.5v51h459v-51H0zM76.5 255h306v-51h-306v51z"/></svg> Filtrar</button>'
-        );
-        $(this)
-          .siblings(".open-filters")
-          .click(function() {
-            $(this)
-              .siblings(".navigation-tabs")
-              .addClass("active");
-          });
-      });
-  }
+
+
+$('body.dep-cat-bus').each(function(){
+if(window.matchMedia("(max-width: 1219px)").matches){
+  $(this).find('.navigation-tabs').each(function(){
+    $(this).prepend('<button class="close-filters">x</button>');
+    $(this).find('.close-filters').click(function(){
+      $(this).parent().removeClass('active');
+    });
+    $(this).after('<button class="open-filters"><svg xmlns="http://www.w3.org/2000/svg" width="459" height="459" viewBox="0 0 459 459"><path d="M178.5 382.5h102v-51h-102v51zM0 76.5v51h459v-51H0zM76.5 255h306v-51h-306v51z"/></svg> Filtrar</button>');
+    $(this).siblings('.open-filters').click(function(){
+      $(this).siblings('.navigation-tabs').addClass('active');
+    });
+  });		
+}
 });

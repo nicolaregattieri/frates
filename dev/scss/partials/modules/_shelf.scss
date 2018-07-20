@@ -80,6 +80,9 @@
     background: rgba(255, 254, 254, 0.801);
     height: 60px;
     width: 100%;
+    span {
+      color: #fff;
+    }
     @include mq($screen-md) {
       position: absolute;
       top: -8px;

@@ -1111,6 +1111,8 @@ footer * > a {
 .section-footer__column {
 	-ms-flex-direction: column;
 	    flex-direction: column;
+	-ms-flex: 2;
+	    flex: 2;
 }
 
 .section-footer__tlt {
@@ -1210,6 +1212,12 @@ footer * > a {
 	    justify-content: space-between;
 }
 
+.top-footer__novidades .form-newsletter .nome,
+.top-footer__novidades .form-newsletter .email {
+	-ms-flex: 2;
+	    flex: 2;
+}
+
 .top-footer__novidades .form-newsletter .newsletter-button-ok {
 	margin: 5% auto;
 	border: none;
@@ -1249,7 +1257,7 @@ footer * > a {
 .top-footer__follow__ul-row {
 	display: -ms-flexbox;
 	display: flex;
-	min-width: 100%;
+	min-width: 80%;
 }
 
 .top-footer__follow__ul-row--space {
@@ -1297,7 +1305,7 @@ footer * > a {
 .divisor {
 	padding: 35px 0;
 	border-bottom: rgba(118, 106, 71, 0.712) solid 1px;
-	width: 95%;
+	width: 97%;
 	margin: 0 auto;
 }
 
@@ -1428,6 +1436,10 @@ footer * > a {
 	background: rgba(255, 254, 254, 0.801);
 	height: 60px;
 	width: 100%;
+}
+
+.prateleira .btn-buy span {
+	color: #fff;
 }
 
 .prateleira .btn-buy i {
@@ -2145,7 +2157,7 @@ footer * > a {
 
 .ui-autocomplete {
 	background-color: #fff;
-	left: 1183px !important;
+	left: 1096px !important;
 	width: 600px !important;
 	padding: 0 35px;
 }
@@ -4459,6 +4471,10 @@ body.institucional .institucional__sub-txt {
 	line-height: 1.5em;
 }
 
+body.institucional .sidebar-inst {
+	margin-top: 75px;
+}
+
 body.institucional .sidebar-inst__item {
 	text-transform: uppercase;
 	font-size: 1.2em;
@@ -4917,23 +4933,6 @@ body.account .slider .address-display-block {
 }
 
 /*Progressbar =====================================*/
-
-.progress {
-	display: block;
-	width: 25%;
-	height: 10px;
-	border-radius: 10px;
-	overflow: hidden;
-	position: absolute;
-	bottom: 100px;
-	right: 20px;
-	background-color: rgba(255, 255, 255, 0.471) !important;
-	background-image: linear-gradient(to right, #fff, #fff);
-	background-repeat: no-repeat;
-	background-size: 0 100%;
-	transition: background-size .4s ease-in-out;
-	z-index: 99;
-}
 
 /* Extensão */
 
@@ -5676,10 +5675,17 @@ header .main-header .menu-header {
 	opacity: 1;
 	display: inline-block;
 	position: relative;
-	padding: 20px 0 0;
+	padding: 0;
 	background-color: transparent;
 	width: 50%;
 	font-weight: 300;
+}
+
+header .main-header .menu-header .ul {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 
 header .main-header .menu-header ul li {
@@ -5827,10 +5833,6 @@ header .row {
 
 .top-footer__follow nav {
 	display: block;
-}
-
-.top-footer__follow__ul-row {
-	max-width: 220px;
 }
 
 .top-footer__revendedor {

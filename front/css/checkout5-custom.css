@@ -10,26 +10,36 @@ body {
 .border-bottom {
   border-bottom: 1px solid #999; }
 
-.body-cart .fake-progress__img, .body-cart-change .fake-progress__img {
+.body-cart .fake-progress__img,
+.body-cart-change .fake-progress__img {
   margin: 0 auto; }
-  .body-cart .fake-progress__img:nth-child(1), .body-cart-change .fake-progress__img:nth-child(1) {
+  .body-cart .fake-progress__img:nth-child(1),
+  .body-cart-change .fake-progress__img:nth-child(1) {
     display: block; }
-  .body-cart .fake-progress__img:nth-child(2), .body-cart-change .fake-progress__img:nth-child(2) {
+  .body-cart .fake-progress__img:nth-child(2),
+  .body-cart-change .fake-progress__img:nth-child(2) {
     display: none; }
-  .body-cart .fake-progress__img:nth-child(3), .body-cart-change .fake-progress__img:nth-child(3) {
+  .body-cart .fake-progress__img:nth-child(3),
+  .body-cart-change .fake-progress__img:nth-child(3) {
     display: none; }
-  .body-cart .fake-progress__img:nth-child(4), .body-cart-change .fake-progress__img:nth-child(4) {
+  .body-cart .fake-progress__img:nth-child(4),
+  .body-cart-change .fake-progress__img:nth-child(4) {
     display: none; }
 
-.body-order-form .fake-progress__img, .body-order-form-change .fake-progress__img {
+.body-order-form .fake-progress__img,
+.body-order-form-change .fake-progress__img {
   margin: 0 auto; }
-  .body-order-form .fake-progress__img:nth-child(1), .body-order-form-change .fake-progress__img:nth-child(1) {
+  .body-order-form .fake-progress__img:nth-child(1),
+  .body-order-form-change .fake-progress__img:nth-child(1) {
     display: none; }
-  .body-order-form .fake-progress__img:nth-child(2), .body-order-form-change .fake-progress__img:nth-child(2) {
+  .body-order-form .fake-progress__img:nth-child(2),
+  .body-order-form-change .fake-progress__img:nth-child(2) {
     display: block; }
-  .body-order-form .fake-progress__img:nth-child(3), .body-order-form-change .fake-progress__img:nth-child(3) {
+  .body-order-form .fake-progress__img:nth-child(3),
+  .body-order-form-change .fake-progress__img:nth-child(3) {
     display: none; }
-  .body-order-form .fake-progress__img:nth-child(4), .body-order-form-change .fake-progress__img:nth-child(4) {
+  .body-order-form .fake-progress__img:nth-child(4),
+  .body-order-form-change .fake-progress__img:nth-child(4) {
     display: none; }
 
 .body-order-form .fake-progress__img {
@@ -104,3 +114,46 @@ body {
         align-items: center;
     padding: 20px;
     padding: 25px; }
+
+.checkout-footer {
+  background: #E5E4E5; }
+  .checkout-footer .wrapper--flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 225px;
+    -ms-flex-align: center;
+        align-items: center; }
+  .checkout-footer .wrapper--narrow,
+  .checkout-footer .container {
+    width: 1170px; }
+  .checkout-footer .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: 13px 0; }
+  .checkout-footer__tlt {
+    margin-bottom: 30px;
+    color: #776c46;
+    font-size: 1.5em; }
+  .checkout-footer .formas-de-pagamento__img {
+    max-width: 100%; }
+  .checkout-footer__compra-segura__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 265px;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 0; }
+  .checkout-footer__compra-segura__item {
+    list-style: none; }
+    .checkout-footer__compra-segura__item img {
+      max-width: 75px; }
+  .checkout-footer-bottom__bg-gold {
+    background: #776c46; }

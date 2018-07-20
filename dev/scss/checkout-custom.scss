@@ -4,18 +4,19 @@ body {
     margin: 0;
     list-style: none;
     font-family: 'Open Sans', sans-serif;
-
-    .loading{
+    .loading {
         .fake-progress__img {
-          display: none;
+            display: none;
         }
     }
 }
+
 .border-bottom {
     border-bottom: 1px solid #999;
 }
 
-.body-cart, .body-cart-change {
+.body-cart,
+.body-cart-change {
     .fake-progress__img {
         margin: 0 auto;
         &:nth-child(1) {
@@ -33,7 +34,8 @@ body {
     }
 }
 
-.body-order-form, .body-order-form-change {
+.body-order-form,
+.body-order-form-change {
     .fake-progress__img {
         margin: 0 auto;
         &:nth-child(1) {
@@ -50,6 +52,7 @@ body {
         }
     }
 }
+
 .body-order-form {
     .fake-progress__img {
         margin: 0 auto;
@@ -67,7 +70,8 @@ body {
         }
     }
 }
-.my-class{
+
+.my-class {
     .fake-progress__img {
         margin: 0 auto;
         &:nth-child(1) {
@@ -84,6 +88,7 @@ body {
         }
     }
 }
+
 .body-checkout-confirmation {
     .fake-progress__img {
         margin: 0 auto;
@@ -105,6 +110,7 @@ body {
 .fake-progress {
     padding: 40px;
 }
+
 .checkout-header {
     list-style: none;
     text-decoration: none;
@@ -132,12 +138,55 @@ body {
         font-size: 1.1em;
         font-weight: 300;
     }
-
     &__logo {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px;
         padding: 25px;
+    }
+}
+
+.checkout-footer {
+    background: #E5E4E5;
+    .wrapper--flex {
+        display: flex;
+        justify-content: space-around;
+        height: 225px;
+        align-items: center;
+    }
+    .wrapper--narrow,
+    .container {
+        width: 1170px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+    }
+    &__tlt {
+        margin-bottom: 30px;
+        color: #776c46;
+        font-size: 1.5em;
+    }
+    .formas-de-pagamento__img {
+        max-width: 100%;
+    }
+    &__compra-segura__list {
+        display: flex;
+        justify-content: space-between;
+        width: 265px;
+        align-items: center;
+        margin: 0;
+    }
+    &__compra-segura__item {
+        list-style: none;
+        img {
+            max-width: 75px;
+        }
+    }
+    &-bottom__bg-gold {
+        background: #776c46;
     }
 }
