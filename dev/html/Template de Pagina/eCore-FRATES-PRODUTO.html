@@ -17,7 +17,6 @@
   <main>
 
     <div class="container--narrow">
-
       <section class="breadcrumb row">
         <div class="col-xs-12">
           <vtex.cmc:breadCrumb />
@@ -26,15 +25,17 @@
 
       <section class="product-view row">
         <section class="product-box col-xs-12 col-md-6">
-          <vtex.cmc:ProductImage zoom="on" />
-          <span class="flags">
+          <!-- Mounting With API -->
+          <ul class="thumbnails"></ul>
+          <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails"></div>
+          <div class="flags">
             <div class="flags__desconto labeled">
               <vtex.cmc:discountHightLight/>
             </div>
             <div class="flags__destaque labeled">
               <vtex.cmc:HightLight/>
             </div>
-          </span>
+          </div>
         </section>
         <!-- product-box END -->
 
@@ -220,7 +221,7 @@
   <vtex:template id="eCore-FRATES-FOOTER" />
   <vtex:template id="eCore-FRATES-COMMONSCRIPTS" />
   <script type="text/javascript" src="/arquivos/slick.js"></script>
-
+  <script type="text/javascript" src="/arquivos/easyzoom.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
 

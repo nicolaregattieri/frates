@@ -16,8 +16,16 @@ body.produto {
       overflow: hidden;
       margin: 20px 0 40px;
       clear: both;
+      .thumbnails {
+        display: inline-block;
+        flex-direction: column;
+        height: 100%;
+        vertical-align: top;
+        margin-right: 10px;
+      }
       .product-box {
         position: relative;
+        display: flex;
         .apresentacao {
           #include {
             @include mq($screen-md) {
@@ -241,6 +249,9 @@ body.produto {
                     width: auto;
                     height: 40px;
                     line-height: 20px;
+                    &:hover{
+                      background: #776c46;
+                    }
                   }
                 }
               }
@@ -701,7 +712,6 @@ body.produto {
     }
   }
   .flags .flag {
-    right: 3px;
     top: 70px;
   }
   .buy-together {

@@ -2713,8 +2713,19 @@ body.produto main .product-view {
 	clear: both;
 }
 
+body.produto main .product-view .thumbnails {
+	display: inline-block;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	height: 100%;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
 body.produto main .product-view .product-box {
 	position: relative;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 body.produto main .product-view .product-box .apresentacao #include a {
@@ -2919,6 +2930,10 @@ body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul
 	width: auto;
 	height: 40px;
 	line-height: 20px;
+}
+
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Tamanho li.skuList label:hover {
+	background: #776c46;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Cores {
@@ -3450,7 +3465,6 @@ body.produto main .social-section .social-share__icons {
 }
 
 body.produto .flags .flag {
-	right: 3px;
 	top: 70px;
 }
 
@@ -3691,7 +3705,7 @@ body.dep-cat-bus .controles__filtro .search-single-navigator h4 a {
 
 body.dep-cat-bus input[type='checkbox'] {
 	position: absolute;
-	left: 99999px;
+	opacity: 0;
 }
 
 body.dep-cat-bus .refino h5 {
@@ -3713,6 +3727,8 @@ body.dep-cat-bus .prateleira ul {
 
 body.dep-cat-bus .prateleira ul .category_page_title {
 	list-style: none;
+	margin: 75px;
+	margin-bottom: 60px;
 }
 
 .filtro_tamanho div,
@@ -5010,6 +5026,69 @@ body.account .slider .address-display-block {
 
 .resultItemsWrapper {
 	position: relative;
+}
+
+.easyzoom {
+	max-width: 490px;
+	position: relative; /* 'Shrink-wrap' the element */
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.easyzoom img {
+	vertical-align: bottom;
+}
+
+.easyzoom.is-loading img {
+	cursor: progress;
+}
+
+.easyzoom.is-ready img {
+	cursor: crosshair;
+}
+
+.easyzoom.is-error img {
+	cursor: not-allowed;
+}
+
+.easyzoom-notice {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 150;
+	width: 10em;
+	margin: -1em 0 0 -5em;
+	line-height: 2em;
+	text-align: center;
+	background: #FFF;
+	box-shadow: 0 0 10px #888;
+}
+
+.easyzoom-flyout {
+	position: absolute;
+	z-index: 100;
+	overflow: hidden;
+	background: #FFF;
+}
+
+/**
+ * EasyZoom layout variations
+ */
+
+.easyzoom--overlay .easyzoom-flyout {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.easyzoom--adjacent .easyzoom-flyout {
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	margin-left: 20px;
 }
 
 /*

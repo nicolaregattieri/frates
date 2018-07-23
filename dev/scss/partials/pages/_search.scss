@@ -94,7 +94,7 @@ body.dep-cat-bus {
     }
     input[type='checkbox'] {
         position: absolute;
-        left: 99999px;
+        opacity: 0;
     }
     .refino {
         h5 {
@@ -110,6 +110,8 @@ body.dep-cat-bus {
             justify-content: center;
             .category_page_title {
                 list-style: none;
+                margin: 75px;
+                margin-bottom: 60px;
             }
         }
     }
