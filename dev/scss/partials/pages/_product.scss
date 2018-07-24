@@ -5,16 +5,18 @@ Página de Produto
 body.produto {
   main {
     overflow: hidden;
-    margin-top: 200px;
-    .breadcrumb {
+    @include mq($screen-md) {
+      margin-top: 185px;
+    }
+    .bread-crumb {
       display: none;
       @include mq($screen-md) {
         display: block;
+        margin-bottom: 20px;
       }
     }
     .product-view {
       overflow: hidden;
-      margin: 20px 0 40px;
       clear: both;
       .thumbnails {
         display: inline-block;
@@ -101,8 +103,7 @@ body.produto {
       .buy-box {
         overflow: hidden;
         @include mq($screen-md) {
-          padding-left: 5%;
-          width: 45%;
+          padding: 0 8%;
         }
         .productName {
           font-size: 1.4em;
@@ -126,6 +127,12 @@ body.produto {
                   text-decoration: line-through;
                   font-style: normal;
                   color: #757575;
+                }
+                .skuListPrice {
+                  margin-left: -22px;
+                  background: white;
+                  font-size: 1.4em;
+                  font-weight: lighter;
                 }
                 .valor-por {
                   @include font-size(0);
@@ -184,7 +191,6 @@ body.produto {
         }
         .choose-skus {
           overflow: hidden;
-          margin: 20px 0;
           flex: 1;
           .sku-selector-container {
             ul {
@@ -196,13 +202,14 @@ body.produto {
                 width: 50%;
                 vertical-align: top;
               }
+              .specification {
+                display: none;
+              }
               li {
                 @include font-size(1.4);
                 text-transform: uppercase;
-                font-weight: bolder;
                 display: block;
                 overflow: hidden;
-                margin-bottom: 10px;
                 &.skuList {
                   input {
                     display: none;
@@ -217,10 +224,9 @@ body.produto {
                     line-height: 25px;
                     border: 1px solid #fff;
                     display: inline-block;
-                    margin-bottom: 10px;
                     &:hover,
                     &.sku-picked {
-                      border: 1px solid #000;
+                      border: 2px solid #c4c4c4;
                     }
                     &:before {
                       display: none;
@@ -243,13 +249,14 @@ body.produto {
                 }
               }
               &.Tamanho {
-                width: 100%;
+                width: 95%;
+                border-right: 1px solid;
                 li.skuList {
                   label {
                     width: auto;
                     height: 40px;
                     line-height: 20px;
-                    &:hover{
+                    &:hover {
                       background: #776c46;
                     }
                   }
@@ -401,6 +408,7 @@ body.produto {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin-bottom: 30px;
         }
         .qtd {
           display: flex;
@@ -409,12 +417,6 @@ body.produto {
           font-weight: 300;
           padding: 0;
           flex: 1;
-          &::before {
-            content: " | ";
-            color: inherit;
-            font-size: 2.4em;
-            font-weight: lighter;
-          }
           span {
             @include font-size(1.4);
             text-transform: uppercase;
@@ -429,7 +431,7 @@ body.produto {
           .quantidade {
             border: 1px solid #c1c1c1;
             padding: 5px;
-            flex: 1;
+            flex-basis: 44%;
             i,
             input {
               @include font-size(1.8);
@@ -457,7 +459,6 @@ body.produto {
           margin: 40px 0;
           .frete__text {
             font-size: .7em;
-            margin-bottom: 8px;
           }
           .frete {
             position: relative;
@@ -465,6 +466,8 @@ body.produto {
           }
           .medidas {
             display: inline-block;
+            border-left: 1px solid #c4c4c4;
+            padding-left: 27px;
             svg {
               transform: rotate(90deg);
               fill: #999;
@@ -478,16 +481,6 @@ body.produto {
               width: 85%;
               margin: 0 auto;
               padding-bottom: 5px;
-            }
-            &::after {
-              content: " | ";
-              display: inline-block;
-              position: absolute;
-              top: 0;
-              right: 0;
-              font-size: 3em;
-              color: #999;
-              font-weight: lighter;
             }
             #popupCalculoFreteWrapper {
               display: none;
@@ -506,11 +499,12 @@ body.produto {
                   vertical-align: top;
                   input {
                     @include font-size(1.4);
-                    padding: 2px;
-                    font-size: 14px;
+                    padding: 7px;
+                    font-size: 16px;
                     display: block;
                     width: 85%;
                     margin: 0 auto;
+                    font-weight: 300;
                   }
                 }
                 .quantity {
@@ -526,7 +520,7 @@ body.produto {
                   top: 0;
                   right: 7.5%;
                   input {
-                    padding: 6px;
+                    padding: 11px;
                     background-color: #333;
                     text-transform: uppercase;
                     text-align: center;

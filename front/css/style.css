@@ -292,6 +292,11 @@ main {
 	margin: 0 auto;
 }
 
+.container--centered {
+	width: 1248px;
+	margin: 0 auto;
+}
+
 /* ==========================================================================
    Responsive: Utility classes
    ========================================================================== */
@@ -2291,7 +2296,6 @@ header.ha-hide {
 .bread-crumb {
 	overflow: hidden;
 	clear: both;
-	margin-bottom: 25px;
 }
 
 .bread-crumb ul li {
@@ -2700,16 +2704,14 @@ Página de Produto
 
 body.produto main {
 	overflow: hidden;
-	margin-top: 200px;
 }
 
-body.produto main .breadcrumb {
+body.produto main .bread-crumb {
 	display: none;
 }
 
 body.produto main .product-view {
 	overflow: hidden;
-	margin: 20px 0 40px;
 	clear: both;
 }
 
@@ -2801,6 +2803,13 @@ body.produto main .product-view .buy-box .price-flag-table .price-info .productP
 	color: #757575;
 }
 
+body.produto main .product-view .buy-box .price-flag-table .price-info .productPrice .descricao-preco .skuListPrice {
+	margin-left: -22px;
+	background: white;
+	font-size: 1.4em;
+	font-weight: lighter;
+}
+
 body.produto main .product-view .buy-box .price-flag-table .price-info .productPrice .descricao-preco .valor-por {
 	font-size: 0px;
 	font-weight: bolder;
@@ -2860,7 +2869,6 @@ body.produto main .product-view .buy-box .price-flag-table .flag-table-info .fla
 
 body.produto main .product-view .buy-box .choose-skus {
 	overflow: hidden;
-	margin: 20px 0;
 	-ms-flex: 1;
 	    flex: 1;
 }
@@ -2871,13 +2879,15 @@ body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul
 	display: block;
 }
 
+body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul .specification {
+	display: none;
+}
+
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul li {
 	font-size: 14px;
 	text-transform: uppercase;
-	font-weight: bolder;
 	display: block;
 	overflow: hidden;
-	margin-bottom: 10px;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul li.skuList input {
@@ -2894,12 +2904,11 @@ body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul
 	line-height: 25px;
 	border: 1px solid #fff;
 	display: inline-block;
-	margin-bottom: 10px;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul li.skuList label:hover,
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul li.skuList label.sku-picked {
-	border: 1px solid #000;
+	border: 2px solid #c4c4c4;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul li.skuList label:before {
@@ -2923,7 +2932,8 @@ body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Tamanho {
-	width: 100%;
+	width: 95%;
+	border-right: 1px solid;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul.Tamanho li.skuList label {
@@ -3115,6 +3125,7 @@ body.produto main .product-view .buy-box .qtd-sku {
 	    justify-content: space-between;
 	-ms-flex-align: center;
 	    align-items: center;
+	margin-bottom: 30px;
 }
 
 body.produto main .product-view .buy-box .qtd {
@@ -3128,13 +3139,6 @@ body.produto main .product-view .buy-box .qtd {
 	padding: 0;
 	-ms-flex: 1;
 	    flex: 1;
-}
-
-body.produto main .product-view .buy-box .qtd::before {
-	content: " | ";
-	color: inherit;
-	font-size: 2.4em;
-	font-weight: lighter;
 }
 
 body.produto main .product-view .buy-box .qtd span {
@@ -3153,8 +3157,8 @@ body.produto main .product-view .buy-box .qtd span {
 body.produto main .product-view .buy-box .qtd .quantidade {
 	border: 1px solid #c1c1c1;
 	padding: 5px;
-	-ms-flex: 1;
-	    flex: 1;
+	-ms-flex-preferred-size: 44%;
+	    flex-basis: 44%;
 }
 
 body.produto main .product-view .buy-box .qtd .quantidade i,
@@ -3189,7 +3193,6 @@ body.produto main .product-view .buy-box .qtd-frete-medidas {
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .frete__text {
 	font-size: .7em;
-	margin-bottom: 8px;
 }
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .frete {
@@ -3199,6 +3202,8 @@ body.produto main .product-view .buy-box .qtd-frete-medidas .frete {
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .medidas {
 	display: inline-block;
+	border-left: 1px solid #c4c4c4;
+	padding-left: 27px;
 }
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .medidas svg {
@@ -3220,17 +3225,6 @@ body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values__te
 	padding-bottom: 5px;
 }
 
-body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values::after {
-	content: " | ";
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: 3em;
-	color: #999;
-	font-weight: lighter;
-}
-
 body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values #popupCalculoFreteWrapper {
 	display: none;
 }
@@ -3250,11 +3244,12 @@ body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values #ca
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values #calculoFrete #ctl00_Conteudo_upnlContent .prefixo input {
 	font-size: 14px;
-	padding: 2px;
-	font-size: 14px;
+	padding: 7px;
+	font-size: 16px;
 	display: block;
 	width: 85%;
 	margin: 0 auto;
+	font-weight: 300;
 }
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values #calculoFrete #ctl00_Conteudo_upnlContent .quantity {
@@ -3273,7 +3268,7 @@ body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values #ca
 }
 
 body.produto main .product-view .buy-box .qtd-frete-medidas .shipping-values #calculoFrete #ctl00_Conteudo_upnlContent .frete-calcular input {
-	padding: 6px;
+	padding: 11px;
 	background-color: #333;
 	text-transform: uppercase;
 	text-align: center;
@@ -5732,7 +5727,7 @@ header .line-div {
 }
 
 header .main-header {
-	padding: 60px 0;
+	padding: 57px 0;
 	height: 85px;
 }
 
@@ -6058,8 +6053,13 @@ body.home .estilo-box {
 	margin-top: 123px;
 }
 
-body.produto main .breadcrumb {
+body.produto main {
+	margin-top: 185px;
+}
+
+body.produto main .bread-crumb {
 	display: block;
+	margin-bottom: 20px;
 }
 
 body.produto main .product-view .product-box .apresentacao #include {
@@ -6099,8 +6099,7 @@ body.produto main .product-view .product-box .apresentacao .thumbs li {
 }
 
 body.produto main .product-view .buy-box {
-	padding-left: 5%;
-	width: 45%;
+	padding: 0 8%;
 }
 
 body.produto main .product-view .buy-box .choose-skus .sku-selector-container ul {
